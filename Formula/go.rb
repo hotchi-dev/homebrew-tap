@@ -2,7 +2,6 @@ class Go < Formula
   desc "Open source programming language to build simple/reliable/efficient software"
   homepage "https://go.dev/"
   url "https://go.dev/dl/go1.27.3.src.tar.gz"
-  version "1.27.3"
   sha256 "6e7749035cf360f06b2575d162ea79df9fda8ef671889e5c375f8e50777f26bb"
 
   bottle do

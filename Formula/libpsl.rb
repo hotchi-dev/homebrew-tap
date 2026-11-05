@@ -2,7 +2,6 @@ class Libpsl < Formula
   desc "C library for the Public Suffix List"
   homepage "https://rockdaboot.github.io/libpsl"
   url "https://github.com/rockdaboot/libpsl/releases/download/0.23.3/libpsl-0.23.3.tar.gz"
-  version "0.23.3"
   sha256 "93941f85a1e7bd593fa94f299233cb5dfc91cd144fd9a78a6ceb75001c5b03be"
 
   bottle do

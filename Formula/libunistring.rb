@@ -2,7 +2,6 @@ class Libunistring < Formula
   desc "C string library for manipulating Unicode strings"
   homepage "https://www.gnu.org/software/libunistring/"
   url "https://ftpmirror.gnu.org/libunistring/libunistring-1.5.tar.gz"
-  version "1.5"
   sha256 "5b0ecd46cbf225375f20ab4056197e66a7ac590e2684c069af407ae3383c9d81"
 
   bottle do

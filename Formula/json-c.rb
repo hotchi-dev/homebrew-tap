@@ -2,7 +2,6 @@ class JsonC < Formula
   desc "JSON parser for C"
   homepage "https://github.com/json-c/json-c/wiki"
   url "https://s3.amazonaws.com/json-c_releases/releases/json-c-0.19.tar.gz"
-  version "0.19"
   sha256 "37ad0249902e301bd9052bf712e511fcc6acff4ecaad4b5900aad9ce564e26de"
 
   bottle do

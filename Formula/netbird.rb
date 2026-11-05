@@ -2,7 +2,6 @@ class Netbird < Formula
   desc "Securely connects across any network with one identity-based platform"
   homepage "https://netbird.io"
   url "https://github.com/netbirdio/netbird/archive/refs/tags/v0.82.0.tar.gz"
-  version "0.82.0"
   sha256 "9553375fdd487572a4fdfeefd4cce95622686a80b8f0d10077c9913bebefe021"
 
   bottle do

@@ -30,7 +30,11 @@ jobs:
         run: |
           tap="$(brew --repository hotchi-dev/tap)"
           brew style "$tap"/Formula/*.rb "$tap"/Casks/claude-code.rb "$tap"/Casks/codex.rb
+      # Excluded checks, each inherent to copying Homebrew's own metadata:
+      #   urls: "HTTP mirror" for curl deps; the formulae API publishes no mirrors and
+      #         the mirror only matters for building curl from source, which this tap never does.
+      #   installed: inspects the runner's preinstalled homebrew-core kegs, not this tap.
+      #   sha256_no_check_if_unversioned: netbird-ui is netbirdio's cask copied verbatim
+      #         (same URL and sha256) by decision.
       - name: brew audit
-        run: |
-          brew audit --formula --tap hotchi-dev/tap
-          brew audit --cask hotchi-dev/tap/claude-code hotchi-dev/tap/codex
+        run: brew audit --tap hotchi-dev/tap --except=urls,installed,sha256_no_check_if_unversioned

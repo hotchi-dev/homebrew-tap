@@ -2,7 +2,6 @@ class Gh < Formula
   desc "GitHub command-line tool"
   homepage "https://cli.github.com/"
   url "https://github.com/cli/cli/archive/refs/tags/v2.103.3.tar.gz"
-  version "2.103.3"
   sha256 "bb148138a3a2fe023e57c78042fe3b42fc09171c0e8fff4cf983b227b7a2eade"
 
   bottle do

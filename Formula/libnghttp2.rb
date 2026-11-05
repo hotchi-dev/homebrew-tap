@@ -2,7 +2,6 @@ class Libnghttp2 < Formula
   desc "HTTP/2 C Library"
   homepage "https://nghttp2.org/"
   url "https://github.com/nghttp2/nghttp2/releases/download/v1.71.0/nghttp2-1.71.0.tar.gz"
-  version "1.71.0"
   sha256 "0cdd35ecec77919b4b7b245f87fe8d2216e3d62da854eb0838c594ff058042fc"
 
   bottle do

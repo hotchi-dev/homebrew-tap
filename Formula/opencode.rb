@@ -2,7 +2,6 @@ class Opencode < Formula
   desc "AI coding agent, built for the terminal"
   homepage "https://opencode.ai"
   url "https://github.com/anomalyco/opencode/archive/refs/tags/v2.2.5.tar.gz"
-  version "2.2.5"
   sha256 "04621edf6c47c2c7a36982ef39914d482c16977708fbd7b779f49f928bdc4fba"
 
   bottle do

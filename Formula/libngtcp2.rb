@@ -2,7 +2,6 @@ class Libngtcp2 < Formula
   desc "IETF QUIC protocol implementation"
   homepage "https://nghttp2.org/ngtcp2/"
   url "https://github.com/ngtcp2/ngtcp2/releases/download/v1.26.0/ngtcp2-1.26.0.tar.xz"
-  version "1.26.0"
   sha256 "7804aa0fa1c39942ba322a90805824c37231f7675b08d0c3cc4332858a7b085e"
 
   bottle do

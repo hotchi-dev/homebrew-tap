@@ -2,7 +2,6 @@ class CaCertificates < Formula
   desc "Mozilla CA certificate store"
   homepage "https://curl.se/docs/caextract.html"
   url "https://curl.se/ca/cacert-2026-11-05.pem"
-  version "2026-11-05"
   sha256 "427c064216761a1e72a8b30f0d954d08cb6e4435a82091fb865afd20c8497285"
 
   bottle do

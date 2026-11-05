@@ -2,7 +2,6 @@ class Git < Formula
   desc "Distributed revision control system"
   homepage "https://git-scm.com"
   url "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.56.0.tar.xz"
-  version "2.56.0"
   sha256 "26c56c296b38c0695b26fa95f475f1d01704d2d38e73465ca30b0b2f5dc789d3"
   revision 2
 

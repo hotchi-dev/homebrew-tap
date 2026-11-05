@@ -2,7 +2,6 @@ class Libssh2 < Formula
   desc "C library implementing the SSH2 protocol"
   homepage "https://libssh2.org/"
   url "https://libssh2.org/download/libssh2-1.11.1.tar.gz"
-  version "1.11.1"
   sha256 "d9ec76cbe34db98eec3539fe2c899d26b0c837cb3eb466a56b0f109cabf658f7"
   revision 7
 

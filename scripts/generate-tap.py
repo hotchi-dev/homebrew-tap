@@ -64,7 +64,9 @@ for name, d in sorted(snapshot['formulae'].items()):
     files = {k:v for k,v in stable['files'].items() if 'linux' not in k}
     if not files:
         raise SystemExit(f'{name}: no macOS bottles; refusing source build')
-    lines = [f'class {cls} < Formula', f'  desc {json.dumps(d["desc"])}', f'  homepage {json.dumps(d["homepage"])}', f'  url {json.dumps(d["urls"]["stable"]["url"])}', f'  version {json.dumps(d["versions"]["stable"])}', f'  sha256 {json.dumps(d["urls"]["stable"]["checksum"])}']
+    lines = [f'class {cls} < Formula', f'  desc {json.dumps(d["desc"])}', f'  homepage {json.dumps(d["homepage"])}', f'  url {json.dumps(d["urls"]["stable"]["url"])}', f'  sha256 {json.dumps(d["urls"]["stable"]["checksum"])}']
+    if d['versions']['stable'] not in Path(d['urls']['stable']['url']).name:
+        raise SystemExit(f'{name}: version not in URL; brew would scan a different version')
     if d.get('revision'): lines.append(f'  revision {d["revision"]}')
     lines += ['', '  bottle do', f'    root_url {json.dumps(stable["root_url"])}']
     if stable.get('rebuild'): lines.append(f'    rebuild {stable["rebuild"]}')
