@@ -88,6 +88,7 @@ for name,d in sorted(snapshot['casks'].items()):
     for dep in snapshot['formulae']:
         raw = raw.replace(f'formula: "{dep}"', f'formula: "hotchi-dev/tap/{dep}"')
     (out / 'Casks' / f'{name}.rb').write_text(raw)
-    coverage.append({'id': name, 'kind': 'homebrew-cask' if name != 'netbird-ui' else 'github', 'package': name if name != 'netbird-ui' else 'netbirdio/netbird', 'version': d['version'], 'paths': [f'hotchi-dev/homebrew-tap/Casks/{name}.rb']})
+    third = d.get('upstream')  # a cask copied from a third-party tap is watched in that tap's cask file
+    coverage.append({'id': name, 'kind': 'tap-cask' if third else 'homebrew-cask', 'package': f'{third}:Casks/{name}.rb' if third else name, 'version': d['version'], 'paths': [f'hotchi-dev/homebrew-tap/Casks/{name}.rb']})
 (out / 'watch-sources.json').write_text(json.dumps(coverage, indent=2) + '\n')
 print(f'Generated {len(snapshot["formulae"])} formulae and {len(snapshot["casks"])} casks')

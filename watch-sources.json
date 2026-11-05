@@ -334,8 +334,8 @@
   },
   {
     "id": "netbird-ui",
-    "kind": "github",
-    "package": "netbirdio/netbird",
+    "kind": "tap-cask",
+    "package": "netbirdio/homebrew-tap:Casks/netbird-ui.rb",
     "version": "0.82.0",
     "paths": [
       "hotchi-dev/homebrew-tap/Casks/netbird-ui.rb"
