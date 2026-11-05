@@ -21,7 +21,9 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Tap this checkout
-        run: brew tap hotchi-dev/tap "$GITHUB_WORKSPACE"
+        run: |
+          brew tap hotchi-dev/tap "$GITHUB_WORKSPACE"
+          brew trust hotchi-dev/tap
       # netbird-ui is copied verbatim from netbirdio/homebrew-tap and does not meet
       # homebrew-core cask style; it is excluded rather than rewritten.
       - name: brew style
