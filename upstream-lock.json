@@ -1,0 +1,4991 @@
+{
+  "casks": {
+    "claude-code": {
+      "analytics": {
+        "install": {
+          "30d": {
+            "claude-code": 60157
+          },
+          "365d": {
+            "claude-code": 1177617
+          },
+          "90d": {
+            "claude-code": 153398
+          }
+        }
+      },
+      "artifacts": [
+        {
+          "binary": [
+            "claude"
+          ],
+          "target": "$HOMEBREW_PREFIX/bin/claude"
+        },
+        {
+          "zap": [
+            {
+              "rmdir": "~/.claude",
+              "trash": [
+                "~/.cache/claude",
+                "~/.claude.json*",
+                "~/.config/claude",
+                "~/.local/bin/claude",
+                "~/.local/share/claude",
+                "~/.local/state/claude",
+                "~/Library/Caches/claude-cli-nodejs"
+              ]
+            }
+          ]
+        }
+      ],
+      "auto_updates": null,
+      "autobump": true,
+      "bundle_short_version": null,
+      "bundle_version": null,
+      "caveats": null,
+      "caveats_rosetta": null,
+      "conflicts_with": {
+        "cask": [
+          "claude-code@latest"
+        ]
+      },
+      "container": null,
+      "depends_on": {},
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Terminal-based AI coding assistant",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "full_token": "claude-code",
+      "generated_date": "2026-11-05",
+      "homepage": "https://claude.com/product/claude-code",
+      "installed": null,
+      "installed_time": null,
+      "languages": [],
+      "name": [
+        "Claude Code"
+      ],
+      "no_autobump_message": null,
+      "old_tokens": [],
+      "outdated": false,
+      "pinned": false,
+      "pinned_version": null,
+      "rename": [],
+      "ruby": "cask \"claude-code\" do\n  arch arm: \"arm64\", intel: \"x64\"\n  os macos: \"darwin\", linux: \"linux\"\n\n  version \"2.1.311\"\n  sha256 arm:          \"85d8c08707fcfd1e78ffa0204eefbc6ec9e4fe22f375fb2767ef85d957ed3161\",\n         intel:        \"d34e1cb82015b050471a97574aa6ea6f698ecf3a97a61c980961f43ad9f838f5\",\n         arm64_linux:  \"2e2496c9a8065df93acb0fca2d341f59a6b8777649b2e025ab8c9bcd5eef61f3\",\n         x86_64_linux: \"86dc1fcc69498159eaf15f446613e847010f9036bfbbdffd4c49350be8489ada\"\n\n  url \"https://downloads.claude.ai/claude-code-releases/#{version}/#{os}-#{arch}/claude\"\n  name \"Claude Code\"\n  desc \"Terminal-based AI coding assistant\"\n  homepage \"https://claude.com/product/claude-code\"\n\n  livecheck do\n    url \"https://downloads.claude.ai/claude-code-releases/stable\"\n    regex(/^v?(\\d+(?:\\.\\d+)+)$/i)\n  end\n\n  conflicts_with cask: \"claude-code@latest\"\n\n  binary \"claude\"\n\n  zap trash: [\n        \"~/.cache/claude\",\n        \"~/.claude.json*\",\n        \"~/.config/claude\",\n        \"~/.local/bin/claude\",\n        \"~/.local/share/claude\",\n        \"~/.local/state/claude\",\n        \"~/Library/Caches/claude-cli-nodejs\",\n      ],\n      rmdir: \"~/.claude\"\nend\n",
+      "ruby_source_checksum": {
+        "sha256": "c04066c2a4f771c8bac604d50855c3e54cc396d4caf3c0b1a69ce89d4bf51b70"
+      },
+      "ruby_source_path": "Casks/c/claude-code.rb",
+      "sha256": "85d8c08707fcfd1e78ffa0204eefbc6ec9e4fe22f375fb2767ef85d957ed3161",
+      "skip_livecheck": false,
+      "supported_platforms": [
+        "golden_gate",
+        "arm64_golden_gate",
+        "tahoe",
+        "arm64_tahoe",
+        "sequoia",
+        "arm64_sequoia",
+        "sonoma",
+        "arm64_sonoma",
+        "ventura",
+        "arm64_ventura",
+        "monterey",
+        "arm64_monterey",
+        "big_sur",
+        "arm64_big_sur",
+        "x86_64_linux",
+        "arm64_linux"
+      ],
+      "tap": "homebrew/cask",
+      "tap_git_head": "89c4166494d7d38f530a0c3ff260c9bdc5a28a87",
+      "token": "claude-code",
+      "url": "https://downloads.claude.ai/claude-code-releases/2.1.311/darwin-arm64/claude",
+      "url_specs": {},
+      "variations": {
+        "arm64_linux": {
+          "sha256": "2e2496c9a8065df93acb0fca2d341f59a6b8777649b2e025ab8c9bcd5eef61f3",
+          "url": "https://downloads.claude.ai/claude-code-releases/2.1.311/linux-arm64/claude"
+        },
+        "big_sur": {
+          "sha256": "d34e1cb82015b050471a97574aa6ea6f698ecf3a97a61c980961f43ad9f838f5",
+          "url": "https://downloads.claude.ai/claude-code-releases/2.1.311/darwin-x64/claude"
+        },
+        "golden_gate": {
+          "sha256": "d34e1cb82015b050471a97574aa6ea6f698ecf3a97a61c980961f43ad9f838f5",
+          "url": "https://downloads.claude.ai/claude-code-releases/2.1.311/darwin-x64/claude"
+        },
+        "monterey": {
+          "sha256": "d34e1cb82015b050471a97574aa6ea6f698ecf3a97a61c980961f43ad9f838f5",
+          "url": "https://downloads.claude.ai/claude-code-releases/2.1.311/darwin-x64/claude"
+        },
+        "sequoia": {
+          "sha256": "d34e1cb82015b050471a97574aa6ea6f698ecf3a97a61c980961f43ad9f838f5",
+          "url": "https://downloads.claude.ai/claude-code-releases/2.1.311/darwin-x64/claude"
+        },
+        "sonoma": {
+          "sha256": "d34e1cb82015b050471a97574aa6ea6f698ecf3a97a61c980961f43ad9f838f5",
+          "url": "https://downloads.claude.ai/claude-code-releases/2.1.311/darwin-x64/claude"
+        },
+        "tahoe": {
+          "sha256": "d34e1cb82015b050471a97574aa6ea6f698ecf3a97a61c980961f43ad9f838f5",
+          "url": "https://downloads.claude.ai/claude-code-releases/2.1.311/darwin-x64/claude"
+        },
+        "ventura": {
+          "sha256": "d34e1cb82015b050471a97574aa6ea6f698ecf3a97a61c980961f43ad9f838f5",
+          "url": "https://downloads.claude.ai/claude-code-releases/2.1.311/darwin-x64/claude"
+        },
+        "x86_64_linux": {
+          "sha256": "86dc1fcc69498159eaf15f446613e847010f9036bfbbdffd4c49350be8489ada",
+          "url": "https://downloads.claude.ai/claude-code-releases/2.1.311/linux-x64/claude"
+        }
+      },
+      "version": "2.1.311"
+    },
+    "codex": {
+      "analytics": {
+        "install": {
+          "30d": {
+            "codex": 258471
+          },
+          "365d": {
+            "codex": 1092124
+          },
+          "90d": {
+            "codex": 488978
+          }
+        }
+      },
+      "artifacts": [
+        {
+          "binary": [
+            "bin/codex"
+          ],
+          "target": "$HOMEBREW_PREFIX/bin/codex"
+        },
+        {
+          "generate_completions_from_executable": [
+            "bin/codex",
+            "completion",
+            {
+              "base_name": null,
+              "shell_parameter_format": null,
+              "shells": [
+                "bash",
+                "zsh",
+                "fish"
+              ]
+            }
+          ]
+        },
+        {
+          "zap": [
+            {
+              "rmdir": "~/.codex"
+            }
+          ]
+        }
+      ],
+      "auto_updates": null,
+      "autobump": true,
+      "bundle_short_version": null,
+      "bundle_version": null,
+      "caveats": null,
+      "caveats_rosetta": null,
+      "conflicts_with": null,
+      "container": null,
+      "depends_on": {},
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "OpenAI's coding agent that runs in your terminal",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "full_token": "codex",
+      "generated_date": "2026-11-05",
+      "homepage": "https://github.com/openai/codex",
+      "installed": null,
+      "installed_time": null,
+      "languages": [],
+      "name": [
+        "Codex"
+      ],
+      "no_autobump_message": null,
+      "old_tokens": [],
+      "outdated": false,
+      "pinned": false,
+      "pinned_version": null,
+      "rename": [],
+      "ruby": "cask \"codex\" do\n  arch arm: \"aarch64\", intel: \"x86_64\"\n  os macos: \"apple-darwin\", linux: \"unknown-linux-musl\"\n\n  version \"0.166.0\"\n  sha256 arm:          \"55a440cb579f970abe7c79ab181e54b0ea4c419be99f333bbd868eebac9c21f0\",\n         intel:        \"1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9\",\n         arm64_linux:  \"7821b77dda2e6283fb1f63f3165177a271da8833e857cf673c6ca1c9db3bfcc6\",\n         x86_64_linux: \"1d44b28bc4ac9937d7d3532264baa68a507ce364956a0d4ebb856f331cdee254\"\n\n  url \"https://github.com/openai/codex/releases/download/rust-v#{version}/codex-package-#{arch}-#{os}.tar.gz\"\n  name \"Codex\"\n  desc \"OpenAI's coding agent that runs in your terminal\"\n  homepage \"https://github.com/openai/codex\"\n\n  livecheck do\n    url :url\n    regex(/^rust[._-]v?(\\d+(?:\\.\\d+)+)$/i)\n    strategy :github_latest\n  end\n\n  binary \"bin/codex\"\n  generate_completions_from_executable \"bin/codex\", \"completion\"\n\n  zap rmdir: \"~/.codex\"\nend\n",
+      "ruby_source_checksum": {
+        "sha256": "5f45f3fc158bf2dd1fc7c82b293fe667c27c64ff5aab76b120b4f1704e589a6d"
+      },
+      "ruby_source_path": "Casks/c/codex.rb",
+      "sha256": "55a440cb579f970abe7c79ab181e54b0ea4c419be99f333bbd868eebac9c21f0",
+      "skip_livecheck": false,
+      "supported_platforms": [
+        "golden_gate",
+        "arm64_golden_gate",
+        "tahoe",
+        "arm64_tahoe",
+        "sequoia",
+        "arm64_sequoia",
+        "sonoma",
+        "arm64_sonoma",
+        "ventura",
+        "arm64_ventura",
+        "monterey",
+        "arm64_monterey",
+        "big_sur",
+        "arm64_big_sur",
+        "x86_64_linux",
+        "arm64_linux"
+      ],
+      "tap": "homebrew/cask",
+      "tap_git_head": "89c4166494d7d38f530a0c3ff260c9bdc5a28a87",
+      "token": "codex",
+      "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-aarch64-apple-darwin.tar.gz",
+      "url_specs": {},
+      "variations": {
+        "arm64_linux": {
+          "sha256": "7821b77dda2e6283fb1f63f3165177a271da8833e857cf673c6ca1c9db3bfcc6",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
+        },
+        "big_sur": {
+          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+        },
+        "golden_gate": {
+          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+        },
+        "monterey": {
+          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+        },
+        "sequoia": {
+          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+        },
+        "sonoma": {
+          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+        },
+        "tahoe": {
+          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+        },
+        "ventura": {
+          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+        },
+        "x86_64_linux": {
+          "sha256": "1d44b28bc4ac9937d7d3532264baa68a507ce364956a0d4ebb856f331cdee254",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
+        }
+      },
+      "version": "0.166.0"
+    },
+    "netbird-ui": {
+      "ruby": "\n\n\n# Netbird's UI Client Cask Formula\ncask \"netbird-ui\" do\n  version \"0.82.0\"\n\n  if Hardware::CPU.intel?\n      url \"https://github.com/netbirdio/netbird/releases/download/v0.82.0/netbird-ui_0.82.0_darwin_amd64_signed.zip\"\n      sha256 \"34cb2589672d46f969817dc9c9b886cd6ddda0c8083f18b4a4b3e1c2e48ae498\"\n      app \"netbird_ui_darwin\", target: \"Netbird UI.app\"\n  else\n      url \"https://github.com/netbirdio/netbird/releases/download/v0.82.0/netbird-ui_0.82.0_darwin_arm64_signed.zip\"\n      sha256 \"919cbb6abdfa90d52b19b9412581313f97daddd0129fac1a5c8a0c4a28d40c86\"\n      app \"netbird_ui_darwin\", target: \"Netbird UI.app\"\n  end\n\n  depends_on formula: \"netbird\"\n\n  postflight_steps do\n    set_permissions [\"Netbird UI.app/installer.sh\", \"Netbird UI.app/uninstaller.sh\"], \"0755\",\n                    base: :appdir, recursive: false\n    run \"Netbird UI.app/installer.sh\", args: [\"#{version}\"], base: :appdir, sudo: true\n  end\n\n  uninstall_preflight_steps do\n    run \"/bin/launchctl\", args: [\"bootout\", \"system/netbird\"], sudo: true, must_succeed: false\n    run \"/bin/launchctl\", args: [\"unload\", \"/Library/LaunchDaemons/netbird.plist\"],\n        sudo: true, must_succeed: false\n    remove \"/Library/LaunchDaemons/netbird.plist\", sudo: true\n  end\n\n  name \"Netbird UI\"\n  desc \"Netbird UI Client\"\n  homepage \"https://www.netbird.io/\"\nend\n",
+      "upstream": "netbirdio/homebrew-tap",
+      "version": "0.82.0"
+    }
+  },
+  "formulae": {
+    "brotli": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "brotli": 159
+          }
+        },
+        "install": {
+          "30d": {
+            "brotli": 197715,
+            "brotli --HEAD": 14
+          },
+          "365d": {
+            "brotli": 1505304,
+            "brotli --HEAD": 51
+          },
+          "90d": {
+            "brotli": 307705,
+            "brotli --HEAD": 20
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "brotli": 2366,
+            "brotli --HEAD": 7
+          },
+          "365d": {
+            "brotli": 10951,
+            "brotli --HEAD": 21
+          },
+          "90d": {
+            "brotli": 2999,
+            "brotli --HEAD": 11
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "ba4564da654b3cbc6a143d98194a5c0a4971976d5190c5627ed0b76c5c971b8f",
+              "url": "https://ghcr.io/v2/homebrew/core/brotli/blobs/sha256:ba4564da654b3cbc6a143d98194a5c0a4971976d5190c5627ed0b76c5c971b8f"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "460dda539a03bf4f7d821763d20351c9207683321611fde79da080e5302f69b5",
+              "url": "https://ghcr.io/v2/homebrew/core/brotli/blobs/sha256:460dda539a03bf4f7d821763d20351c9207683321611fde79da080e5302f69b5"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "7b92f3978056e44ac3f4bb6f5fc1ec31278a6b5972706236e8988e7c255cb3d4",
+              "url": "https://ghcr.io/v2/homebrew/core/brotli/blobs/sha256:7b92f3978056e44ac3f4bb6f5fc1ec31278a6b5972706236e8988e7c255cb3d4"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "c5a6fba2965b2423acfbf5084a4d8291bf95b96bbc64b534c8ef83a480413e49",
+              "url": "https://ghcr.io/v2/homebrew/core/brotli/blobs/sha256:c5a6fba2965b2423acfbf5084a4d8291bf95b96bbc64b534c8ef83a480413e49"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "cb1fe9a81c06db13b0c0824450e9616d0f2a633f03f83047d1dfa88e4f981981",
+              "url": "https://ghcr.io/v2/homebrew/core/brotli/blobs/sha256:cb1fe9a81c06db13b0c0824450e9616d0f2a633f03f83047d1dfa88e4f981981"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "cmake"
+      ],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Generic-purpose lossless compression algorithm by Google",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "brotli"
+      ],
+      "full_name": "brotli",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 50800046,
+        "analytics_30d": 197729,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 12.99,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:24Z",
+        "last_30_days": 2568648,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fbrotli",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://github.com/google/brotli",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "MIT",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "brotli",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "dd52c7983ad63e4f322a3d44f610dec3ada3448583c3c66e35030ebbaee3433c"
+      },
+      "ruby_source_path": "Formula/b/brotli.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "master",
+          "url": "https://github.com/google/brotli.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "98d35d11a78dc453aebb7d10c3748f3f73ff78c8267c0dc697b8631f67bf7e8f",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/google/brotli/archive/refs/tags/v1.2.1.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {},
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "1.2.1"
+      }
+    },
+    "ca-certificates": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "ca-certificates": 0
+          }
+        },
+        "install": {
+          "30d": {
+            "ca-certificates": 495025,
+            "ca-certificates --HEAD": 24
+          },
+          "365d": {
+            "ca-certificates": 5328445,
+            "ca-certificates --HEAD": 246
+          },
+          "90d": {
+            "ca-certificates": 1332880,
+            "ca-certificates --HEAD": 71
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "ca-certificates": 14477,
+            "ca-certificates --HEAD": 17
+          },
+          "365d": {
+            "ca-certificates": 156788,
+            "ca-certificates --HEAD": 197
+          },
+          "90d": {
+            "ca-certificates": 51922,
+            "ca-certificates --HEAD": 61
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "all": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "8a5a35e1a3223e6bc6ca7c853e0ac3d2568de2cc329b61688682bdf57165dab9",
+              "url": "https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:8a5a35e1a3223e6bc6ca7c853e0ac3d2568de2cc329b61688682bdf57165dab9"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Mozilla CA certificate store",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [],
+      "full_name": "ca-certificates",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 167328859,
+        "analytics_30d": 495049,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 11.79,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:21Z",
+        "last_30_days": 5836936,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fca-certificates",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://curl.se/docs/caextract.html",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "MPL-2.0",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "ca-certificates",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [
+        {
+          "args": [
+            "{{pkgshare}}/cacert.pem",
+            "{{pkgetc}}/cert.pem"
+          ],
+          "command": {
+            "base": "libexec",
+            "path": "post-install"
+          },
+          "type": "run"
+        }
+      ],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "f91688b4ef39b7655316d645b9a3054e3a9a9e3a027226fb375911a1685c7cf3"
+      },
+      "ruby_source_path": "Formula/c/ca-certificates.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "stable": {
+          "checksum": "427c064216761a1e72a8b30f0d954d08cb6e4435a82091fb865afd20c8497285",
+          "revision": null,
+          "tag": null,
+          "url": "https://curl.se/ca/cacert-2026-11-05.pem",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {
+        "arm64_linux": {
+          "caveats": "CA certificates have been bootstrapped from both the Mozilla CA store and the system CA store at\none of the following locations, depending on your distro:\n\n  /etc/ssl/certs/ca-certificates.crt                 # Debian/Ubuntu, Alpine Linux, Arch Linux\n  /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem  # RHEL/CentOS/Fedora, Amazon Linux\n  /etc/ssl/ca-bundle.pem                             # SUSE/openSUSE\n\n"
+        },
+        "x86_64_linux": {
+          "caveats": "CA certificates have been bootstrapped from both the Mozilla CA store and the system CA store at\none of the following locations, depending on your distro:\n\n  /etc/ssl/certs/ca-certificates.crt                 # Debian/Ubuntu, Alpine Linux, Arch Linux\n  /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem  # RHEL/CentOS/Fedora, Amazon Linux\n  /etc/ssl/ca-bundle.pem                             # SUSE/openSUSE\n\n"
+        }
+      },
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": null,
+        "stable": "2026-11-05"
+      }
+    },
+    "curl": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "curl": 260
+          }
+        },
+        "install": {
+          "30d": {
+            "curl": 95927,
+            "curl --HEAD": 107
+          },
+          "365d": {
+            "curl": 783436,
+            "curl --HEAD": 840
+          },
+          "90d": {
+            "curl": 172932,
+            "curl --HEAD": 149
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "curl": 32351,
+            "curl --HEAD": 107
+          },
+          "365d": {
+            "curl": 323694,
+            "curl --HEAD": 837
+          },
+          "90d": {
+            "curl": 57979,
+            "curl --HEAD": 148
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "16b951fa8ecede2c254441c26e34814fed37c1e97382dad3016012aa2cbf20ac",
+              "url": "https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:16b951fa8ecede2c254441c26e34814fed37c1e97382dad3016012aa2cbf20ac"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "773a9a7afd3a2953b132dee517f9dc56a7bf339a9bd3eda72745f013c72a9200",
+              "url": "https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:773a9a7afd3a2953b132dee517f9dc56a7bf339a9bd3eda72745f013c72a9200"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "d0245613b94f81fbb069090f4310a6a0c71830a3bf6b3f14ebef30c6ae49b957",
+              "url": "https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:d0245613b94f81fbb069090f4310a6a0c71830a3bf6b3f14ebef30c6ae49b957"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "44771918de230a1767855f3e6623b280c4e1b238a431e997bec8fc53b8bd8f74",
+              "url": "https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:44771918de230a1767855f3e6623b280c4e1b238a431e997bec8fc53b8bd8f74"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "2c606f6fe3a8937a21925ada646e72d85f5c4ccc0a7a93c7ab3ae7536886db4a",
+              "url": "https://ghcr.io/v2/homebrew/core/curl/blobs/sha256:2c606f6fe3a8937a21925ada646e72d85f5c4ccc0a7a93c7ab3ae7536886db4a"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "pkgconf"
+      ],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [
+        "brotli",
+        "libnghttp2",
+        "libnghttp3",
+        "libngtcp2",
+        "libpsl",
+        "libssh2",
+        "openssl@4",
+        "zstd"
+      ],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Get a file from an HTTP, HTTPS or FTP server",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "curl",
+        "curl-config",
+        "wcurl"
+      ],
+      "full_name": "curl",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 30579672,
+        "analytics_30d": 96034,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 7.09,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:32Z",
+        "last_30_days": 680778,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fcurl",
+        "start_date": "2026-10-04"
+      },
+      "head_dependencies": {
+        "build_dependencies": [
+          "autoconf",
+          "automake",
+          "libtool",
+          "pkgconf"
+        ],
+        "dependencies": [
+          "brotli",
+          "libnghttp2",
+          "libnghttp3",
+          "libngtcp2",
+          "libpsl",
+          "libssh2",
+          "openssl@4",
+          "zstd"
+        ],
+        "no_linkage_dependencies": [],
+        "optional_dependencies": [],
+        "recommended_dependencies": [],
+        "test_dependencies": [
+          "pkgconf"
+        ],
+        "uses_from_macos": [
+          "krb5",
+          "openldap"
+        ],
+        "uses_from_macos_bounds": [
+          {},
+          {}
+        ]
+      },
+      "homepage": "https://curl.se",
+      "installed": [],
+      "keg_only": true,
+      "keg_only_reason": {
+        "explanation": "",
+        "reason": ":provided_by_macos"
+      },
+      "license": "curl",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "curl",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [
+        "wcurl"
+      ],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "33e932ab597435e4b7013abdcea8c1737e12db3fe77e4cf475d15fc831a1cf9a"
+      },
+      "ruby_source_path": "Formula/c/curl.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [
+        "pkgconf"
+      ],
+      "urls": {
+        "head": {
+          "branch": "master",
+          "url": "https://github.com/curl/curl.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "95b22eb32bf6d1fa6e3e9463bdb61cece3efc56d86576a9b3cbd428246a6d854",
+          "revision": null,
+          "tag": null,
+          "url": "https://curl.se/download/curl-8.23.0.tar.bz2",
+          "using": null
+        }
+      },
+      "uses_from_macos": [
+        "krb5",
+        "openldap"
+      ],
+      "uses_from_macos_bounds": [
+        {},
+        {}
+      ],
+      "variations": {
+        "arm64_big_sur": {
+          "dependencies": [
+            "brotli",
+            "libnghttp2",
+            "libnghttp3",
+            "libngtcp2",
+            "libpsl",
+            "libssh2",
+            "openssl@4",
+            "zstd",
+            "libidn2"
+          ],
+          "head_dependencies": {
+            "build_dependencies": [
+              "autoconf",
+              "automake",
+              "libtool",
+              "pkgconf"
+            ],
+            "dependencies": [
+              "brotli",
+              "libnghttp2",
+              "libnghttp3",
+              "libngtcp2",
+              "libpsl",
+              "libssh2",
+              "openssl@4",
+              "zstd",
+              "libidn2"
+            ],
+            "no_linkage_dependencies": [],
+            "optional_dependencies": [],
+            "recommended_dependencies": [],
+            "test_dependencies": [
+              "pkgconf"
+            ],
+            "uses_from_macos": [
+              "krb5",
+              "openldap"
+            ],
+            "uses_from_macos_bounds": [
+              {},
+              {}
+            ]
+          }
+        },
+        "arm64_linux": {
+          "dependencies": [
+            "brotli",
+            "libnghttp2",
+            "libnghttp3",
+            "libngtcp2",
+            "libpsl",
+            "libssh2",
+            "openssl@4",
+            "zstd",
+            "libidn2",
+            "zlib-ng-compat"
+          ],
+          "head_dependencies": {
+            "build_dependencies": [
+              "autoconf",
+              "automake",
+              "libtool",
+              "pkgconf"
+            ],
+            "dependencies": [
+              "brotli",
+              "libnghttp2",
+              "libnghttp3",
+              "libngtcp2",
+              "libpsl",
+              "libssh2",
+              "openssl@4",
+              "zstd",
+              "libidn2",
+              "zlib-ng-compat"
+            ],
+            "no_linkage_dependencies": [],
+            "optional_dependencies": [],
+            "recommended_dependencies": [],
+            "test_dependencies": [
+              "pkgconf"
+            ],
+            "uses_from_macos": [
+              "krb5",
+              "openldap"
+            ],
+            "uses_from_macos_bounds": [
+              {},
+              {}
+            ]
+          }
+        },
+        "arm64_monterey": {
+          "dependencies": [
+            "brotli",
+            "libnghttp2",
+            "libnghttp3",
+            "libngtcp2",
+            "libpsl",
+            "libssh2",
+            "openssl@4",
+            "zstd",
+            "libidn2"
+          ],
+          "head_dependencies": {
+            "build_dependencies": [
+              "autoconf",
+              "automake",
+              "libtool",
+              "pkgconf"
+            ],
+            "dependencies": [
+              "brotli",
+              "libnghttp2",
+              "libnghttp3",
+              "libngtcp2",
+              "libpsl",
+              "libssh2",
+              "openssl@4",
+              "zstd",
+              "libidn2"
+            ],
+            "no_linkage_dependencies": [],
+            "optional_dependencies": [],
+            "recommended_dependencies": [],
+            "test_dependencies": [
+              "pkgconf"
+            ],
+            "uses_from_macos": [
+              "krb5",
+              "openldap"
+            ],
+            "uses_from_macos_bounds": [
+              {},
+              {}
+            ]
+          }
+        },
+        "big_sur": {
+          "dependencies": [
+            "brotli",
+            "libnghttp2",
+            "libnghttp3",
+            "libngtcp2",
+            "libpsl",
+            "libssh2",
+            "openssl@4",
+            "zstd",
+            "libidn2"
+          ],
+          "head_dependencies": {
+            "build_dependencies": [
+              "autoconf",
+              "automake",
+              "libtool",
+              "pkgconf"
+            ],
+            "dependencies": [
+              "brotli",
+              "libnghttp2",
+              "libnghttp3",
+              "libngtcp2",
+              "libpsl",
+              "libssh2",
+              "openssl@4",
+              "zstd",
+              "libidn2"
+            ],
+            "no_linkage_dependencies": [],
+            "optional_dependencies": [],
+            "recommended_dependencies": [],
+            "test_dependencies": [
+              "pkgconf"
+            ],
+            "uses_from_macos": [
+              "krb5",
+              "openldap"
+            ],
+            "uses_from_macos_bounds": [
+              {},
+              {}
+            ]
+          }
+        },
+        "monterey": {
+          "dependencies": [
+            "brotli",
+            "libnghttp2",
+            "libnghttp3",
+            "libngtcp2",
+            "libpsl",
+            "libssh2",
+            "openssl@4",
+            "zstd",
+            "libidn2"
+          ],
+          "head_dependencies": {
+            "build_dependencies": [
+              "autoconf",
+              "automake",
+              "libtool",
+              "pkgconf"
+            ],
+            "dependencies": [
+              "brotli",
+              "libnghttp2",
+              "libnghttp3",
+              "libngtcp2",
+              "libpsl",
+              "libssh2",
+              "openssl@4",
+              "zstd",
+              "libidn2"
+            ],
+            "no_linkage_dependencies": [],
+            "optional_dependencies": [],
+            "recommended_dependencies": [],
+            "test_dependencies": [
+              "pkgconf"
+            ],
+            "uses_from_macos": [
+              "krb5",
+              "openldap"
+            ],
+            "uses_from_macos_bounds": [
+              {},
+              {}
+            ]
+          }
+        },
+        "x86_64_linux": {
+          "dependencies": [
+            "brotli",
+            "libnghttp2",
+            "libnghttp3",
+            "libngtcp2",
+            "libpsl",
+            "libssh2",
+            "openssl@4",
+            "zstd",
+            "libidn2",
+            "zlib-ng-compat"
+          ],
+          "head_dependencies": {
+            "build_dependencies": [
+              "autoconf",
+              "automake",
+              "libtool",
+              "pkgconf"
+            ],
+            "dependencies": [
+              "brotli",
+              "libnghttp2",
+              "libnghttp3",
+              "libngtcp2",
+              "libpsl",
+              "libssh2",
+              "openssl@4",
+              "zstd",
+              "libidn2",
+              "zlib-ng-compat"
+            ],
+            "no_linkage_dependencies": [],
+            "optional_dependencies": [],
+            "recommended_dependencies": [],
+            "test_dependencies": [
+              "pkgconf"
+            ],
+            "uses_from_macos": [
+              "krb5",
+              "openldap"
+            ],
+            "uses_from_macos_bounds": [
+              {},
+              {}
+            ]
+          }
+        }
+      },
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "8.23.0"
+      }
+    },
+    "gettext": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "gettext": 214
+          }
+        },
+        "install": {
+          "30d": {
+            "gettext": 62722,
+            "gettext --HEAD": 6
+          },
+          "365d": {
+            "gettext": 1698526,
+            "gettext --HEAD": 162
+          },
+          "90d": {
+            "gettext": 188809,
+            "gettext --HEAD": 17
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "gettext": 4761,
+            "gettext --HEAD": 2
+          },
+          "365d": {
+            "gettext": 109020,
+            "gettext --HEAD": 123
+          },
+          "90d": {
+            "gettext": 14528,
+            "gettext --HEAD": 11
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "4db034aa2ae4b1f18d86906707ece14c895198090ad028d2fb1ae4fbeb3ca6fd",
+              "url": "https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:4db034aa2ae4b1f18d86906707ece14c895198090ad028d2fb1ae4fbeb3ca6fd"
+            },
+            "arm64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "sha256": "3cad13274e2b89d4b625623c0e6553b341dc04f2f24465892c511332dc80c2d2",
+              "url": "https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:3cad13274e2b89d4b625623c0e6553b341dc04f2f24465892c511332dc80c2d2"
+            },
+            "arm64_sequoia": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "98a116d35792ccd730360ffc8c0d8fc5799b2282b96bb7696192c573f064a331",
+              "url": "https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:98a116d35792ccd730360ffc8c0d8fc5799b2282b96bb7696192c573f064a331"
+            },
+            "arm64_tahoe": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "3af5392939e50a6ef73e42799fc3ead6ef72fe0040c0a45183d04a4008306d6a",
+              "url": "https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:3af5392939e50a6ef73e42799fc3ead6ef72fe0040c0a45183d04a4008306d6a"
+            },
+            "x86_64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "sha256": "2d8896fdb7fe81fc987cefd609ddcd3696f99b71b7b6b60508a2c53f0e99eb5a",
+              "url": "https://ghcr.io/v2/homebrew/core/gettext/blobs/sha256:2d8896fdb7fe81fc987cefd609ddcd3696f99b71b7b6b60508a2c53f0e99eb5a"
+            }
+          },
+          "rebuild": 2,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [
+        "json-c",
+        "libunistring"
+      ],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "GNU internationalization (i18n) and localization (l10n) library",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "autopoint",
+        "envsubst",
+        "gettext",
+        "gettext.sh",
+        "gettextize",
+        "msgattrib",
+        "msgcat",
+        "msgcmp",
+        "msgcomm",
+        "msgconv",
+        "msgen",
+        "msgexec",
+        "msgfilter",
+        "msgfmt",
+        "msggrep",
+        "msginit",
+        "msgmerge",
+        "msgpre",
+        "msgunfmt",
+        "msguniq",
+        "ngettext",
+        "po-fetch",
+        "printf_gettext",
+        "printf_ngettext",
+        "recode-sr-latin",
+        "spit",
+        "xgettext"
+      ],
+      "full_name": "gettext",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 77510105,
+        "analytics_30d": 62728,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 14.91,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:41Z",
+        "last_30_days": 935444,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fgettext",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://www.gnu.org/software/gettext/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "GPL-3.0-or-later AND LGPL-2.1-or-later",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "gettext",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "9c90f7cf5a45c828e2a66d9339b25b781302cf49316e939d029e6079e1b9d916"
+      },
+      "ruby_source_path": "Formula/g/gettext.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "stable": {
+          "checksum": "85d99b79c981a404874c02e0342176cf75c7698e2b51fe41031cf6526d974f1a",
+          "revision": null,
+          "tag": null,
+          "url": "https://ftpmirror.gnu.org/gettext/gettext-1.0.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [
+        "curl",
+        "libxml2",
+        "ncurses"
+      ],
+      "uses_from_macos_bounds": [
+        {},
+        {},
+        {}
+      ],
+      "variations": {
+        "arm64_linux": {
+          "dependencies": [
+            "json-c",
+            "libunistring",
+            "acl"
+          ]
+        },
+        "x86_64_linux": {
+          "dependencies": [
+            "json-c",
+            "libunistring",
+            "acl"
+          ]
+        }
+      },
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": null,
+        "stable": "1.0"
+      }
+    },
+    "gh": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "gh": 1950,
+            "gh --HEAD": 2
+          }
+        },
+        "install": {
+          "30d": {
+            "gh": 295234,
+            "gh --HEAD": 553
+          },
+          "365d": {
+            "gh": 3091757,
+            "gh --HEAD": 4980
+          },
+          "90d": {
+            "gh": 749267,
+            "gh --HEAD": 1405
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "gh": 292812,
+            "gh --HEAD": 553
+          },
+          "365d": {
+            "gh": 3085800,
+            "gh --HEAD": 4980
+          },
+          "90d": {
+            "gh": 746313,
+            "gh --HEAD": 1405
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "3a6c3b09eca8a065522c78d3c2ba739e866afd64eb2b0a6280527b05e5539151",
+              "url": "https://ghcr.io/v2/homebrew/core/gh/blobs/sha256:3a6c3b09eca8a065522c78d3c2ba739e866afd64eb2b0a6280527b05e5539151"
+            },
+            "arm64_linux": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "2bf1cf7e6aa89f23f14a55646d70434e3014f68b72d53e67ac710a1b9269e1ca",
+              "url": "https://ghcr.io/v2/homebrew/core/gh/blobs/sha256:2bf1cf7e6aa89f23f14a55646d70434e3014f68b72d53e67ac710a1b9269e1ca"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "21e6314bf4f4f9d881b0ab6ba1f6bad3c940ab419f8b689f83a526eb646291f2",
+              "url": "https://ghcr.io/v2/homebrew/core/gh/blobs/sha256:21e6314bf4f4f9d881b0ab6ba1f6bad3c940ab419f8b689f83a526eb646291f2"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "901fc52c4611b1c716ed73b31d516d6bb6b37bcfb8abbedc537404bc80ec5e26",
+              "url": "https://ghcr.io/v2/homebrew/core/gh/blobs/sha256:901fc52c4611b1c716ed73b31d516d6bb6b37bcfb8abbedc537404bc80ec5e26"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "bc13ea369179fe336f14316c11e4cddd020a84aa17e9113508ef5b43a475eefe",
+              "url": "https://ghcr.io/v2/homebrew/core/gh/blobs/sha256:bc13ea369179fe336f14316c11e4cddd020a84aa17e9113508ef5b43a475eefe"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "go"
+      ],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "GitHub command-line tool",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "gh"
+      ],
+      "full_name": "gh",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 34347857,
+        "analytics_30d": 295787,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 6.31,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:22Z",
+        "last_30_days": 1865820,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fgh",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://cli.github.com/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "MIT",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "gh",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "0939bb6e8799e9f1cd70e45e7954e70b1101c2e75d8f582223114e819d1225e6"
+      },
+      "ruby_source_path": "Formula/g/gh.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "trunk",
+          "url": "https://github.com/cli/cli.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "bb148138a3a2fe023e57c78042fe3b42fc09171c0e8fff4cf983b227b7a2eade",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/cli/cli/archive/refs/tags/v2.103.3.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {},
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "2.103.3"
+      }
+    },
+    "git": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "git": 196
+          }
+        },
+        "install": {
+          "30d": {
+            "git": 133597,
+            "git --HEAD": 252
+          },
+          "365d": {
+            "git": 1418942,
+            "git --HEAD": 2568
+          },
+          "90d": {
+            "git": 273441,
+            "git --HEAD": 449
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "git": 130463,
+            "git --HEAD": 252
+          },
+          "365d": {
+            "git": 1389004,
+            "git --HEAD": 2568
+          },
+          "90d": {
+            "git": 267656,
+            "git --HEAD": 449
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "a974c47b8f63bbc98389df7e942aae13fb881f05f9cd94c2bdca0767a19e2554",
+              "url": "https://ghcr.io/v2/homebrew/core/git/blobs/sha256:a974c47b8f63bbc98389df7e942aae13fb881f05f9cd94c2bdca0767a19e2554"
+            },
+            "arm64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "sha256": "a01aed6fe7b7f9e8c4f1a97f42006cdc0539babe58e5daadc4b4b8eb11e5b3cc",
+              "url": "https://ghcr.io/v2/homebrew/core/git/blobs/sha256:a01aed6fe7b7f9e8c4f1a97f42006cdc0539babe58e5daadc4b4b8eb11e5b3cc"
+            },
+            "arm64_sequoia": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "6106c08b84b66b28800b2b837a77a855b7b600bc922f6999d1980e8d78b53294",
+              "url": "https://ghcr.io/v2/homebrew/core/git/blobs/sha256:6106c08b84b66b28800b2b837a77a855b7b600bc922f6999d1980e8d78b53294"
+            },
+            "arm64_tahoe": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "ae0057867c6fc57d89f7b141e095f084a39bb30dc5fd1fd81ab984de5a74740c",
+              "url": "https://ghcr.io/v2/homebrew/core/git/blobs/sha256:ae0057867c6fc57d89f7b141e095f084a39bb30dc5fd1fd81ab984de5a74740c"
+            },
+            "x86_64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "sha256": "1f39b14814e57cae3556d3cee9a84cce6d6d0be87a7d0d64b4e4383fc653a2a9",
+              "url": "https://ghcr.io/v2/homebrew/core/git/blobs/sha256:1f39b14814e57cae3556d3cee9a84cce6d6d0be87a7d0d64b4e4383fc653a2a9"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "gettext",
+        "pkgconf"
+      ],
+      "caveats": "The Tcl/Tk GUIs (e.g. gitk, git-gui) are now in the `git-gui` formula.\nSubversion interoperability (git-svn) is now in the `git-svn` formula.\n",
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [
+        "curl",
+        "pcre2",
+        "gettext"
+      ],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Distributed revision control system",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "git",
+        "git-cvsserver",
+        "git-receive-pack",
+        "git-shell",
+        "git-upload-archive",
+        "git-upload-pack",
+        "scalar"
+      ],
+      "full_name": "git",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 44815805,
+        "analytics_30d": 133849,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 6.42,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:28Z",
+        "last_30_days": 859820,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fgit",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://git-scm.com",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "GPL-2.0-only AND GPL-2.0-or-later AND LGPL-2.1-or-later AND BSD-3-Clause AND MIT",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "git",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 2,
+      "ruby_source_checksum": {
+        "sha256": "5884e345d5e79ae925821bc8b753a7c1a56ffef130aa479e64940a6888af0092"
+      },
+      "ruby_source_path": "Formula/g/git.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "master",
+          "url": "https://github.com/git/git.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "26c56c296b38c0695b26fa95f475f1d01704d2d38e73465ca30b0b2f5dc789d3",
+          "revision": null,
+          "tag": null,
+          "url": "https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.56.0.tar.xz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [
+        "expat"
+      ],
+      "uses_from_macos_bounds": [
+        {}
+      ],
+      "variations": {
+        "arm64_linux": {
+          "dependencies": [
+            "curl",
+            "pcre2",
+            "openssl@4",
+            "zlib-ng-compat"
+          ]
+        },
+        "x86_64_linux": {
+          "dependencies": [
+            "curl",
+            "pcre2",
+            "openssl@4",
+            "zlib-ng-compat"
+          ]
+        }
+      },
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "2.56.0"
+      },
+      "vulnerabilities": {
+        "fixed_count": 45,
+        "open": [
+          {
+            "id": "BREW-git-CVE-2026-86219",
+            "severity": "critical",
+            "summary": "Authen::SASL::Perl::DIGEST_MD5 versions before 2.2100 for Perl accept replayed authentication responses via unverified nonce in server_step",
+            "upstream": [
+              "CVE-2026-86219"
+            ]
+          }
+        ],
+        "patched": []
+      }
+    },
+    "go": {
+      "aliases": [
+        "go@1.27",
+        "golang",
+        "google-go"
+      ],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "go": 1966,
+            "go --HEAD": 5
+          }
+        },
+        "install": {
+          "30d": {
+            "go": 166708,
+            "go --HEAD": 157
+          },
+          "365d": {
+            "go": 1643760,
+            "go --HEAD": 1751
+          },
+          "90d": {
+            "go": 400848,
+            "go --HEAD": 425
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "go": 103480,
+            "go --HEAD": 156
+          },
+          "365d": {
+            "go": 1238307,
+            "go --HEAD": 1750
+          },
+          "90d": {
+            "go": 273431,
+            "go --HEAD": 424
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "c7bf84a6f727873581b3e1b5f79c1254cd5856f1241534e2f6943a8acc193e6e",
+              "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:c7bf84a6f727873581b3e1b5f79c1254cd5856f1241534e2f6943a8acc193e6e"
+            },
+            "arm64_linux": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "9ae86aba2107b26b5cf76658117eefa9803e9e2d3800872b93e81dac8f6dbae1",
+              "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:9ae86aba2107b26b5cf76658117eefa9803e9e2d3800872b93e81dac8f6dbae1"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "c7bf84a6f727873581b3e1b5f79c1254cd5856f1241534e2f6943a8acc193e6e",
+              "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:c7bf84a6f727873581b3e1b5f79c1254cd5856f1241534e2f6943a8acc193e6e"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "c7bf84a6f727873581b3e1b5f79c1254cd5856f1241534e2f6943a8acc193e6e",
+              "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:c7bf84a6f727873581b3e1b5f79c1254cd5856f1241534e2f6943a8acc193e6e"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "979baea7402fd8b6b172fcb19a12477c4ee3db46d8d910af512d380121b063e9",
+              "url": "https://ghcr.io/v2/homebrew/core/go/blobs/sha256:979baea7402fd8b6b172fcb19a12477c4ee3db46d8d910af512d380121b063e9"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [],
+      "caveats": null,
+      "compatibility_version": 13,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Open source programming language to build simple/reliable/efficient software",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "go",
+        "gofmt"
+      ],
+      "full_name": "go",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 26573998,
+        "analytics_30d": 166865,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 3.98,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:25Z",
+        "last_30_days": 663775,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fgo",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://go.dev/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "BSD-3-Clause",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "go",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [
+        {
+          "cask": null,
+          "contexts": [],
+          "download": null,
+          "name": "macos",
+          "specs": [
+            "stable",
+            "head"
+          ],
+          "version": "12"
+        }
+      ],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "60d78711c1300f95a5f3f5ef6f0a1892517e5bdff0c6068d2b0c71bd3233b1f9"
+      },
+      "ruby_source_path": "Formula/g/go.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "master",
+          "url": "https://go.googlesource.com/go.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "6e7749035cf360f06b2575d162ea79df9fda8ef671889e5c375f8e50777f26bb",
+          "revision": null,
+          "tag": null,
+          "url": "https://go.dev/dl/go1.27.3.src.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {
+        "arm64_linux": {
+          "requirements": []
+        },
+        "x86_64_linux": {
+          "requirements": []
+        }
+      },
+      "version_scheme": 0,
+      "versioned_formulae": [
+        "go@1.26",
+        "go@1.25",
+        "go@1.24",
+        "go@1.23",
+        "go@1.22"
+      ],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "1.27.3"
+      }
+    },
+    "json-c": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "json-c": 140
+          }
+        },
+        "install": {
+          "30d": {
+            "json-c": 97629,
+            "json-c --HEAD": 5
+          },
+          "365d": {
+            "json-c": 510906,
+            "json-c --HEAD": 27
+          },
+          "90d": {
+            "json-c": 281583,
+            "json-c --HEAD": 10
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "json-c": 434,
+            "json-c --HEAD": 1
+          },
+          "365d": {
+            "json-c": 5724,
+            "json-c --HEAD": 10
+          },
+          "90d": {
+            "json-c": 1638,
+            "json-c --HEAD": 1
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "6b45746f31780a84ae3ed11d056bd101d1b0a6d0f16bf91aad2d35a18f6107dc",
+              "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:6b45746f31780a84ae3ed11d056bd101d1b0a6d0f16bf91aad2d35a18f6107dc"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "64475f64c83a75a0438e4d652bd75b0e7428f2e33e33377c88f087f4c652ed90",
+              "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:64475f64c83a75a0438e4d652bd75b0e7428f2e33e33377c88f087f4c652ed90"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "5624048dbb067f1a6d3784081029c3d738edeefd57188ce6724bb93d01aa53aa",
+              "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:5624048dbb067f1a6d3784081029c3d738edeefd57188ce6724bb93d01aa53aa"
+            },
+            "arm64_sonoma": {
+              "cellar": ":any",
+              "sha256": "ce9c5f6c7095110cd5c9336b9277e1845cc55bb0fc98c7550576587fd28abbb1",
+              "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:ce9c5f6c7095110cd5c9336b9277e1845cc55bb0fc98c7550576587fd28abbb1"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "f2da9c816501d9c3c0e5f883b60b3d2758b35a3995e20d541d4b029d8b35ef13",
+              "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:f2da9c816501d9c3c0e5f883b60b3d2758b35a3995e20d541d4b029d8b35ef13"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "9745b482f9c14d66b5ec02f567a61f7ef29f9060cded74e5b37e322c139580af",
+              "url": "https://ghcr.io/v2/homebrew/core/json-c/blobs/sha256:9745b482f9c14d66b5ec02f567a61f7ef29f9060cded74e5b37e322c139580af"
+            }
+          },
+          "rebuild": 1,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "cmake"
+      ],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "JSON parser for C",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [],
+      "full_name": "json-c",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 11297289,
+        "analytics_30d": 97634,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 14.2,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:31Z",
+        "last_30_days": 1385940,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fjson-c",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://github.com/json-c/json-c/wiki",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "MIT",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "json-c",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "e03b308ea392958d3d9d71fd196bebf64f39be569283dc93010ffa07504ccda8"
+      },
+      "ruby_source_path": "Formula/j/json-c.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "master",
+          "url": "https://github.com/json-c/json-c.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "37ad0249902e301bd9052bf712e511fcc6acff4ecaad4b5900aad9ce564e26de",
+          "revision": null,
+          "tag": null,
+          "url": "https://s3.amazonaws.com/json-c_releases/releases/json-c-0.19.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {},
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "0.19"
+      }
+    },
+    "libnghttp2": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "libnghttp2": 17
+          }
+        },
+        "install": {
+          "30d": {
+            "libnghttp2": 99132
+          },
+          "365d": {
+            "libnghttp2": 1615892,
+            "libnghttp2 --HEAD": 38
+          },
+          "90d": {
+            "libnghttp2": 236363,
+            "libnghttp2 --HEAD": 3
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "libnghttp2": 583
+          },
+          "365d": {
+            "libnghttp2": 12089,
+            "libnghttp2 --HEAD": 16
+          },
+          "90d": {
+            "libnghttp2": 1870,
+            "libnghttp2 --HEAD": 2
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "d9da888bfcca6b9e1cbf53b84d4664b02e12b38e04032fb985c7e4ff7068acb0",
+              "url": "https://ghcr.io/v2/homebrew/core/libnghttp2/blobs/sha256:d9da888bfcca6b9e1cbf53b84d4664b02e12b38e04032fb985c7e4ff7068acb0"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "0f30d9054161da6b9b7b2506f8ea7ca7730a1297b8a0766126678ebee1c0873a",
+              "url": "https://ghcr.io/v2/homebrew/core/libnghttp2/blobs/sha256:0f30d9054161da6b9b7b2506f8ea7ca7730a1297b8a0766126678ebee1c0873a"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "88d1ab4c79c450318c8e65a3070578a533a11eff7dad6d3a4b79c580b0fbe6bb",
+              "url": "https://ghcr.io/v2/homebrew/core/libnghttp2/blobs/sha256:88d1ab4c79c450318c8e65a3070578a533a11eff7dad6d3a4b79c580b0fbe6bb"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "b666811d826d75ddb25caf4ee321f54cb0a750e050b9857681c2b15538ee13f0",
+              "url": "https://ghcr.io/v2/homebrew/core/libnghttp2/blobs/sha256:b666811d826d75ddb25caf4ee321f54cb0a750e050b9857681c2b15538ee13f0"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "82b44983f47398ff3ebfe86e84d97e1bcb71916f93428c90bb95b7bb814b1671",
+              "url": "https://ghcr.io/v2/homebrew/core/libnghttp2/blobs/sha256:82b44983f47398ff3ebfe86e84d97e1bcb71916f93428c90bb95b7bb814b1671"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "pkgconf"
+      ],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "HTTP/2 C Library",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [],
+      "full_name": "libnghttp2",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 85258217,
+        "analytics_30d": 99132,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 13.59,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:31Z",
+        "last_30_days": 1346953,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibnghttp2",
+        "start_date": "2026-10-04"
+      },
+      "head_dependencies": {
+        "build_dependencies": [
+          "autoconf",
+          "automake",
+          "libtool",
+          "pkgconf"
+        ],
+        "dependencies": [],
+        "no_linkage_dependencies": [],
+        "optional_dependencies": [],
+        "recommended_dependencies": [],
+        "test_dependencies": [],
+        "uses_from_macos": [],
+        "uses_from_macos_bounds": []
+      },
+      "homepage": "https://nghttp2.org/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "MIT",
+      "link_overwrite": [
+        "include/nghttp2",
+        "lib/libnghttp2.a",
+        "lib/libnghttp2.dylib",
+        "lib/libnghttp2.14.dylib",
+        "lib/libnghttp2.so",
+        "lib/libnghttp2.so.14",
+        "lib/pkgconfig/libnghttp2.pc"
+      ],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "libnghttp2",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "ad7f105d2df6c62cd286220d88428a99cd763933c0880c8e1049fbb858092e17"
+      },
+      "ruby_source_path": "Formula/lib/libnghttp2.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "master",
+          "url": "https://github.com/nghttp2/nghttp2.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "0cdd35ecec77919b4b7b245f87fe8d2216e3d62da854eb0838c594ff058042fc",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/nghttp2/nghttp2/releases/download/v1.71.0/nghttp2-1.71.0.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {},
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "1.71.0"
+      }
+    },
+    "libnghttp3": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "libnghttp3": 6
+          }
+        },
+        "install": {
+          "30d": {
+            "libnghttp3": 68570,
+            "libnghttp3 --HEAD": 3
+          },
+          "365d": {
+            "libnghttp3": 1383671,
+            "libnghttp3 --HEAD": 63
+          },
+          "90d": {
+            "libnghttp3": 174672,
+            "libnghttp3 --HEAD": 12
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "libnghttp3": 3971,
+            "libnghttp3 --HEAD": 1
+          },
+          "365d": {
+            "libnghttp3": 57139,
+            "libnghttp3 --HEAD": 48
+          },
+          "90d": {
+            "libnghttp3": 8729,
+            "libnghttp3 --HEAD": 9
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "4aa61da9837c8773e8548bac1f6956446eb5babb5efa70ec02d3955cf7713f43",
+              "url": "https://ghcr.io/v2/homebrew/core/libnghttp3/blobs/sha256:4aa61da9837c8773e8548bac1f6956446eb5babb5efa70ec02d3955cf7713f43"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "3d5d1255df1065b9d1dd2f6cc5f45bf794181f263a83b976d12d70df27231255",
+              "url": "https://ghcr.io/v2/homebrew/core/libnghttp3/blobs/sha256:3d5d1255df1065b9d1dd2f6cc5f45bf794181f263a83b976d12d70df27231255"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "a7e6e8dadb7a218166d75d2849a7afec01588e27fb53fb18f11d3fce7f1ec853",
+              "url": "https://ghcr.io/v2/homebrew/core/libnghttp3/blobs/sha256:a7e6e8dadb7a218166d75d2849a7afec01588e27fb53fb18f11d3fce7f1ec853"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "4d4260baf29ed38e74806c0e66a31e98af6e7afe4d66e0e9d29692d265751141",
+              "url": "https://ghcr.io/v2/homebrew/core/libnghttp3/blobs/sha256:4d4260baf29ed38e74806c0e66a31e98af6e7afe4d66e0e9d29692d265751141"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "a824afb5435ebc4fa4133b95adef827bcda9307455def65e56e88f81daab635c",
+              "url": "https://ghcr.io/v2/homebrew/core/libnghttp3/blobs/sha256:a824afb5435ebc4fa4133b95adef827bcda9307455def65e56e88f81daab635c"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "cmake"
+      ],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "HTTP/3 library written in C",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [],
+      "full_name": "libnghttp3",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 18669913,
+        "analytics_30d": 68573,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 10.57,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:38Z",
+        "last_30_days": 724697,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibnghttp3",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://nghttp2.org/nghttp3/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "MIT",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "libnghttp3",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "9e892ed65ed3595791fb18e8ee6eee756b4d32e4d7227046ba5196762a77162f"
+      },
+      "ruby_source_path": "Formula/lib/libnghttp3.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "main",
+          "url": "https://github.com/ngtcp2/nghttp3.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "228e17f5cc3d4de7bfced9912bd09de30e7f45741cc47503cf88d3fa9209e155",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/ngtcp2/nghttp3/releases/download/v1.19.0/nghttp3-1.19.0.tar.xz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {},
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "1.19.0"
+      }
+    },
+    "libngtcp2": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "libngtcp2": 5,
+            "libngtcp2 --HEAD": 10
+          }
+        },
+        "install": {
+          "30d": {
+            "libngtcp2": 98821,
+            "libngtcp2 --HEAD": 7
+          },
+          "365d": {
+            "libngtcp2": 1603550,
+            "libngtcp2 --HEAD": 65
+          },
+          "90d": {
+            "libngtcp2": 205005,
+            "libngtcp2 --HEAD": 13
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "libngtcp2": 4758,
+            "libngtcp2 --HEAD": 6
+          },
+          "365d": {
+            "libngtcp2": 59953,
+            "libngtcp2 --HEAD": 55
+          },
+          "90d": {
+            "libngtcp2": 9717,
+            "libngtcp2 --HEAD": 12
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "d65b079eb551262a42e0087b2324c468f3787d2a43b7ff8ea46c61f31b59d1e2",
+              "url": "https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:d65b079eb551262a42e0087b2324c468f3787d2a43b7ff8ea46c61f31b59d1e2"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "95d4cdea286f7560e42dd01de34872416486ccbd4b32c8e57f13d28ef145382b",
+              "url": "https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:95d4cdea286f7560e42dd01de34872416486ccbd4b32c8e57f13d28ef145382b"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "ee6c605ea834e91eb3a47c1dc64bf49f005b9f6053eaf9d549ba883a1f80ceef",
+              "url": "https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:ee6c605ea834e91eb3a47c1dc64bf49f005b9f6053eaf9d549ba883a1f80ceef"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "c1face4d23af05416918430026ba50211f85f60bd37c48250eb306a1bcec6f36",
+              "url": "https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:c1face4d23af05416918430026ba50211f85f60bd37c48250eb306a1bcec6f36"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "8b78cd71163fa19134d6551c5232c08dde780c8c7deeeeec56d403070920c2b5",
+              "url": "https://ghcr.io/v2/homebrew/core/libngtcp2/blobs/sha256:8b78cd71163fa19134d6551c5232c08dde780c8c7deeeeec56d403070920c2b5"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "pkgconf"
+      ],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [
+        "openssl@4"
+      ],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "IETF QUIC protocol implementation",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [],
+      "full_name": "libngtcp2",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 20923911,
+        "analytics_30d": 98828,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 10.11,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:31Z",
+        "last_30_days": 998862,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibngtcp2",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://nghttp2.org/ngtcp2/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "MIT",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "libngtcp2",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "2e25d28bbd7c8b1190b02bcc106a8a24cb1f1950620981cd66d505472729e5b5"
+      },
+      "ruby_source_path": "Formula/lib/libngtcp2.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "main",
+          "url": "https://github.com/ngtcp2/ngtcp2.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "7804aa0fa1c39942ba322a90805824c37231f7675b08d0c3cc4332858a7b085e",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/ngtcp2/ngtcp2/releases/download/v1.26.0/ngtcp2-1.26.0.tar.xz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {},
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "1.26.0"
+      }
+    },
+    "libpsl": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "libpsl": 68
+          }
+        },
+        "install": {
+          "30d": {
+            "libpsl": 59634,
+            "libpsl --HEAD": 1
+          },
+          "365d": {
+            "libpsl": 235053,
+            "libpsl --HEAD": 4
+          },
+          "90d": {
+            "libpsl": 146931,
+            "libpsl --HEAD": 2
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "libpsl": 216
+          },
+          "365d": {
+            "libpsl": 2418,
+            "libpsl --HEAD": 2
+          },
+          "90d": {
+            "libpsl": 986
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "55221f12796ff26921c5eead5511e2d1f4465c1f8cfc08c164aef8f9e50c9261",
+              "url": "https://ghcr.io/v2/homebrew/core/libpsl/blobs/sha256:55221f12796ff26921c5eead5511e2d1f4465c1f8cfc08c164aef8f9e50c9261"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "939526d6284bf9296521d430a86e30b9226bd0618a558a0a58e5c2729b6f891e",
+              "url": "https://ghcr.io/v2/homebrew/core/libpsl/blobs/sha256:939526d6284bf9296521d430a86e30b9226bd0618a558a0a58e5c2729b6f891e"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "392f0aceca4e4febcb583688fa4bb701853e4a41a3d11446b0deac5231c32a53",
+              "url": "https://ghcr.io/v2/homebrew/core/libpsl/blobs/sha256:392f0aceca4e4febcb583688fa4bb701853e4a41a3d11446b0deac5231c32a53"
+            },
+            "arm64_sonoma": {
+              "cellar": ":any",
+              "sha256": "c26c327af497356f04a3f818da2d073a7f9833a7494231d8808b85599e029bbd",
+              "url": "https://ghcr.io/v2/homebrew/core/libpsl/blobs/sha256:c26c327af497356f04a3f818da2d073a7f9833a7494231d8808b85599e029bbd"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "3058120ea617a1ba193463788e81b8afd08fcf0abdbaf0bb5bfa85eebc695761",
+              "url": "https://ghcr.io/v2/homebrew/core/libpsl/blobs/sha256:3058120ea617a1ba193463788e81b8afd08fcf0abdbaf0bb5bfa85eebc695761"
+            },
+            "sonoma": {
+              "cellar": ":any",
+              "sha256": "a8461dfee9fad01788669d0afbdcfd92c112708e220c4a8a371c3cfca3da1b8e",
+              "url": "https://ghcr.io/v2/homebrew/core/libpsl/blobs/sha256:a8461dfee9fad01788669d0afbdcfd92c112708e220c4a8a371c3cfca3da1b8e"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "31ef3766b6b2f2c78a82e9f8b1d902e06d03ec33e1170694e298296ad7c3fba5",
+              "url": "https://ghcr.io/v2/homebrew/core/libpsl/blobs/sha256:31ef3766b6b2f2c78a82e9f8b1d902e06d03ec33e1170694e298296ad7c3fba5"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "pkgconf"
+      ],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "C library for the Public Suffix List",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "psl",
+        "psl-make-dafsa"
+      ],
+      "full_name": "libpsl",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 6100829,
+        "analytics_30d": 59635,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 9.14,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:42Z",
+        "last_30_days": 544843,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibpsl",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://rockdaboot.github.io/libpsl",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "MIT",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "libpsl",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "6b6159d3bd8c455b132d2b1d492e9fb9b6a127f8c7eb4b045cd982446391ca45"
+      },
+      "ruby_source_path": "Formula/lib/libpsl.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "stable": {
+          "checksum": "93941f85a1e7bd593fa94f299233cb5dfc91cd144fd9a78a6ceb75001c5b03be",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/rockdaboot/libpsl/releases/download/0.23.3/libpsl-0.23.3.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {
+        "arm64_big_sur": {
+          "dependencies": [
+            "libidn2",
+            "libunistring"
+          ]
+        },
+        "arm64_linux": {
+          "dependencies": [
+            "libidn2",
+            "libunistring"
+          ]
+        },
+        "arm64_monterey": {
+          "dependencies": [
+            "libidn2",
+            "libunistring"
+          ]
+        },
+        "big_sur": {
+          "dependencies": [
+            "libidn2",
+            "libunistring"
+          ]
+        },
+        "monterey": {
+          "dependencies": [
+            "libidn2",
+            "libunistring"
+          ]
+        },
+        "x86_64_linux": {
+          "dependencies": [
+            "libidn2",
+            "libunistring"
+          ]
+        }
+      },
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": null,
+        "stable": "0.23.3"
+      }
+    },
+    "libssh2": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "libssh2": 85,
+            "libssh2 --HEAD": 1
+          }
+        },
+        "install": {
+          "30d": {
+            "libssh2": 156846,
+            "libssh2 --HEAD": 13
+          },
+          "365d": {
+            "libssh2": 917870,
+            "libssh2 --HEAD": 75
+          },
+          "90d": {
+            "libssh2": 299723,
+            "libssh2 --HEAD": 23
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "libssh2": 7537,
+            "libssh2 --HEAD": 11
+          },
+          "365d": {
+            "libssh2": 53052,
+            "libssh2 --HEAD": 66
+          },
+          "90d": {
+            "libssh2": 15870,
+            "libssh2 --HEAD": 21
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "5556a728575577915ed43171a3881c8aeed3d0d62c24d1eb13798f8a6a03834d",
+              "url": "https://ghcr.io/v2/homebrew/core/libssh2/blobs/sha256:5556a728575577915ed43171a3881c8aeed3d0d62c24d1eb13798f8a6a03834d"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "d429e38ea1d9345a3590d16e1ef79b2d10b9689ac1b02f175c3725ded666d76e",
+              "url": "https://ghcr.io/v2/homebrew/core/libssh2/blobs/sha256:d429e38ea1d9345a3590d16e1ef79b2d10b9689ac1b02f175c3725ded666d76e"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "e0cd7666188510728b2e133ddfab7357437f4df5c347dfbe12cc89d8c06bd2ee",
+              "url": "https://ghcr.io/v2/homebrew/core/libssh2/blobs/sha256:e0cd7666188510728b2e133ddfab7357437f4df5c347dfbe12cc89d8c06bd2ee"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "d51f26fef662c9f562f8d6bee348c9e9fdd2a917cc96bb1b26aa53116b9e7481",
+              "url": "https://ghcr.io/v2/homebrew/core/libssh2/blobs/sha256:d51f26fef662c9f562f8d6bee348c9e9fdd2a917cc96bb1b26aa53116b9e7481"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "67939513d8a056ee430572396dcae0446e75f7a6963cc34771971fc9eb2dfefb",
+              "url": "https://ghcr.io/v2/homebrew/core/libssh2/blobs/sha256:67939513d8a056ee430572396dcae0446e75f7a6963cc34771971fc9eb2dfefb"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [
+        "openssl@4"
+      ],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "C library implementing the SSH2 protocol",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [],
+      "full_name": "libssh2",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 25379352,
+        "analytics_30d": 156859,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 6.92,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:25Z",
+        "last_30_days": 1085206,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibssh2",
+        "start_date": "2026-10-04"
+      },
+      "head_dependencies": {
+        "build_dependencies": [
+          "autoconf",
+          "automake",
+          "libtool"
+        ],
+        "dependencies": [
+          "openssl@4"
+        ],
+        "no_linkage_dependencies": [],
+        "optional_dependencies": [],
+        "recommended_dependencies": [],
+        "test_dependencies": [],
+        "uses_from_macos": [],
+        "uses_from_macos_bounds": []
+      },
+      "homepage": "https://libssh2.org/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "BSD-3-Clause",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {
+        "Patches/libssh2/CVE-2025-15661.patch": "7fbbb58149ea7e2df234f491d3ee1e7ce8416c8405b0dad0048ea6bbe5ffb5b9",
+        "Patches/libssh2/CVE-2026-55200.patch": "db9015ee5cbe95ea0861131109cc29e3cb408a4789d497c1c8812e86873533ac",
+        "Patches/libssh2/CVE-2026-58050.patch": "052bd73ea87ddcbb473131e2a52bd3523de065a2201051878c1259230ed3bb7f",
+        "Patches/libssh2/CVE-2026-66032.patch": "d46ed49ff9cf311306deae102fca3b8fd6bd649d43c3d794cc29be6ebb523e0a",
+        "Patches/libssh2/CVE-2026-66034.patch": "4f4eac78ba3ecb7cd43f19e9fe23b1586caf73372a3d6a325f048098fa53b3dd",
+        "Patches/libssh2/CVE-2026-66035.patch": "c5ff4520b0815006e3ee925eea9a0cc97ae4f5b93b70183f99428f2e9845ccca"
+      },
+      "name": "libssh2",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [
+        {
+          "file": "Patches/libssh2/CVE-2025-15661.patch",
+          "resolves": [
+            {
+              "id": "CVE-2025-15661",
+              "type": "security"
+            }
+          ],
+          "strip": "p1",
+          "type": "backport"
+        },
+        {
+          "resolves": [
+            {
+              "id": "CVE-2026-7598",
+              "type": "security"
+            }
+          ],
+          "sha256": "7c5fe26b0b58fb3ee3770c8a7648eddec09845fe016eff22b9074451d1a60c34",
+          "strip": "p1",
+          "type": "backport",
+          "url": "https://github.com/libssh2/libssh2/commit/256d04b60d80bf1190e96b0ad1e91b2174d744b1.patch?full_index=1"
+        },
+        {
+          "resolves": [
+            {
+              "id": "CVE-2026-55199",
+              "type": "security"
+            }
+          ],
+          "sha256": "a236d5cfe1995a85c3b036ab16cc2672aa316fd3e1d6299100bcc4c07a539fd7",
+          "strip": "p1",
+          "type": "backport",
+          "url": "https://github.com/libssh2/libssh2/commit/17626857d20b3c9a1addfa45979dadcee1cd84a4.patch?full_index=1"
+        },
+        {
+          "file": "Patches/libssh2/CVE-2026-55200.patch",
+          "resolves": [
+            {
+              "id": "CVE-2026-55200",
+              "type": "security"
+            }
+          ],
+          "strip": "p1",
+          "type": "backport"
+        },
+        {
+          "file": "Patches/libssh2/CVE-2026-58050.patch",
+          "resolves": [
+            {
+              "id": "CVE-2026-58050",
+              "type": "security"
+            }
+          ],
+          "strip": "p1",
+          "type": "backport"
+        },
+        {
+          "resolves": [
+            {
+              "id": "CVE-2026-58051",
+              "type": "security"
+            }
+          ],
+          "sha256": "46cc7c5184d333e93c80a9cac1c86469c17340e6fc0418aecb2d0d8f6eaa5f41",
+          "strip": "p1",
+          "type": "backport",
+          "url": "https://github.com/libssh2/libssh2/commit/a9758da45a52bc8c630ec9493804d0c6ea30b24a.patch?full_index=1"
+        },
+        {
+          "file": "Patches/libssh2/CVE-2026-66032.patch",
+          "resolves": [
+            {
+              "id": "CVE-2026-66032",
+              "type": "security"
+            }
+          ],
+          "strip": "p1",
+          "type": "backport"
+        },
+        {
+          "resolves": [
+            {
+              "id": "CVE-2026-66033",
+              "type": "security"
+            }
+          ],
+          "sha256": "378b5f95f1a410afb790c57ceb67f2d4bd15cc42fc1db58d19fe26fd6f8acbed",
+          "strip": "p1",
+          "type": "backport",
+          "url": "https://github.com/libssh2/libssh2/commit/a2ed82d40964bbc0d64cd717aa0a5a892117d2e6.patch?full_index=1"
+        },
+        {
+          "file": "Patches/libssh2/CVE-2026-66034.patch",
+          "resolves": [
+            {
+              "id": "CVE-2026-66034",
+              "type": "security"
+            }
+          ],
+          "strip": "p1",
+          "type": "backport"
+        },
+        {
+          "file": "Patches/libssh2/CVE-2026-66035.patch",
+          "resolves": [
+            {
+              "id": "CVE-2026-66035",
+              "type": "security"
+            }
+          ],
+          "strip": "p1",
+          "type": "backport"
+        },
+        {
+          "resolves": [
+            {
+              "id": "OSV-2025-90",
+              "type": "security"
+            },
+            {
+              "id": "OSV-2025-92",
+              "type": "security"
+            }
+          ],
+          "sha256": "a790ab6c15c8dd6300ca8a651121ecc91e90e0eda1a221ad8108f51de05e1cf3",
+          "strip": "p1",
+          "type": "backport",
+          "url": "https://github.com/libssh2/libssh2/commit/631e2f82a32ef016299ebb1af66efeae0161f68e.patch?full_index=1"
+        },
+        {
+          "resolves": [
+            {
+              "id": "OSV-2022-24",
+              "type": "security"
+            },
+            {
+              "id": "OSV-2024-847",
+              "type": "security"
+            }
+          ],
+          "sha256": "76bdf62172e16e2f74fdde35cd3daa3db27b753c48c4a7bdfd295463444eb936",
+          "strip": "p1",
+          "type": "backport",
+          "url": "https://github.com/libssh2/libssh2/commit/b89858b83d68d7e29e0c5b0bb803f8a68271710c.patch?full_index=1"
+        }
+      ],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 7,
+      "ruby_source_checksum": {
+        "sha256": "eecf497120b0b28aad11f0536ac3c7759fe0d02db6ef972a811a7fc198ade8d3"
+      },
+      "ruby_source_path": "Formula/lib/libssh2.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "master",
+          "url": "https://github.com/libssh2/libssh2.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "d9ec76cbe34db98eec3539fe2c899d26b0c837cb3eb466a56b0f109cabf658f7",
+          "revision": null,
+          "tag": null,
+          "url": "https://libssh2.org/download/libssh2-1.11.1.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {
+        "arm64_linux": {
+          "dependencies": [
+            "openssl@4",
+            "zlib-ng-compat"
+          ],
+          "head_dependencies": {
+            "build_dependencies": [
+              "autoconf",
+              "automake",
+              "libtool"
+            ],
+            "dependencies": [
+              "openssl@4",
+              "zlib-ng-compat"
+            ],
+            "no_linkage_dependencies": [],
+            "optional_dependencies": [],
+            "recommended_dependencies": [],
+            "test_dependencies": [],
+            "uses_from_macos": [],
+            "uses_from_macos_bounds": []
+          }
+        },
+        "x86_64_linux": {
+          "dependencies": [
+            "openssl@4",
+            "zlib-ng-compat"
+          ],
+          "head_dependencies": {
+            "build_dependencies": [
+              "autoconf",
+              "automake",
+              "libtool"
+            ],
+            "dependencies": [
+              "openssl@4",
+              "zlib-ng-compat"
+            ],
+            "no_linkage_dependencies": [],
+            "optional_dependencies": [],
+            "recommended_dependencies": [],
+            "test_dependencies": [],
+            "uses_from_macos": [],
+            "uses_from_macos_bounds": []
+          }
+        }
+      },
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "1.11.1"
+      },
+      "vulnerabilities": {
+        "fixed_count": 0,
+        "open": [],
+        "patched": [
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_3",
+            "id": "BREW-libssh2-CVE-2025-15661",
+            "summary": "libssh2 - Heap Buffer Over-read via sftp_symlink() in sftp.c",
+            "upstream": [
+              "CVE-2025-15661"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_3",
+            "id": "BREW-libssh2-CVE-2026-55199",
+            "summary": "libssh2 - Pre-Authentication DoS via SSH_MSG_EXT_INFO Handler",
+            "upstream": [
+              "CVE-2026-55199"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_3",
+            "id": "BREW-libssh2-CVE-2026-55200",
+            "summary": "libssh2 - Out-of-Bounds Write via Unchecked packet_length in transport.c",
+            "upstream": [
+              "CVE-2026-55200"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_3",
+            "id": "BREW-libssh2-CVE-2026-58050",
+            "summary": "libssh2 - Integer Overflow in publickey Subsystem Attribute Allocation",
+            "upstream": [
+              "CVE-2026-58050"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_3",
+            "id": "BREW-libssh2-CVE-2026-58051",
+            "summary": "libssh2 - Free of Uninitialized Pointer in publickey List Cleanup",
+            "upstream": [
+              "CVE-2026-58051"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_4",
+            "id": "BREW-libssh2-CVE-2026-66032",
+            "summary": "libssh2 Double-Free Heap Corruption via sftp_open()",
+            "upstream": [
+              "CVE-2026-66032"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_4",
+            "id": "BREW-libssh2-CVE-2026-66033",
+            "summary": "libssh2 Integer Underflow DoS via AES-GCM Cipher Negotiation",
+            "upstream": [
+              "CVE-2026-66033"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_4",
+            "id": "BREW-libssh2-CVE-2026-66034",
+            "summary": "libssh2 Heap Out-of-Bounds Read via publickey subsystem",
+            "upstream": [
+              "CVE-2026-66034"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_4",
+            "id": "BREW-libssh2-CVE-2026-66035",
+            "summary": "libssh2 Heap Buffer Overflow via ETM Cipher Negotiation",
+            "upstream": [
+              "CVE-2026-66035"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_3",
+            "id": "BREW-libssh2-CVE-2026-7598",
+            "summary": "libssh2 userauth.c userauth_password integer overflow",
+            "upstream": [
+              "CVE-2026-7598"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_6",
+            "id": "BREW-libssh2-OSV-2022-24",
+            "summary": "Null-dereference READ in session_startup",
+            "upstream": [
+              "OSV-2022-24"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_6",
+            "id": "BREW-libssh2-OSV-2024-847",
+            "summary": "Null-dereference READ in _libssh2_packet_add",
+            "upstream": [
+              "OSV-2024-847"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_5",
+            "id": "BREW-libssh2-OSV-2025-90",
+            "summary": "Null-dereference READ in ubsan_GetStackTrace",
+            "upstream": [
+              "OSV-2025-90"
+            ]
+          },
+          {
+            "fix": "patch",
+            "fixed_in": "1.11.1_5",
+            "id": "BREW-libssh2-OSV-2025-92",
+            "summary": "Null-dereference READ in session_startup",
+            "upstream": [
+              "OSV-2025-92"
+            ]
+          }
+        ]
+      }
+    },
+    "libunistring": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "libunistring": 588
+          }
+        },
+        "install": {
+          "30d": {
+            "libunistring": 168527,
+            "libunistring --HEAD": 5
+          },
+          "365d": {
+            "libunistring": 1774792,
+            "libunistring --HEAD": 42
+          },
+          "90d": {
+            "libunistring": 297615,
+            "libunistring --HEAD": 7
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "libunistring": 1714,
+            "libunistring --HEAD": 1
+          },
+          "365d": {
+            "libunistring": 12545,
+            "libunistring --HEAD": 12
+          },
+          "90d": {
+            "libunistring": 2330,
+            "libunistring --HEAD": 1
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "fec6be46cabaefd1dc5d5ecd029c50aeaef6c93d9c7de4425968047811575e81",
+              "url": "https://ghcr.io/v2/homebrew/core/libunistring/blobs/sha256:fec6be46cabaefd1dc5d5ecd029c50aeaef6c93d9c7de4425968047811575e81"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "142d02125d023a6908f2f407ab5b89f5fd5a9382d363d5f0b627b81d5a19f8f5",
+              "url": "https://ghcr.io/v2/homebrew/core/libunistring/blobs/sha256:142d02125d023a6908f2f407ab5b89f5fd5a9382d363d5f0b627b81d5a19f8f5"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "5001abe192babcfaf0f97ad322e2e59958d0d991de3da9f2e941b24924b8a2b8",
+              "url": "https://ghcr.io/v2/homebrew/core/libunistring/blobs/sha256:5001abe192babcfaf0f97ad322e2e59958d0d991de3da9f2e941b24924b8a2b8"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "b803434415743b204ffc6bc5415ebfceeaf3dbcb86c0c4ea8a6fc63d2a04f441",
+              "url": "https://ghcr.io/v2/homebrew/core/libunistring/blobs/sha256:b803434415743b204ffc6bc5415ebfceeaf3dbcb86c0c4ea8a6fc63d2a04f441"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "8064362db7a4b0a036feb1e0eb4513b1604da1b14fde4b7f3866d067d24808ca",
+              "url": "https://ghcr.io/v2/homebrew/core/libunistring/blobs/sha256:8064362db7a4b0a036feb1e0eb4513b1604da1b14fde4b7f3866d067d24808ca"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "C string library for manipulating Unicode strings",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [],
+      "full_name": "libunistring",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 60589860,
+        "analytics_30d": 168532,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 13.17,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:25Z",
+        "last_30_days": 2220380,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibunistring",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://www.gnu.org/software/libunistring/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "GPL-2.0-or-later OR LGPL-3.0-or-later",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "libunistring",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "e19b8847465634aa2ab365c7fa641216450ad26cc02bddfce08c8d17342d21dc"
+      },
+      "ruby_source_path": "Formula/lib/libunistring.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "stable": {
+          "checksum": "5b0ecd46cbf225375f20ab4056197e66a7ac590e2684c069af407ae3383c9d81",
+          "revision": null,
+          "tag": null,
+          "url": "https://ftpmirror.gnu.org/libunistring/libunistring-1.5.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {},
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": null,
+        "stable": "1.5"
+      }
+    },
+    "lz4": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "lz4": 19
+          }
+        },
+        "install": {
+          "30d": {
+            "lz4": 179442,
+            "lz4 --HEAD": 16
+          },
+          "365d": {
+            "lz4": 2101343,
+            "lz4 --HEAD": 53
+          },
+          "90d": {
+            "lz4": 390982,
+            "lz4 --HEAD": 19
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "lz4": 466,
+            "lz4 --HEAD": 13
+          },
+          "365d": {
+            "lz4": 11223,
+            "lz4 --HEAD": 28
+          },
+          "90d": {
+            "lz4": 1484,
+            "lz4 --HEAD": 14
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "464d0e2782c24627a2ffa99093daaf8a7f9e2acbdae1ac4587d8724b85f2dbf9",
+              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:464d0e2782c24627a2ffa99093daaf8a7f9e2acbdae1ac4587d8724b85f2dbf9"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "73e9aabe8d8050adae8f0d71946169b0e915fb9d627e956b2377558d48285ae1",
+              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:73e9aabe8d8050adae8f0d71946169b0e915fb9d627e956b2377558d48285ae1"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "8c311d5e93bca17d53f8225dd8fabbb2626fa6ade09ff5713e3b85d428fec3bf",
+              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:8c311d5e93bca17d53f8225dd8fabbb2626fa6ade09ff5713e3b85d428fec3bf"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "f25384fe48be399693954cf6b1b48da50ae795a29058ca7abfe91fc4c3e8b623",
+              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:f25384fe48be399693954cf6b1b48da50ae795a29058ca7abfe91fc4c3e8b623"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "48865122616cc54135b0605f93ebc56a6fc7aecffb112019e91a90a5893b6903",
+              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:48865122616cc54135b0605f93ebc56a6fc7aecffb112019e91a90a5893b6903"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "cmake"
+      ],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Extremely Fast Compression algorithm",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "lz4",
+        "lz4c",
+        "lz4cat",
+        "unlz4"
+      ],
+      "full_name": "lz4",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 61575051,
+        "analytics_30d": 179458,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 7.56,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:25Z",
+        "last_30_days": 1356738,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flz4",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://lz4.github.io/lz4/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "BSD-2-Clause",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "lz4",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "745caf6d52068ef269f41dd3445171baef7610dfdd657d1a19da7f27a930c7d8"
+      },
+      "ruby_source_path": "Formula/l/lz4.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "dev",
+          "url": "https://github.com/lz4/lz4.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "247e5fa64da5f7b75ee3dd3bed484076396c9ebe8254d9ccf693eb62800c5e26",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/lz4/lz4/archive/refs/tags/v1.11.0.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {},
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "1.11.0"
+      }
+    },
+    "netbird": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "netbird": 0
+          }
+        },
+        "install": {
+          "30d": {
+            "netbird": 0
+          },
+          "365d": {
+            "netbird": 4
+          },
+          "90d": {
+            "netbird": 0
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "netbird": 0
+          },
+          "365d": {
+            "netbird": 4
+          },
+          "90d": {
+            "netbird": 0
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1",
+              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1"
+            },
+            "arm64_linux": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "b7fa188803d2da12044b84bfed295c3f256e4618eb4ac1c451baf5ea15c17f0d",
+              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:b7fa188803d2da12044b84bfed295c3f256e4618eb4ac1c451baf5ea15c17f0d"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1",
+              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1",
+              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "267e35d7e5dac75bacb763ff6005caf250749d16200570a21b240a1f901570d0",
+              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:267e35d7e5dac75bacb763ff6005caf250749d16200570a21b240a1f901570d0"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "go"
+      ],
+      "caveats": null,
+      "compatibility_version": null,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Securely connects across any network with one identity-based platform",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "netbird"
+      ],
+      "full_name": "netbird",
+      "generated_date": "2026-11-05",
+      "homepage": "https://netbird.io",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "BSD-3-Clause",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "netbird",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "9de516483ed98bbb2fb641059d7510a0b798fe9eab88934bc7a3d1b6a0ed2a36"
+      },
+      "ruby_source_path": "Formula/n/netbird.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "stable": {
+          "checksum": "9553375fdd487572a4fdfeefd4cce95622686a80b8f0d10077c9913bebefe021",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/netbirdio/netbird/archive/refs/tags/v0.82.0.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {},
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": null,
+        "stable": "0.82.0"
+      }
+    },
+    "opencode": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "opencode": 51
+          }
+        },
+        "install": {
+          "30d": {
+            "opencode": 44159,
+            "opencode --HEAD": 82
+          },
+          "365d": {
+            "opencode": 411613,
+            "opencode --HEAD": 655
+          },
+          "90d": {
+            "opencode": 95394,
+            "opencode --HEAD": 155
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "opencode": 44110,
+            "opencode --HEAD": 82
+          },
+          "365d": {
+            "opencode": 411487,
+            "opencode --HEAD": 655
+          },
+          "90d": {
+            "opencode": 95336,
+            "opencode --HEAD": 155
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "c5c9005403cebf90c25d10599a7fcdaafb664eafa91d20c1be16f830cf3c8e1a",
+              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:c5c9005403cebf90c25d10599a7fcdaafb664eafa91d20c1be16f830cf3c8e1a"
+            },
+            "arm64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "sha256": "11cea92273faab90c96629acf5ff46a15144ce729b3644ed88bb929126a27363",
+              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:11cea92273faab90c96629acf5ff46a15144ce729b3644ed88bb929126a27363"
+            },
+            "arm64_sequoia": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "298115ba70a52fff940c6a54e3399591927c96d84cd07d910690f13027290bdc",
+              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:298115ba70a52fff940c6a54e3399591927c96d84cd07d910690f13027290bdc"
+            },
+            "arm64_tahoe": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "ee89b294d1465431bc1734602266b1b9b1fcff7abb113a969540ba838eeee998",
+              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:ee89b294d1465431bc1734602266b1b9b1fcff7abb113a969540ba838eeee998"
+            },
+            "x86_64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "sha256": "01667dd07202f61671c4c48130156831ac0186671ce5f9924207970595c22e9b",
+              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:01667dd07202f61671c4c48130156831ac0186671ce5f9924207970595c22e9b"
+            }
+          },
+          "rebuild": 1,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "bun",
+        "rust",
+        "zig@0.16"
+      ],
+      "caveats": null,
+      "compatibility_version": null,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [
+        "ripgrep"
+      ],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "AI coding agent, built for the terminal",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "opencode"
+      ],
+      "full_name": "opencode",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 1869719,
+        "analytics_30d": 44241,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 5.6,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:52Z",
+        "last_30_days": 247953,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fopencode",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://opencode.ai",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "MIT",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "opencode",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "e07b67abcd41017de2f3d3e9604005bb15a8ebdaa937f30104d240878b199988"
+      },
+      "ruby_source_path": "Formula/o/opencode.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "stable": {
+          "checksum": "04621edf6c47c2c7a36982ef39914d482c16977708fbd7b779f49f928bdc4fba",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/anomalyco/opencode/archive/refs/tags/v2.2.5.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {
+        "arm64_linux": {
+          "dependencies": [
+            "ripgrep",
+            "icu4c@79"
+          ]
+        },
+        "x86_64_linux": {
+          "dependencies": [
+            "ripgrep",
+            "icu4c@79"
+          ]
+        }
+      },
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": null,
+        "stable": "2.2.5"
+      },
+      "vulnerabilities": {
+        "fixed_count": 2,
+        "open": [],
+        "patched": []
+      }
+    },
+    "openssl@4": {
+      "aliases": [
+        "openssl"
+      ],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "openssl@4": 4611
+          }
+        },
+        "install": {
+          "30d": {
+            "openssl@4": 459536,
+            "openssl@4 --HEAD": 18
+          },
+          "365d": {
+            "openssl@4": 623959,
+            "openssl@4 --HEAD": 37
+          },
+          "90d": {
+            "openssl@4": 549579,
+            "openssl@4 --HEAD": 28
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "openssl@4": 15749,
+            "openssl@4 --HEAD": 12
+          },
+          "365d": {
+            "openssl@4": 39457,
+            "openssl@4 --HEAD": 27
+          },
+          "90d": {
+            "openssl@4": 25641,
+            "openssl@4 --HEAD": 21
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "d239639f77a275caa217707e126790b3f5f5c86e5bc6e2a996e5df7fdaed44a6",
+              "url": "https://ghcr.io/v2/homebrew/core/openssl/4/blobs/sha256:d239639f77a275caa217707e126790b3f5f5c86e5bc6e2a996e5df7fdaed44a6"
+            },
+            "arm64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "sha256": "e76f5b649d8c593a802fc377a52b2d963807b8a1d79e3e256647f35c4fc9088a",
+              "url": "https://ghcr.io/v2/homebrew/core/openssl/4/blobs/sha256:e76f5b649d8c593a802fc377a52b2d963807b8a1d79e3e256647f35c4fc9088a"
+            },
+            "arm64_sequoia": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "6fcbad388ef13f6f9481e91676e2ec1b49f0a3dbd473e838297a3c8850283978",
+              "url": "https://ghcr.io/v2/homebrew/core/openssl/4/blobs/sha256:6fcbad388ef13f6f9481e91676e2ec1b49f0a3dbd473e838297a3c8850283978"
+            },
+            "arm64_tahoe": {
+              "cellar": "/opt/homebrew/Cellar",
+              "sha256": "382f63e829b116d5fb9a2b186147e489631b5bbbb06ac0089f795a3fed1085c4",
+              "url": "https://ghcr.io/v2/homebrew/core/openssl/4/blobs/sha256:382f63e829b116d5fb9a2b186147e489631b5bbbb06ac0089f795a3fed1085c4"
+            },
+            "x86_64_linux": {
+              "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
+              "sha256": "4818b19c5662c2ec0c699d5bc8ebddb91f92d799fb91420de26a98fac6ca68c3",
+              "url": "https://ghcr.io/v2/homebrew/core/openssl/4/blobs/sha256:4818b19c5662c2ec0c699d5bc8ebddb91f92d799fb91420de26a98fac6ca68c3"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [],
+      "caveats": "To add additional certificates, place .pem, .crt, .cer, or .crl files in\n  $HOMEBREW_PREFIX/etc/openssl@4/certs\n\nand run\n  $HOMEBREW_CELLAR/openssl@4/4.1.0/bin/openssl rehash $HOMEBREW_PREFIX/etc/openssl@4/certs\n",
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [
+        "ca-certificates"
+      ],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Cryptography and SSL/TLS Toolkit",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "openssl"
+      ],
+      "full_name": "openssl@4",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 6093058,
+        "analytics_30d": 459554,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 9.83,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:21Z",
+        "last_30_days": 4519574,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fopenssl%2F4",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://openssl-library.org",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "Apache-2.0",
+      "link_overwrite": [
+        "bin/openssl",
+        "include/openssl/*",
+        "share/man/man*/*ssl.gz",
+        "lib/libcrypto*",
+        "lib/libssl*",
+        "lib/ossl-modules/legacy.*",
+        "lib/cmake/OpenSSL/OpenSSLConfig.cmake",
+        "lib/cmake/OpenSSL/OpenSSLConfigVersion.cmake",
+        "lib/pkgconfig/libcrypto.pc",
+        "lib/pkgconfig/libssl.pc",
+        "lib/pkgconfig/openssl.pc"
+      ],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "openssl@4",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [
+        "ca-certificates"
+      ],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [
+        {
+          "force": true,
+          "source": {
+            "path": "{{etc}}/ca-certificates/cert.pem"
+          },
+          "target": {
+            "path": "{{pkgetc}}/cert.pem"
+          },
+          "type": "symlink"
+        }
+      ],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "50f58cda0dfd54aabc627e53205a88afc2e1780d83f43a99c525b58950c32049"
+      },
+      "ruby_source_path": "Formula/o/openssl@4.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "stable": {
+          "checksum": "50c17baf54cb008f6ce42d50deb4b28050a1aad711636cabd4b241c7e90cc2fd",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/openssl/openssl/releases/download/openssl-4.1.0/openssl-4.1.0.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [
+        {
+          "perl": "build"
+        }
+      ],
+      "uses_from_macos_bounds": [
+        {}
+      ],
+      "variations": {},
+      "version_scheme": 0,
+      "versioned_formulae": [
+        "openssl@3.6",
+        "openssl@3",
+        "openssl@3.0"
+      ],
+      "versions": {
+        "bottle": true,
+        "head": null,
+        "stable": "4.1.0"
+      }
+    },
+    "pcre2": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "pcre2": 439
+          }
+        },
+        "install": {
+          "30d": {
+            "pcre2": 202186,
+            "pcre2 --HEAD": 15
+          },
+          "365d": {
+            "pcre2": 2339670,
+            "pcre2 --HEAD": 90
+          },
+          "90d": {
+            "pcre2": 511049,
+            "pcre2 --HEAD": 22
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "pcre2": 2861,
+            "pcre2 --HEAD": 12
+          },
+          "365d": {
+            "pcre2": 28938,
+            "pcre2 --HEAD": 55
+          },
+          "90d": {
+            "pcre2": 8176,
+            "pcre2 --HEAD": 17
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "5cac44323243138490ca74a2499fd347fa836df6b5fffa789944be12110e91ff",
+              "url": "https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:5cac44323243138490ca74a2499fd347fa836df6b5fffa789944be12110e91ff"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "5bab1f9eb587d9f538e0a18589768c71b741dcebd9fd3863d7b5dd35f10ccd1a",
+              "url": "https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:5bab1f9eb587d9f538e0a18589768c71b741dcebd9fd3863d7b5dd35f10ccd1a"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "0ec47d18c50f5770db2b3f07b5b85644284cc6ee8e07e23b11d2727e95932b77",
+              "url": "https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:0ec47d18c50f5770db2b3f07b5b85644284cc6ee8e07e23b11d2727e95932b77"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "475d36ffae1f472554eac1fd96ca3ead3840c3d8fd2d34b257d2d7c4c1e5a17f",
+              "url": "https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:475d36ffae1f472554eac1fd96ca3ead3840c3d8fd2d34b257d2d7c4c1e5a17f"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "372ff34217dfe1185894c7ee06dc5c865eea331192c13ed5e62df0babe1b0520",
+              "url": "https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:372ff34217dfe1185894c7ee06dc5c865eea331192c13ed5e62df0babe1b0520"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Perl compatible regular expressions library with a new API",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "pcre2-config",
+        "pcre2grep",
+        "pcre2test"
+      ],
+      "full_name": "pcre2",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 76882954,
+        "analytics_30d": 202201,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 10.9,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:24Z",
+        "last_30_days": 2204439,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fpcre2",
+        "start_date": "2026-10-04"
+      },
+      "head_dependencies": {
+        "build_dependencies": [
+          "autoconf",
+          "automake",
+          "libtool"
+        ],
+        "dependencies": [],
+        "no_linkage_dependencies": [],
+        "optional_dependencies": [],
+        "recommended_dependencies": [],
+        "test_dependencies": [],
+        "uses_from_macos": [
+          "bzip2"
+        ],
+        "uses_from_macos_bounds": [
+          {}
+        ]
+      },
+      "homepage": "https://www.pcre.org/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "BSD-3-Clause",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "pcre2",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "2dcb74b4bc19dc81ace51feac7bb626b679c7b730eca1d3492d73fe822134fb8"
+      },
+      "ruby_source_path": "Formula/p/pcre2.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "main",
+          "url": "https://github.com/PCRE2Project/pcre2.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "53c156e1ba416a20da8e65395daa132da0d80e76910424caca3fcdae7831d384",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.49/pcre2-10.49.tar.bz2",
+          "using": null
+        }
+      },
+      "uses_from_macos": [
+        "bzip2"
+      ],
+      "uses_from_macos_bounds": [
+        {}
+      ],
+      "variations": {
+        "arm64_linux": {
+          "dependencies": [
+            "zlib-ng-compat"
+          ],
+          "head_dependencies": {
+            "build_dependencies": [
+              "autoconf",
+              "automake",
+              "libtool"
+            ],
+            "dependencies": [
+              "zlib-ng-compat"
+            ],
+            "no_linkage_dependencies": [],
+            "optional_dependencies": [],
+            "recommended_dependencies": [],
+            "test_dependencies": [],
+            "uses_from_macos": [
+              "bzip2"
+            ],
+            "uses_from_macos_bounds": [
+              {}
+            ]
+          }
+        },
+        "x86_64_linux": {
+          "dependencies": [
+            "zlib-ng-compat"
+          ],
+          "head_dependencies": {
+            "build_dependencies": [
+              "autoconf",
+              "automake",
+              "libtool"
+            ],
+            "dependencies": [
+              "zlib-ng-compat"
+            ],
+            "no_linkage_dependencies": [],
+            "optional_dependencies": [],
+            "recommended_dependencies": [],
+            "test_dependencies": [],
+            "uses_from_macos": [
+              "bzip2"
+            ],
+            "uses_from_macos_bounds": [
+              {}
+            ]
+          }
+        }
+      },
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "10.49"
+      }
+    },
+    "ripgrep": {
+      "aliases": [
+        "rg"
+      ],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "ripgrep": 6
+          }
+        },
+        "install": {
+          "30d": {
+            "ripgrep": 47071,
+            "ripgrep --HEAD": 43
+          },
+          "365d": {
+            "ripgrep": 702403,
+            "ripgrep --HEAD": 778
+          },
+          "90d": {
+            "ripgrep": 149042,
+            "ripgrep --HEAD": 158
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "ripgrep": 36219,
+            "ripgrep --HEAD": 43
+          },
+          "365d": {
+            "ripgrep": 504258,
+            "ripgrep --HEAD": 778
+          },
+          "90d": {
+            "ripgrep": 114336,
+            "ripgrep --HEAD": 158
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "327215e000a1e83a9e3bf643bd88a3211796bfede87958955ad2a27df270ec4d",
+              "url": "https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:327215e000a1e83a9e3bf643bd88a3211796bfede87958955ad2a27df270ec4d"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "d3659fe11edcb52b93ce3510428435991fcb479c854d0b66bd14a2ffc7ef956a",
+              "url": "https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:d3659fe11edcb52b93ce3510428435991fcb479c854d0b66bd14a2ffc7ef956a"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "2754dac3a512be2007dde3a8a481f1753ea9b0e22041a1a32b544daed966981b",
+              "url": "https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:2754dac3a512be2007dde3a8a481f1753ea9b0e22041a1a32b544daed966981b"
+            },
+            "arm64_sonoma": {
+              "cellar": ":any",
+              "sha256": "8e485dfa978673c6ada6f83ca39f5f15f8b7444b0cdbe8814cd3d3d7bd83afa0",
+              "url": "https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:8e485dfa978673c6ada6f83ca39f5f15f8b7444b0cdbe8814cd3d3d7bd83afa0"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "7829e262f0ebbb51c4744b343bf801a5107479fe08c6d6f61f4d909748cba337",
+              "url": "https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:7829e262f0ebbb51c4744b343bf801a5107479fe08c6d6f61f4d909748cba337"
+            },
+            "sonoma": {
+              "cellar": ":any",
+              "sha256": "9dd76bad725daf9ad1d4c983419e79ec92aefdae0cc9c92d465b424c8aea4808",
+              "url": "https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:9dd76bad725daf9ad1d4c983419e79ec92aefdae0cc9c92d465b424c8aea4808"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "b92a80402edd4e6fa17e9eb580d20e941c60787510c4ce2716fa53d2c6d4c432",
+              "url": "https://ghcr.io/v2/homebrew/core/ripgrep/blobs/sha256:b92a80402edd4e6fa17e9eb580d20e941c60787510c4ce2716fa53d2c6d4c432"
+            }
+          },
+          "rebuild": 1,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "asciidoctor",
+        "pkgconf",
+        "rust"
+      ],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [
+        "pcre2"
+      ],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Search tool like grep and The Silver Searcher",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "rg"
+      ],
+      "full_name": "ripgrep",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 8349245,
+        "analytics_30d": 47114,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 12.83,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:50Z",
+        "last_30_days": 604632,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fripgrep",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://github.com/BurntSushi/ripgrep",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "Unlicense",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "ripgrep",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "2e493e50a49a37f7ed090f44019d1c58dd30c90a5c6fe1ecbcd69334dccaa60b"
+      },
+      "ruby_source_path": "Formula/r/ripgrep.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "master",
+          "url": "https://github.com/BurntSushi/ripgrep.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "7605249d3eb0d5f170e3414498e3344e26b1e7a147aec518b57090b80036a562",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/BurntSushi/ripgrep/archive/refs/tags/15.2.0.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {},
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "15.2.0"
+      }
+    },
+    "xz": {
+      "aliases": [],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "xz": 551
+          }
+        },
+        "install": {
+          "30d": {
+            "xz": 358027,
+            "xz --HEAD": 40
+          },
+          "365d": {
+            "xz": 3660215,
+            "xz --HEAD": 503
+          },
+          "90d": {
+            "xz": 719071,
+            "xz --HEAD": 82
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "xz": 46893,
+            "xz --HEAD": 33
+          },
+          "365d": {
+            "xz": 586631,
+            "xz --HEAD": 464
+          },
+          "90d": {
+            "xz": 108875,
+            "xz --HEAD": 72
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "b2b5d6523153be05c20bcc51cd358ea3dd1f4bf893748fdedb779ab508ea63ce",
+              "url": "https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:b2b5d6523153be05c20bcc51cd358ea3dd1f4bf893748fdedb779ab508ea63ce"
+            },
+            "arm64_linux": {
+              "cellar": ":any",
+              "sha256": "fd4f4c75678cc31e474931ff9798f0ca9aeb137b401faec2f6339891f2b40f94",
+              "url": "https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:fd4f4c75678cc31e474931ff9798f0ca9aeb137b401faec2f6339891f2b40f94"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "c2724c0db0398134694b8366d30d14f4de376115fb54c559c331d5fd0474af76",
+              "url": "https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:c2724c0db0398134694b8366d30d14f4de376115fb54c559c331d5fd0474af76"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "d291ad2277682238329b0e4d249e5e2c948c4b10cd64dba1963d897330ad88dd",
+              "url": "https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:d291ad2277682238329b0e4d249e5e2c948c4b10cd64dba1963d897330ad88dd"
+            },
+            "x86_64_linux": {
+              "cellar": ":any",
+              "sha256": "aa3b18af4d682e52746cd73dca60cec5422bfe1dc8bf4fff3c38a63fe4d516f5",
+              "url": "https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:aa3b18af4d682e52746cd73dca60cec5422bfe1dc8bf4fff3c38a63fe4d516f5"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "General-purpose data compression with high compression ratio",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "lzcat",
+        "lzcmp",
+        "lzdiff",
+        "lzegrep",
+        "lzfgrep",
+        "lzgrep",
+        "lzless",
+        "lzma",
+        "lzmadec",
+        "lzmainfo",
+        "lzmore",
+        "unlzma",
+        "unxz",
+        "xz",
+        "xzcat",
+        "xzcmp",
+        "xzdec",
+        "xzdiff",
+        "xzegrep",
+        "xzfgrep",
+        "xzgrep",
+        "xzless",
+        "xzmore"
+      ],
+      "full_name": "xz",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 127449436,
+        "analytics_30d": 358067,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 9.67,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:21Z",
+        "last_30_days": 3462520,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fxz",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://tukaani.org/xz/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "0BSD AND GPL-2.0-or-later",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "xz",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 0,
+      "ruby_source_checksum": {
+        "sha256": "e5b8bbf09dccb4a1f2ee333ed65b13ee773350a26735ef594ca859d2cf85248e"
+      },
+      "ruby_source_path": "Formula/x/xz.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "stable": {
+          "checksum": "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {},
+      "version_scheme": 1,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": null,
+        "stable": "5.8.4"
+      }
+    },
+    "zstd": {
+      "aliases": [
+        "pzstd"
+      ],
+      "analytics": {
+        "build_error": {
+          "30d": {
+            "zstd": 183
+          }
+        },
+        "install": {
+          "30d": {
+            "zstd": 197338,
+            "zstd --HEAD": 12
+          },
+          "365d": {
+            "zstd": 2780094,
+            "zstd --HEAD": 168
+          },
+          "90d": {
+            "zstd": 462521,
+            "zstd --HEAD": 28
+          }
+        },
+        "install_on_request": {
+          "30d": {
+            "zstd": 4216,
+            "zstd --HEAD": 10
+          },
+          "365d": {
+            "zstd": 118784,
+            "zstd --HEAD": 141
+          },
+          "90d": {
+            "zstd": 23778,
+            "zstd --HEAD": 23
+          }
+        }
+      },
+      "autobump": true,
+      "bottle": {
+        "stable": {
+          "files": {
+            "arm64_golden_gate": {
+              "cellar": ":any",
+              "sha256": "7fb4af03304cc4897326168cdcd53290311c5543150f5502a61c3e84b6d62765",
+              "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:7fb4af03304cc4897326168cdcd53290311c5543150f5502a61c3e84b6d62765"
+            },
+            "arm64_linux": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "575617c1532fe90e212c052fb14fcd4fa295890e3bc9ac69dc52404a04a95855",
+              "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:575617c1532fe90e212c052fb14fcd4fa295890e3bc9ac69dc52404a04a95855"
+            },
+            "arm64_sequoia": {
+              "cellar": ":any",
+              "sha256": "d72adf48460a8384b256f88061cd7b9df4977df7fa2e0794051d427db754a565",
+              "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:d72adf48460a8384b256f88061cd7b9df4977df7fa2e0794051d427db754a565"
+            },
+            "arm64_sonoma": {
+              "cellar": ":any",
+              "sha256": "35b5150b27512a94ebaee7b4399aaa8adf42d247e6968319e4aeac3c05365281",
+              "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:35b5150b27512a94ebaee7b4399aaa8adf42d247e6968319e4aeac3c05365281"
+            },
+            "arm64_tahoe": {
+              "cellar": ":any",
+              "sha256": "628a4ef53428d0078e3d76d297171ce8d0294f5ec1de3f20305e08c4dd333565",
+              "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:628a4ef53428d0078e3d76d297171ce8d0294f5ec1de3f20305e08c4dd333565"
+            },
+            "sequoia": {
+              "cellar": ":any",
+              "sha256": "8b2443dfa62b9d28cf0321e0e670bb096b2680fe72739999228291f36018311f",
+              "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:8b2443dfa62b9d28cf0321e0e670bb096b2680fe72739999228291f36018311f"
+            },
+            "sonoma": {
+              "cellar": ":any",
+              "sha256": "8b8656acd6f30bcbbb9a033ae840afea299c9f0852f71b7540492b0fe7a36742",
+              "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:8b8656acd6f30bcbbb9a033ae840afea299c9f0852f71b7540492b0fe7a36742"
+            },
+            "tahoe": {
+              "cellar": ":any",
+              "sha256": "90c345a174a631a157f7ea056fe41205fb77778e65d4bdc91097a3fb3a62faa6",
+              "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:90c345a174a631a157f7ea056fe41205fb77778e65d4bdc91097a3fb3a62faa6"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "sha256": "3d5ca8948526a2e3a487db0cd0acec9f4b415d5a4b08cffe27e2ea0c339c9dbe",
+              "url": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:3d5ca8948526a2e3a487db0cd0acec9f4b415d5a4b08cffe27e2ea0c339c9dbe"
+            }
+          },
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core"
+        }
+      },
+      "build_dependencies": [
+        "cmake"
+      ],
+      "caveats": null,
+      "compatibility_version": 1,
+      "conflicts_with": [],
+      "conflicts_with_reasons": [],
+      "dependencies": [
+        "lz4",
+        "xz"
+      ],
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Zstandard is a real-time compression algorithm",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "executables": [
+        "pzstd",
+        "unzstd",
+        "zstd",
+        "zstdcat",
+        "zstdgrep",
+        "zstdless",
+        "zstdmt"
+      ],
+      "full_name": "zstd",
+      "generated_date": "2026-11-05",
+      "github_packages_downloads": {
+        "all_time": 81529427,
+        "analytics_30d": 197350,
+        "analytics_end_date": "2026-11-03",
+        "analytics_ratio": 9.04,
+        "analytics_start_date": "2026-10-04",
+        "end_date": "2026-11-02",
+        "fetched_at": "2026-11-03T00:38:24Z",
+        "last_30_days": 1783584,
+        "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fzstd",
+        "start_date": "2026-10-04"
+      },
+      "homepage": "https://facebook.github.io/zstd/",
+      "installed": [],
+      "keg_only": false,
+      "keg_only_reason": null,
+      "license": "(BSD-3-Clause OR GPL-2.0-only) AND BSD-2-Clause AND MIT",
+      "link_overwrite": [],
+      "linked_keg": null,
+      "local_patch_checksums": {},
+      "name": "zstd",
+      "no_autobump_message": null,
+      "no_linkage_dependencies": [],
+      "oldnames": [],
+      "optional_dependencies": [],
+      "options": [],
+      "outdated": false,
+      "patches": [],
+      "pinned": false,
+      "post_install_defined": false,
+      "post_install_steps": [],
+      "pour_bottle_only_if": null,
+      "recommended_dependencies": [],
+      "requirements": [],
+      "revision": 1,
+      "ruby_source_checksum": {
+        "sha256": "e40f1de5b4e53faf64cad3d24dd74e28948d674caf96b3229310ce78e66b030e"
+      },
+      "ruby_source_path": "Formula/z/zstd.rb",
+      "service": null,
+      "skip_livecheck": false,
+      "tap": "homebrew/core",
+      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "test_dependencies": [],
+      "urls": {
+        "head": {
+          "branch": "dev",
+          "url": "https://github.com/facebook/zstd.git",
+          "using": null
+        },
+        "stable": {
+          "checksum": "37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3",
+          "revision": null,
+          "tag": null,
+          "url": "https://github.com/facebook/zstd/archive/refs/tags/v1.5.7.tar.gz",
+          "using": null
+        }
+      },
+      "uses_from_macos": [],
+      "uses_from_macos_bounds": [],
+      "variations": {
+        "arm64_linux": {
+          "dependencies": [
+            "lz4",
+            "xz",
+            "zlib-ng-compat"
+          ]
+        },
+        "x86_64_linux": {
+          "dependencies": [
+            "lz4",
+            "xz",
+            "zlib-ng-compat"
+          ]
+        }
+      },
+      "version_scheme": 0,
+      "versioned_formulae": [],
+      "versions": {
+        "bottle": true,
+        "head": "HEAD",
+        "stable": "1.5.7"
+      }
+    }
+  }
+}

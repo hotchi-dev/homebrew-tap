@@ -1,0 +1,344 @@
+[
+  {
+    "id": "brotli",
+    "kind": "homebrew",
+    "package": "brotli",
+    "version": "1.2.1",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/brotli.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "ca-certificates",
+    "kind": "homebrew",
+    "package": "ca-certificates",
+    "version": "2026-11-05",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/ca-certificates.rb"
+    ],
+    "bottles": [
+      "all"
+    ]
+  },
+  {
+    "id": "curl",
+    "kind": "homebrew",
+    "package": "curl",
+    "version": "8.23.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/curl.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "gettext",
+    "kind": "homebrew",
+    "package": "gettext",
+    "version": "1.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/gettext.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "gh",
+    "kind": "homebrew",
+    "package": "gh",
+    "version": "2.103.3",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/gh.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "git",
+    "kind": "homebrew",
+    "package": "git",
+    "version": "2.56.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/git.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "go",
+    "kind": "homebrew",
+    "package": "go",
+    "version": "1.27.3",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/go.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "json-c",
+    "kind": "homebrew",
+    "package": "json-c",
+    "version": "0.19",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/json-c.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_sonoma",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "libnghttp2",
+    "kind": "homebrew",
+    "package": "libnghttp2",
+    "version": "1.71.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/libnghttp2.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "libnghttp3",
+    "kind": "homebrew",
+    "package": "libnghttp3",
+    "version": "1.19.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/libnghttp3.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "libngtcp2",
+    "kind": "homebrew",
+    "package": "libngtcp2",
+    "version": "1.26.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/libngtcp2.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "libpsl",
+    "kind": "homebrew",
+    "package": "libpsl",
+    "version": "0.23.3",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/libpsl.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_sonoma",
+      "arm64_tahoe",
+      "sonoma"
+    ]
+  },
+  {
+    "id": "libssh2",
+    "kind": "homebrew",
+    "package": "libssh2",
+    "version": "1.11.1",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/libssh2.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "libunistring",
+    "kind": "homebrew",
+    "package": "libunistring",
+    "version": "1.5",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/libunistring.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "lz4",
+    "kind": "homebrew",
+    "package": "lz4",
+    "version": "1.11.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/lz4.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "netbird",
+    "kind": "homebrew",
+    "package": "netbird",
+    "version": "0.82.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/netbird.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "opencode",
+    "kind": "homebrew",
+    "package": "opencode",
+    "version": "2.2.5",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/opencode.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "openssl@4",
+    "kind": "homebrew",
+    "package": "openssl@4",
+    "version": "4.1.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/openssl@4.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "pcre2",
+    "kind": "homebrew",
+    "package": "pcre2",
+    "version": "10.49",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/pcre2.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "ripgrep",
+    "kind": "homebrew",
+    "package": "ripgrep",
+    "version": "15.2.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/ripgrep.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_sonoma",
+      "arm64_tahoe",
+      "sonoma"
+    ]
+  },
+  {
+    "id": "xz",
+    "kind": "homebrew",
+    "package": "xz",
+    "version": "5.8.4",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/xz.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_tahoe"
+    ]
+  },
+  {
+    "id": "zstd",
+    "kind": "homebrew",
+    "package": "zstd",
+    "version": "1.5.7",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Formula/zstd.rb"
+    ],
+    "bottles": [
+      "arm64_golden_gate",
+      "arm64_sequoia",
+      "arm64_sonoma",
+      "arm64_tahoe",
+      "sequoia",
+      "sonoma",
+      "tahoe"
+    ]
+  },
+  {
+    "id": "claude-code",
+    "kind": "homebrew-cask",
+    "package": "claude-code",
+    "version": "2.1.311",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Casks/claude-code.rb"
+    ]
+  },
+  {
+    "id": "codex",
+    "kind": "homebrew-cask",
+    "package": "codex",
+    "version": "0.166.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Casks/codex.rb"
+    ]
+  },
+  {
+    "id": "netbird-ui",
+    "kind": "github",
+    "package": "netbirdio/netbird",
+    "version": "0.82.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Casks/netbird-ui.rb"
+    ]
+  }
+]

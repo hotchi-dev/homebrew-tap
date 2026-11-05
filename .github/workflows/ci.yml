@@ -1,0 +1,34 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  deterministic:
+    # Offline regeneration from upstream-lock.json must reproduce the committed tap exactly.
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - run: python3 -I scripts/generate-tap.py .
+      - run: git diff --exit-code
+  style-audit:
+    runs-on: macos-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Tap this checkout
+        run: brew tap hotchi-dev/tap "$GITHUB_WORKSPACE"
+      # netbird-ui is copied verbatim from netbirdio/homebrew-tap and does not meet
+      # homebrew-core cask style; it is excluded rather than rewritten.
+      - name: brew style
+        run: |
+          tap="$(brew --repository hotchi-dev/tap)"
+          brew style "$tap"/Formula/*.rb "$tap"/Casks/claude-code.rb "$tap"/Casks/codex.rb
+      - name: brew audit
+        run: |
+          brew audit --formula --tap hotchi-dev/tap
+          brew audit --cask hotchi-dev/tap/claude-code hotchi-dev/tap/codex
