@@ -1,4 +1,4 @@
-# hotchi-dev/homebrew-tap (private)
+# hotchi-dev/homebrew-tap
 
 Quill's pinned macOS packages. Every formula pins an exact version and source
 sha256, and its `bottle` block points at Homebrew's own GHCR bottles by sha256,
@@ -15,5 +15,10 @@ python3 scripts/generate-tap.py .             # offline, deterministic, from ups
 Bumps arrive through Quill's upstream watcher (`hotchi-dev/quill`,
 `.github/workflows/upstream-watch.yml`) after a 72h quarantine.
 
-Access: the tap is private, so `brew tap hotchi-dev/tap` needs the user's own
-GitHub credentials (`gh auth login && gh auth setup-git`). No shared token.
+Trust: the tap is public and `brew tap hotchi-dev/tap` needs no credentials.
+Quill does not trust the tap's moving `main`: its signed manifest pins
+`brew_tap.commit`, and Quill checks out exactly that commit (detached) and
+runs brew with `HOMEBREW_NO_AUTO_UPDATE=1 HOMEBREW_NO_INSTALL_FROM_API=1`.
+A tap change only reaches users through a manifest PR that moves the pin.
+
+Platforms: macOS arm64 only. Intel Macs are unsupported; no source builds.
