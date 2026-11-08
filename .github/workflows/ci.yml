@@ -1,8 +1,12 @@
 name: CI
+# README.md is the only Markdown here and nothing reads it: a README-only
+# change skips the macOS style/audit leg. No check is required on main.
 on:
   pull_request:
+    paths-ignore: ['*.md']
   push:
     branches: [main]
+    paths-ignore: ['*.md']
   workflow_dispatch:
 permissions:
   contents: read
