@@ -9,17 +9,20 @@ permissions:
 jobs:
   deterministic:
     # Offline regeneration from upstream-lock.json must reproduce the committed tap exactly.
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - run: python3 -I scripts/generate-tap.py .
       - run: git diff --exit-code
   style-audit:
-    runs-on: macos-latest
+    runs-on: blacksmith-6vcpu-macos-latest
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      # The Blacksmith image may predate DSL used by the upstream casks.
+      - name: Update Homebrew
+        run: brew update
       - name: Tap this checkout
         run: |
           brew tap hotchi-dev/tap "$GITHUB_WORKSPACE"
