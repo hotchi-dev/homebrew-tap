@@ -20,6 +20,9 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      # The Blacksmith image may predate DSL used by the upstream casks.
+      - name: Update Homebrew
+        run: brew update
       - name: Tap this checkout
         run: |
           brew tap hotchi-dev/tap "$GITHUB_WORKSPACE"
