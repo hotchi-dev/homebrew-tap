@@ -10,21 +10,24 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+# This repository is public: GitHub-hosted runners are free here, and the org's
+# self-hosted (k3s) runner group must never serve a public repository, so
+# neither job follows vars.CI_RUNNER.
 jobs:
   deterministic:
     # Offline regeneration from upstream-lock.json must reproduce the committed tap exactly.
-    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - run: python3 -I scripts/generate-tap.py .
       - run: git diff --exit-code
   style-audit:
-    runs-on: blacksmith-6vcpu-macos-latest
+    runs-on: macos-15
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      # The Blacksmith image may predate DSL used by the upstream casks.
+      # The runner image may predate DSL used by the upstream casks.
       - name: Update Homebrew
         run: brew update
       - name: Tap this checkout
