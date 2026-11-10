@@ -200,7 +200,7 @@
     "id": "lz4",
     "kind": "homebrew",
     "package": "lz4",
-    "version": "1.11.0",
+    "version": "1.11.1",
     "paths": [
       "hotchi-dev/homebrew-tap/Formula/lz4.rb"
     ],
@@ -214,7 +214,7 @@
     "id": "netbird",
     "kind": "homebrew",
     "package": "netbird",
-    "version": "0.82.0",
+    "version": "0.82.1",
     "paths": [
       "hotchi-dev/homebrew-tap/Formula/netbird.rb"
     ],
@@ -228,7 +228,7 @@
     "id": "opencode",
     "kind": "homebrew",
     "package": "opencode",
-    "version": "2.2.5",
+    "version": "2.2.7",
     "paths": [
       "hotchi-dev/homebrew-tap/Formula/opencode.rb"
     ],
@@ -327,7 +327,7 @@
     "id": "codex",
     "kind": "homebrew-cask",
     "package": "codex",
-    "version": "0.166.0",
+    "version": "0.167.0",
     "paths": [
       "hotchi-dev/homebrew-tap/Casks/codex.rb"
     ]
@@ -336,9 +336,27 @@
     "id": "netbird-ui",
     "kind": "tap-cask",
     "package": "netbirdio/homebrew-tap:Casks/netbird-ui.rb",
-    "version": "0.82.0",
+    "version": "0.82.1",
     "paths": [
       "hotchi-dev/homebrew-tap/Casks/netbird-ui.rb"
+    ]
+  },
+  {
+    "id": "onlyoffice",
+    "kind": "homebrew-cask",
+    "package": "onlyoffice",
+    "version": "10.0.0",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Casks/onlyoffice.rb"
+    ]
+  },
+  {
+    "id": "t3-code",
+    "kind": "homebrew-cask",
+    "package": "t3-code",
+    "version": "0.1.8",
+    "paths": [
+      "hotchi-dev/homebrew-tap/Casks/t3-code.rb"
     ]
   }
 ]
