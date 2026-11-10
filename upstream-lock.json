@@ -4,13 +4,13 @@
       "analytics": {
         "install": {
           "30d": {
-            "claude-code": 60157
+            "claude-code": 58828
           },
           "365d": {
-            "claude-code": 1177617
+            "claude-code": 1169330
           },
           "90d": {
-            "claude-code": 153398
+            "claude-code": 150540
           }
         }
       },
@@ -65,7 +65,7 @@
       "disable_replacement_formula": null,
       "disabled": false,
       "full_token": "claude-code",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "homepage": "https://claude.com/product/claude-code",
       "installed": null,
       "installed_time": null,
@@ -105,7 +105,7 @@
         "arm64_linux"
       ],
       "tap": "homebrew/cask",
-      "tap_git_head": "89c4166494d7d38f530a0c3ff260c9bdc5a28a87",
+      "tap_git_head": "11490971ee74bb39e43fac6fb5cfcbc16fda1ca5",
       "token": "claude-code",
       "url": "https://downloads.claude.ai/claude-code-releases/2.1.311/darwin-arm64/claude",
       "url_specs": {},
@@ -153,13 +153,13 @@
       "analytics": {
         "install": {
           "30d": {
-            "codex": 258471
+            "codex": 368586
           },
           "365d": {
-            "codex": 1092124
+            "codex": 1229195
           },
           "90d": {
-            "codex": 488978
+            "codex": 608994
           }
         }
       },
@@ -216,7 +216,7 @@
       "disable_replacement_formula": null,
       "disabled": false,
       "full_token": "codex",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "homepage": "https://github.com/openai/codex",
       "installed": null,
       "installed_time": null,
@@ -230,12 +230,12 @@
       "pinned": false,
       "pinned_version": null,
       "rename": [],
-      "ruby": "cask \"codex\" do\n  arch arm: \"aarch64\", intel: \"x86_64\"\n  os macos: \"apple-darwin\", linux: \"unknown-linux-musl\"\n\n  version \"0.166.0\"\n  sha256 arm:          \"55a440cb579f970abe7c79ab181e54b0ea4c419be99f333bbd868eebac9c21f0\",\n         intel:        \"1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9\",\n         arm64_linux:  \"7821b77dda2e6283fb1f63f3165177a271da8833e857cf673c6ca1c9db3bfcc6\",\n         x86_64_linux: \"1d44b28bc4ac9937d7d3532264baa68a507ce364956a0d4ebb856f331cdee254\"\n\n  url \"https://github.com/openai/codex/releases/download/rust-v#{version}/codex-package-#{arch}-#{os}.tar.gz\"\n  name \"Codex\"\n  desc \"OpenAI's coding agent that runs in your terminal\"\n  homepage \"https://github.com/openai/codex\"\n\n  livecheck do\n    url :url\n    regex(/^rust[._-]v?(\\d+(?:\\.\\d+)+)$/i)\n    strategy :github_latest\n  end\n\n  binary \"bin/codex\"\n  generate_completions_from_executable \"bin/codex\", \"completion\"\n\n  zap rmdir: \"~/.codex\"\nend\n",
+      "ruby": "cask \"codex\" do\n  arch arm: \"aarch64\", intel: \"x86_64\"\n  os macos: \"apple-darwin\", linux: \"unknown-linux-musl\"\n\n  version \"0.167.0\"\n  sha256 arm:          \"af45ed45d940d7998809622c1c0296d3098ed7d7fad695284422c228bd454517\",\n         intel:        \"3d7c4c83296db63b5108e13612c77f3e5020b6c5f2fc004bee413a5cc92de899\",\n         arm64_linux:  \"0de261ecf1e7f3028a7952f03fca2093f749277d38590b78bb32f8567756bbb7\",\n         x86_64_linux: \"3bbf75e83de6b58aed28f2cf6e33ad423ec31fd4700a1457b94be557ea5a7c6e\"\n\n  url \"https://github.com/openai/codex/releases/download/rust-v#{version}/codex-package-#{arch}-#{os}.tar.gz\"\n  name \"Codex\"\n  desc \"OpenAI's coding agent that runs in your terminal\"\n  homepage \"https://github.com/openai/codex\"\n\n  livecheck do\n    url :url\n    regex(/^rust[._-]v?(\\d+(?:\\.\\d+)+)$/i)\n    strategy :github_latest\n  end\n\n  binary \"bin/codex\"\n  generate_completions_from_executable \"bin/codex\", \"completion\"\n\n  zap rmdir: \"~/.codex\"\nend\n",
       "ruby_source_checksum": {
-        "sha256": "5f45f3fc158bf2dd1fc7c82b293fe667c27c64ff5aab76b120b4f1704e589a6d"
+        "sha256": "b0c026cc50855b4646d9eb50060c8459c9cccfe707386cadb0d0dd2324e26b14"
       },
       "ruby_source_path": "Casks/c/codex.rb",
-      "sha256": "55a440cb579f970abe7c79ab181e54b0ea4c419be99f333bbd868eebac9c21f0",
+      "sha256": "af45ed45d940d7998809622c1c0296d3098ed7d7fad695284422c228bd454517",
       "skip_livecheck": false,
       "supported_platforms": [
         "golden_gate",
@@ -256,54 +256,467 @@
         "arm64_linux"
       ],
       "tap": "homebrew/cask",
-      "tap_git_head": "89c4166494d7d38f530a0c3ff260c9bdc5a28a87",
+      "tap_git_head": "11490971ee74bb39e43fac6fb5cfcbc16fda1ca5",
       "token": "codex",
-      "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-aarch64-apple-darwin.tar.gz",
+      "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-aarch64-apple-darwin.tar.gz",
       "url_specs": {},
       "variations": {
         "arm64_linux": {
-          "sha256": "7821b77dda2e6283fb1f63f3165177a271da8833e857cf673c6ca1c9db3bfcc6",
-          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
+          "sha256": "0de261ecf1e7f3028a7952f03fca2093f749277d38590b78bb32f8567756bbb7",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-aarch64-unknown-linux-musl.tar.gz"
         },
         "big_sur": {
-          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
-          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+          "sha256": "3d7c4c83296db63b5108e13612c77f3e5020b6c5f2fc004bee413a5cc92de899",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-apple-darwin.tar.gz"
         },
         "golden_gate": {
-          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
-          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+          "sha256": "3d7c4c83296db63b5108e13612c77f3e5020b6c5f2fc004bee413a5cc92de899",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-apple-darwin.tar.gz"
         },
         "monterey": {
-          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
-          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+          "sha256": "3d7c4c83296db63b5108e13612c77f3e5020b6c5f2fc004bee413a5cc92de899",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-apple-darwin.tar.gz"
         },
         "sequoia": {
-          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
-          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+          "sha256": "3d7c4c83296db63b5108e13612c77f3e5020b6c5f2fc004bee413a5cc92de899",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-apple-darwin.tar.gz"
         },
         "sonoma": {
-          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
-          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+          "sha256": "3d7c4c83296db63b5108e13612c77f3e5020b6c5f2fc004bee413a5cc92de899",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-apple-darwin.tar.gz"
         },
         "tahoe": {
-          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
-          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+          "sha256": "3d7c4c83296db63b5108e13612c77f3e5020b6c5f2fc004bee413a5cc92de899",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-apple-darwin.tar.gz"
         },
         "ventura": {
-          "sha256": "1cb65690230be5982c654ba2655e3a3b594dce9c55b780e78bfdfeff829d7ad9",
-          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-apple-darwin.tar.gz"
+          "sha256": "3d7c4c83296db63b5108e13612c77f3e5020b6c5f2fc004bee413a5cc92de899",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-apple-darwin.tar.gz"
         },
         "x86_64_linux": {
-          "sha256": "1d44b28bc4ac9937d7d3532264baa68a507ce364956a0d4ebb856f331cdee254",
-          "url": "https://github.com/openai/codex/releases/download/rust-v0.166.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
+          "sha256": "3bbf75e83de6b58aed28f2cf6e33ad423ec31fd4700a1457b94be557ea5a7c6e",
+          "url": "https://github.com/openai/codex/releases/download/rust-v0.167.0/codex-package-x86_64-unknown-linux-musl.tar.gz"
         }
       },
-      "version": "0.166.0"
+      "version": "0.167.0"
     },
     "netbird-ui": {
-      "ruby": "\n\n\n# Netbird's UI Client Cask Formula\ncask \"netbird-ui\" do\n  version \"0.82.0\"\n\n  if Hardware::CPU.intel?\n      url \"https://github.com/netbirdio/netbird/releases/download/v0.82.0/netbird-ui_0.82.0_darwin_amd64_signed.zip\"\n      sha256 \"34cb2589672d46f969817dc9c9b886cd6ddda0c8083f18b4a4b3e1c2e48ae498\"\n      app \"netbird_ui_darwin\", target: \"Netbird UI.app\"\n  else\n      url \"https://github.com/netbirdio/netbird/releases/download/v0.82.0/netbird-ui_0.82.0_darwin_arm64_signed.zip\"\n      sha256 \"919cbb6abdfa90d52b19b9412581313f97daddd0129fac1a5c8a0c4a28d40c86\"\n      app \"netbird_ui_darwin\", target: \"Netbird UI.app\"\n  end\n\n  depends_on formula: \"netbird\"\n\n  postflight_steps do\n    set_permissions [\"Netbird UI.app/installer.sh\", \"Netbird UI.app/uninstaller.sh\"], \"0755\",\n                    base: :appdir, recursive: false\n    run \"Netbird UI.app/installer.sh\", args: [\"#{version}\"], base: :appdir, sudo: true\n  end\n\n  uninstall_preflight_steps do\n    run \"/bin/launchctl\", args: [\"bootout\", \"system/netbird\"], sudo: true, must_succeed: false\n    run \"/bin/launchctl\", args: [\"unload\", \"/Library/LaunchDaemons/netbird.plist\"],\n        sudo: true, must_succeed: false\n    remove \"/Library/LaunchDaemons/netbird.plist\", sudo: true\n  end\n\n  name \"Netbird UI\"\n  desc \"Netbird UI Client\"\n  homepage \"https://www.netbird.io/\"\nend\n",
+      "ruby": "\n\n\n# Netbird's UI Client Cask Formula\ncask \"netbird-ui\" do\n  version \"0.82.1\"\n\n  if Hardware::CPU.intel?\n      url \"https://github.com/netbirdio/netbird/releases/download/v0.82.1/netbird-ui_0.82.1_darwin_amd64_signed.zip\"\n      sha256 \"4253db19181e4f37aeb2000dd6288f9aa351bc350fc126dfe4d44234dc9c0976\"\n      app \"netbird_ui_darwin\", target: \"Netbird UI.app\"\n  else\n      url \"https://github.com/netbirdio/netbird/releases/download/v0.82.1/netbird-ui_0.82.1_darwin_arm64_signed.zip\"\n      sha256 \"9cd57d6f42997f18fffff0b41dfd658bb5c3e9f5581dd46ab3d6d4706e956412\"\n      app \"netbird_ui_darwin\", target: \"Netbird UI.app\"\n  end\n\n  depends_on formula: \"netbird\"\n\n  postflight_steps do\n    set_permissions [\"Netbird UI.app/installer.sh\", \"Netbird UI.app/uninstaller.sh\"], \"0755\",\n                    base: :appdir, recursive: false\n    run \"Netbird UI.app/installer.sh\", args: [\"#{version}\"], base: :appdir, sudo: true\n  end\n\n  uninstall_preflight_steps do\n    run \"/bin/launchctl\", args: [\"bootout\", \"system/netbird\"], sudo: true, must_succeed: false\n    run \"/bin/launchctl\", args: [\"unload\", \"/Library/LaunchDaemons/netbird.plist\"],\n        sudo: true, must_succeed: false\n    remove \"/Library/LaunchDaemons/netbird.plist\", sudo: true\n  end\n\n  name \"Netbird UI\"\n  desc \"Netbird UI Client\"\n  homepage \"https://www.netbird.io/\"\nend\n",
       "upstream": "netbirdio/homebrew-tap",
-      "version": "0.82.0"
+      "version": "0.82.1"
+    },
+    "onlyoffice": {
+      "analytics": {
+        "install": {
+          "30d": {
+            "onlyoffice": 1131
+          },
+          "365d": {
+            "onlyoffice": 9417
+          },
+          "90d": {
+            "onlyoffice": 2694
+          }
+        }
+      },
+      "artifacts": [
+        {
+          "app": [
+            "ONLYOFFICE.app"
+          ],
+          "target": "/Applications/ONLYOFFICE.app"
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/Library/Application Support/asc.onlyoffice.ONLYOFFICE",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/asc.onlyoffice.onlyoffice.sfl*",
+                "~/Library/HTTPStorages/asc.onlyoffice.ONLYOFFICE",
+                "~/Library/Preferences/asc.onlyoffice.editors-helper-renderer.plist",
+                "~/Library/Preferences/asc.onlyoffice.ONLYOFFICE.plist"
+              ]
+            }
+          ]
+        }
+      ],
+      "auto_updates": true,
+      "autobump": true,
+      "bundle_short_version": null,
+      "bundle_version": null,
+      "caveats": null,
+      "caveats_rosetta": null,
+      "conflicts_with": null,
+      "container": null,
+      "depends_on": {},
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Document editor",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "full_token": "onlyoffice",
+      "generated_date": "2026-11-10",
+      "homepage": "https://www.onlyoffice.com/",
+      "installed": null,
+      "installed_time": null,
+      "languages": [],
+      "name": [
+        "ONLYOFFICE"
+      ],
+      "no_autobump_message": null,
+      "old_tokens": [],
+      "outdated": false,
+      "pinned": false,
+      "pinned_version": null,
+      "rename": [],
+      "ruby": "cask \"onlyoffice\" do\n  arch arm: on_system_conditional(macos: \"arm\", linux: \"arm64\"), intel: \"x86_64\"\n\n  on_macos do\n    version \"10.0.0\"\n    sha256 arm:   \"9095cc8c46f1206237d690c7e146fada0d72dbf7f40c035cd5fd218b680c2deb\",\n           intel: \"769f514a1030aad3af0d654dff22b93ea11689afa3a59b98579a3ea19e3fa7a4\"\n\n    url \"https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v#{version}/ONLYOFFICE-#{arch}.dmg\"\n\n    livecheck do\n      url :url\n      strategy :github_latest\n    end\n\n    auto_updates true\n\n    app \"ONLYOFFICE.app\"\n\n    zap trash: [\n      \"~/Library/Application Support/asc.onlyoffice.ONLYOFFICE\",\n      \"~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/asc.onlyoffice.onlyoffice.sfl*\",\n      \"~/Library/HTTPStorages/asc.onlyoffice.ONLYOFFICE\",\n      \"~/Library/Preferences/asc.onlyoffice.editors-helper-renderer.plist\",\n      \"~/Library/Preferences/asc.onlyoffice.ONLYOFFICE.plist\",\n    ]\n  end\n  on_linux do\n    version \"9.4.0\"\n    sha256 arm64_linux:  \"7dfc2fa195ff9912a4022841613b9a99fdba2a238792648f257007a7df887b7c\",\n           x86_64_linux: \"f5faf24552665262fe94486a510b997d2e5a24bde14df94c802c79bf17f9254c\"\n\n    url \"https://github.com/ONLYOFFICE/appimage-desktopeditors/releases/download/v#{version}/DesktopEditors-#{arch}.AppImage\"\n\n    livecheck do\n      url :url\n      strategy :github_latest\n    end\n\n    app_image \"DesktopEditors-#{arch}.AppImage\", target: \"ONLYOFFICE.AppImage\"\n\n    zap trash: [\n      \"~/.config/onlyoffice\",\n      \"~/.local/share/onlyoffice\",\n    ]\n  end\n\n  name \"ONLYOFFICE\"\n  desc \"Document editor\"\n  homepage \"https://www.onlyoffice.com/\"\nend\n",
+      "ruby_source_checksum": {
+        "sha256": "894e9af2cbe12118190dfd139d10431bd0ae1715377d7139ed2983e0adb0efb9"
+      },
+      "ruby_source_path": "Casks/o/onlyoffice.rb",
+      "sha256": "9095cc8c46f1206237d690c7e146fada0d72dbf7f40c035cd5fd218b680c2deb",
+      "skip_livecheck": false,
+      "supported_platforms": [
+        "golden_gate",
+        "arm64_golden_gate",
+        "tahoe",
+        "arm64_tahoe",
+        "sequoia",
+        "arm64_sequoia",
+        "sonoma",
+        "arm64_sonoma",
+        "ventura",
+        "arm64_ventura",
+        "monterey",
+        "arm64_monterey",
+        "big_sur",
+        "arm64_big_sur",
+        "x86_64_linux",
+        "arm64_linux"
+      ],
+      "tap": "homebrew/cask",
+      "tap_git_head": "11490971ee74bb39e43fac6fb5cfcbc16fda1ca5",
+      "token": "onlyoffice",
+      "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v10.0.0/ONLYOFFICE-arm.dmg",
+      "url_specs": {},
+      "variations": {
+        "arm64_linux": {
+          "artifacts": [
+            {
+              "app_image": [
+                "DesktopEditors-arm64.AppImage",
+                {
+                  "target": "ONLYOFFICE.AppImage"
+                }
+              ],
+              "target": "/$HOME/Applications/ONLYOFFICE.AppImage"
+            },
+            {
+              "zap": [
+                {
+                  "trash": [
+                    "~/.config/onlyoffice",
+                    "~/.local/share/onlyoffice"
+                  ]
+                }
+              ]
+            }
+          ],
+          "auto_updates": null,
+          "sha256": "7dfc2fa195ff9912a4022841613b9a99fdba2a238792648f257007a7df887b7c",
+          "url": "https://github.com/ONLYOFFICE/appimage-desktopeditors/releases/download/v9.4.0/DesktopEditors-arm64.AppImage",
+          "version": "9.4.0"
+        },
+        "big_sur": {
+          "sha256": "769f514a1030aad3af0d654dff22b93ea11689afa3a59b98579a3ea19e3fa7a4",
+          "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v10.0.0/ONLYOFFICE-x86_64.dmg"
+        },
+        "golden_gate": {
+          "sha256": "769f514a1030aad3af0d654dff22b93ea11689afa3a59b98579a3ea19e3fa7a4",
+          "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v10.0.0/ONLYOFFICE-x86_64.dmg"
+        },
+        "monterey": {
+          "sha256": "769f514a1030aad3af0d654dff22b93ea11689afa3a59b98579a3ea19e3fa7a4",
+          "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v10.0.0/ONLYOFFICE-x86_64.dmg"
+        },
+        "sequoia": {
+          "sha256": "769f514a1030aad3af0d654dff22b93ea11689afa3a59b98579a3ea19e3fa7a4",
+          "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v10.0.0/ONLYOFFICE-x86_64.dmg"
+        },
+        "sonoma": {
+          "sha256": "769f514a1030aad3af0d654dff22b93ea11689afa3a59b98579a3ea19e3fa7a4",
+          "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v10.0.0/ONLYOFFICE-x86_64.dmg"
+        },
+        "tahoe": {
+          "sha256": "769f514a1030aad3af0d654dff22b93ea11689afa3a59b98579a3ea19e3fa7a4",
+          "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v10.0.0/ONLYOFFICE-x86_64.dmg"
+        },
+        "ventura": {
+          "sha256": "769f514a1030aad3af0d654dff22b93ea11689afa3a59b98579a3ea19e3fa7a4",
+          "url": "https://github.com/ONLYOFFICE/DesktopEditors/releases/download/v10.0.0/ONLYOFFICE-x86_64.dmg"
+        },
+        "x86_64_linux": {
+          "artifacts": [
+            {
+              "app_image": [
+                "DesktopEditors-x86_64.AppImage",
+                {
+                  "target": "ONLYOFFICE.AppImage"
+                }
+              ],
+              "target": "/$HOME/Applications/ONLYOFFICE.AppImage"
+            },
+            {
+              "zap": [
+                {
+                  "trash": [
+                    "~/.config/onlyoffice",
+                    "~/.local/share/onlyoffice"
+                  ]
+                }
+              ]
+            }
+          ],
+          "auto_updates": null,
+          "sha256": "f5faf24552665262fe94486a510b997d2e5a24bde14df94c802c79bf17f9254c",
+          "url": "https://github.com/ONLYOFFICE/appimage-desktopeditors/releases/download/v9.4.0/DesktopEditors-x86_64.AppImage",
+          "version": "9.4.0"
+        }
+      },
+      "version": "10.0.0"
+    },
+    "t3-code": {
+      "analytics": {
+        "install": {
+          "30d": {
+            "t3-code": 6412
+          },
+          "365d": {
+            "t3-code": 18779
+          },
+          "90d": {
+            "t3-code": 11032
+          }
+        }
+      },
+      "artifacts": [
+        {
+          "app": [
+            "T3 Code (Beta).app"
+          ],
+          "target": "/Applications/T3 Code (Beta).app"
+        },
+        {
+          "zap": [
+            {
+              "trash": [
+                "~/.t3/userdata",
+                "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.t3tools.t3code.sfl*",
+                "~/Library/Application Support/T3 Code (Alpha)",
+                "~/Library/Application Support/t3code",
+                "~/Library/Application Support/t3code-v2",
+                "~/Library/Caches/com.t3tools.t3code",
+                "~/Library/HTTPStorages/com.t3tools.t3code",
+                "~/Library/Preferences/com.t3tools.t3code.plist",
+                "~/Library/Saved Application State/com.t3tools.t3code.savedState"
+              ]
+            }
+          ]
+        }
+      ],
+      "auto_updates": true,
+      "autobump": true,
+      "bundle_short_version": null,
+      "bundle_version": null,
+      "caveats": null,
+      "caveats_rosetta": null,
+      "conflicts_with": null,
+      "container": null,
+      "depends_on": {
+        "macos": {
+          ">=": [
+            "13"
+          ]
+        }
+      },
+      "deprecate_args": null,
+      "deprecated": false,
+      "deprecation_date": null,
+      "deprecation_reason": null,
+      "deprecation_replacement_cask": null,
+      "deprecation_replacement_formula": null,
+      "desc": "Minimal GUI for AI code agents",
+      "disable_args": null,
+      "disable_date": null,
+      "disable_reason": null,
+      "disable_replacement_cask": null,
+      "disable_replacement_formula": null,
+      "disabled": false,
+      "full_token": "t3-code",
+      "generated_date": "2026-11-10",
+      "homepage": "https://t3.codes/",
+      "installed": null,
+      "installed_time": null,
+      "languages": [],
+      "name": [
+        "T3 Code"
+      ],
+      "no_autobump_message": null,
+      "old_tokens": [],
+      "outdated": false,
+      "pinned": false,
+      "pinned_version": null,
+      "rename": [],
+      "ruby": "cask \"t3-code\" do\n  arch arm: \"arm64\", intel: on_system_conditional(macos: \"x64\", linux: \"x86_64\")\n  os macos: \"dmg\", linux: \"AppImage\"\n\n  version \"0.1.8\"\n  sha256 arm:          \"7b174b2195b3de2c82ea11e5021e4d4c4ec78c577bd6d527dc1d9ad6ebe29273\",\n         intel:        \"66e2c86916a6deefc6ec4b1589a173b25c938625154792acb5d808c8d1b31c8f\",\n         x86_64_linux: \"e117698be4cc59e5ec1416c51dfd442a53efa3141977bc20cbd0d81fd3fd5824\"\n\n  on_macos do\n    auto_updates true\n    depends_on macos: :ventura\n\n    app \"T3 Code (Beta).app\"\n\n    zap trash: [\n      \"~/.t3/userdata\",\n      \"~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.t3tools.t3code.sfl*\",\n      \"~/Library/Application Support/T3 Code (Alpha)\",\n      \"~/Library/Application Support/t3code\",\n      \"~/Library/Application Support/t3code-v2\",\n      \"~/Library/Caches/com.t3tools.t3code\",\n      \"~/Library/HTTPStorages/com.t3tools.t3code\",\n      \"~/Library/Preferences/com.t3tools.t3code.plist\",\n      \"~/Library/Saved Application State/com.t3tools.t3code.savedState\",\n    ]\n  end\n  on_linux do\n    depends_on arch: :x86_64\n\n    app_image \"T3-Code-#{version}-#{arch}.AppImage\", target: \"T3 Code.AppImage\"\n\n    zap trash: [\n      \"~/.config/T3 Code (Alpha)\",\n      \"~/.config/t3code\",\n      \"~/.config/t3code-v2\",\n      \"~/.local/share/applications/com.t3tools.T3Code.desktop\",\n      \"~/.local/share/icons/com.t3tools.T3Code.desktop.png\",\n      \"~/.local/share/icons/hicolor/256x256/apps/com.t3tools.T3Code.png\",\n      \"~/.local/share/icons/hicolor/256x256/apps/com.t3tools.t3code.png\",\n      \"~/.t3/bin\",\n      \"~/.t3/caches\",\n      \"~/.t3/usage-host-id\",\n      \"~/.t3/userdata\",\n    ]\n  end\n\n  url \"https://github.com/pingdotgg/t3code/releases/download/v#{version}/T3-Code-#{version}-#{arch}.#{os}\"\n  name \"T3 Code\"\n  desc \"Minimal GUI for AI code agents\"\n  homepage \"https://t3.codes/\"\n\n  livecheck do\n    url :url\n    strategy :github_latest\n  end\nend\n",
+      "ruby_source_checksum": {
+        "sha256": "9c5700fad2685bccb65d309a725640f886588a1940ca7dfc55c53914620b3509"
+      },
+      "ruby_source_path": "Casks/t/t3-code.rb",
+      "sha256": "7b174b2195b3de2c82ea11e5021e4d4c4ec78c577bd6d527dc1d9ad6ebe29273",
+      "skip_livecheck": false,
+      "supported_platforms": [
+        "golden_gate",
+        "arm64_golden_gate",
+        "tahoe",
+        "arm64_tahoe",
+        "sequoia",
+        "arm64_sequoia",
+        "sonoma",
+        "arm64_sonoma",
+        "ventura",
+        "arm64_ventura",
+        "x86_64_linux"
+      ],
+      "tap": "homebrew/cask",
+      "tap_git_head": "11490971ee74bb39e43fac6fb5cfcbc16fda1ca5",
+      "token": "t3-code",
+      "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.8/T3-Code-0.1.8-arm64.dmg",
+      "url_specs": {},
+      "variations": {
+        "arm64_linux": {
+          "artifacts": [
+            {
+              "app_image": [
+                "T3-Code-0.1.8-arm64.AppImage",
+                {
+                  "target": "T3 Code.AppImage"
+                }
+              ],
+              "target": "/$HOME/Applications/T3 Code.AppImage"
+            },
+            {
+              "zap": [
+                {
+                  "trash": [
+                    "~/.config/T3 Code (Alpha)",
+                    "~/.config/t3code",
+                    "~/.config/t3code-v2",
+                    "~/.local/share/applications/com.t3tools.T3Code.desktop",
+                    "~/.local/share/icons/com.t3tools.T3Code.desktop.png",
+                    "~/.local/share/icons/hicolor/256x256/apps/com.t3tools.T3Code.png",
+                    "~/.local/share/icons/hicolor/256x256/apps/com.t3tools.t3code.png",
+                    "~/.t3/bin",
+                    "~/.t3/caches",
+                    "~/.t3/usage-host-id",
+                    "~/.t3/userdata"
+                  ]
+                }
+              ]
+            }
+          ],
+          "auto_updates": null,
+          "depends_on": {
+            "arch": [
+              {
+                "bits": 64,
+                "type": "intel"
+              }
+            ]
+          },
+          "sha256": null,
+          "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.8/T3-Code-0.1.8-arm64.AppImage"
+        },
+        "big_sur": {
+          "sha256": "66e2c86916a6deefc6ec4b1589a173b25c938625154792acb5d808c8d1b31c8f",
+          "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.8/T3-Code-0.1.8-x64.dmg"
+        },
+        "golden_gate": {
+          "sha256": "66e2c86916a6deefc6ec4b1589a173b25c938625154792acb5d808c8d1b31c8f",
+          "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.8/T3-Code-0.1.8-x64.dmg"
+        },
+        "monterey": {
+          "sha256": "66e2c86916a6deefc6ec4b1589a173b25c938625154792acb5d808c8d1b31c8f",
+          "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.8/T3-Code-0.1.8-x64.dmg"
+        },
+        "sequoia": {
+          "sha256": "66e2c86916a6deefc6ec4b1589a173b25c938625154792acb5d808c8d1b31c8f",
+          "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.8/T3-Code-0.1.8-x64.dmg"
+        },
+        "sonoma": {
+          "sha256": "66e2c86916a6deefc6ec4b1589a173b25c938625154792acb5d808c8d1b31c8f",
+          "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.8/T3-Code-0.1.8-x64.dmg"
+        },
+        "tahoe": {
+          "sha256": "66e2c86916a6deefc6ec4b1589a173b25c938625154792acb5d808c8d1b31c8f",
+          "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.8/T3-Code-0.1.8-x64.dmg"
+        },
+        "ventura": {
+          "sha256": "66e2c86916a6deefc6ec4b1589a173b25c938625154792acb5d808c8d1b31c8f",
+          "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.8/T3-Code-0.1.8-x64.dmg"
+        },
+        "x86_64_linux": {
+          "artifacts": [
+            {
+              "app_image": [
+                "T3-Code-0.1.8-x86_64.AppImage",
+                {
+                  "target": "T3 Code.AppImage"
+                }
+              ],
+              "target": "/$HOME/Applications/T3 Code.AppImage"
+            },
+            {
+              "zap": [
+                {
+                  "trash": [
+                    "~/.config/T3 Code (Alpha)",
+                    "~/.config/t3code",
+                    "~/.config/t3code-v2",
+                    "~/.local/share/applications/com.t3tools.T3Code.desktop",
+                    "~/.local/share/icons/com.t3tools.T3Code.desktop.png",
+                    "~/.local/share/icons/hicolor/256x256/apps/com.t3tools.T3Code.png",
+                    "~/.local/share/icons/hicolor/256x256/apps/com.t3tools.t3code.png",
+                    "~/.t3/bin",
+                    "~/.t3/caches",
+                    "~/.t3/usage-host-id",
+                    "~/.t3/userdata"
+                  ]
+                }
+              ]
+            }
+          ],
+          "auto_updates": null,
+          "depends_on": {
+            "arch": [
+              {
+                "bits": 64,
+                "type": "intel"
+              }
+            ]
+          },
+          "sha256": "e117698be4cc59e5ec1416c51dfd442a53efa3141977bc20cbd0d81fd3fd5824",
+          "url": "https://github.com/pingdotgg/t3code/releases/download/v0.1.8/T3-Code-0.1.8-x86_64.AppImage"
+        }
+      },
+      "version": "0.1.8"
     }
   },
   "formulae": {
@@ -312,34 +725,34 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "brotli": 159
+            "brotli": 191
           }
         },
         "install": {
           "30d": {
-            "brotli": 197715,
-            "brotli --HEAD": 14
+            "brotli": 222670,
+            "brotli --HEAD": 15
           },
           "365d": {
-            "brotli": 1505304,
-            "brotli --HEAD": 51
+            "brotli": 1513254,
+            "brotli --HEAD": 52
           },
           "90d": {
-            "brotli": 307705,
-            "brotli --HEAD": 20
+            "brotli": 342799,
+            "brotli --HEAD": 21
           }
         },
         "install_on_request": {
           "30d": {
-            "brotli": 2366,
+            "brotli": 2918,
             "brotli --HEAD": 7
           },
           "365d": {
-            "brotli": 10951,
+            "brotli": 10902,
             "brotli --HEAD": 21
           },
           "90d": {
-            "brotli": 2999,
+            "brotli": 3552,
             "brotli --HEAD": 11
           }
         }
@@ -403,18 +816,18 @@
         "brotli"
       ],
       "full_name": "brotli",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 50800046,
-        "analytics_30d": 197729,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 12.99,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:24Z",
-        "last_30_days": 2568648,
+        "all_time": 51489066,
+        "analytics_30d": 222685,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 13.03,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:39Z",
+        "last_30_days": 2902669,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fbrotli",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://github.com/google/brotli",
       "installed": [],
@@ -446,7 +859,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -483,30 +896,30 @@
         },
         "install": {
           "30d": {
-            "ca-certificates": 495025,
-            "ca-certificates --HEAD": 24
+            "ca-certificates": 532986,
+            "ca-certificates --HEAD": 26
           },
           "365d": {
-            "ca-certificates": 5328445,
-            "ca-certificates --HEAD": 246
+            "ca-certificates": 5355472,
+            "ca-certificates --HEAD": 244
           },
           "90d": {
-            "ca-certificates": 1332880,
-            "ca-certificates --HEAD": 71
+            "ca-certificates": 1370473,
+            "ca-certificates --HEAD": 68
           }
         },
         "install_on_request": {
           "30d": {
-            "ca-certificates": 14477,
-            "ca-certificates --HEAD": 17
+            "ca-certificates": 17605,
+            "ca-certificates --HEAD": 16
           },
           "365d": {
-            "ca-certificates": 156788,
-            "ca-certificates --HEAD": 197
+            "ca-certificates": 157190,
+            "ca-certificates --HEAD": 191
           },
           "90d": {
-            "ca-certificates": 51922,
-            "ca-certificates --HEAD": 61
+            "ca-certificates": 51683,
+            "ca-certificates --HEAD": 55
           }
         }
       },
@@ -545,18 +958,18 @@
       "disabled": false,
       "executables": [],
       "full_name": "ca-certificates",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 167328859,
-        "analytics_30d": 495049,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 11.79,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:21Z",
-        "last_30_days": 5836936,
+        "all_time": 169086972,
+        "analytics_30d": 533012,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 11.91,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:37Z",
+        "last_30_days": 6346335,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fca-certificates",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://curl.se/docs/caextract.html",
       "installed": [],
@@ -600,7 +1013,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "stable": {
@@ -634,35 +1047,35 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "curl": 260
+            "curl": 275
           }
         },
         "install": {
           "30d": {
-            "curl": 95927,
-            "curl --HEAD": 107
+            "curl": 96420,
+            "curl --HEAD": 91
           },
           "365d": {
-            "curl": 783436,
-            "curl --HEAD": 840
+            "curl": 777881,
+            "curl --HEAD": 818
           },
           "90d": {
-            "curl": 172932,
-            "curl --HEAD": 149
+            "curl": 182063,
+            "curl --HEAD": 148
           }
         },
         "install_on_request": {
           "30d": {
-            "curl": 32351,
-            "curl --HEAD": 107
+            "curl": 28449,
+            "curl --HEAD": 90
           },
           "365d": {
-            "curl": 323694,
-            "curl --HEAD": 837
+            "curl": 314577,
+            "curl --HEAD": 814
           },
           "90d": {
-            "curl": 57979,
-            "curl --HEAD": 148
+            "curl": 57751,
+            "curl --HEAD": 146
           }
         }
       },
@@ -736,18 +1149,18 @@
         "wcurl"
       ],
       "full_name": "curl",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 30579672,
-        "analytics_30d": 96034,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 7.09,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:32Z",
-        "last_30_days": 680778,
+        "all_time": 30773227,
+        "analytics_30d": 96511,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 7.6,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:51Z",
+        "last_30_days": 733648,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fcurl",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "head_dependencies": {
         "build_dependencies": [
@@ -816,7 +1229,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [
         "pkgconf"
       ],
@@ -1137,34 +1550,34 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "gettext": 214
+            "gettext": 215
           }
         },
         "install": {
           "30d": {
-            "gettext": 62722,
+            "gettext": 59988,
             "gettext --HEAD": 6
           },
           "365d": {
-            "gettext": 1698526,
-            "gettext --HEAD": 162
+            "gettext": 1650139,
+            "gettext --HEAD": 155
           },
           "90d": {
-            "gettext": 188809,
+            "gettext": 181440,
             "gettext --HEAD": 17
           }
         },
         "install_on_request": {
           "30d": {
-            "gettext": 4761,
-            "gettext --HEAD": 2
+            "gettext": 4469,
+            "gettext --HEAD": 1
           },
           "365d": {
-            "gettext": 109020,
-            "gettext --HEAD": 123
+            "gettext": 104789,
+            "gettext --HEAD": 116
           },
           "90d": {
-            "gettext": 14528,
+            "gettext": 13880,
             "gettext --HEAD": 11
           }
         }
@@ -1255,18 +1668,18 @@
         "xgettext"
       ],
       "full_name": "gettext",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 77510105,
-        "analytics_30d": 62728,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 14.91,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:41Z",
-        "last_30_days": 935444,
+        "all_time": 77733296,
+        "analytics_30d": 59994,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 15.3,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:48:03Z",
+        "last_30_days": 917627,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fgettext",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://www.gnu.org/software/gettext/",
       "installed": [],
@@ -1298,7 +1711,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "stable": {
@@ -1348,36 +1761,36 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "gh": 1950,
+            "gh": 1875,
             "gh --HEAD": 2
           }
         },
         "install": {
           "30d": {
-            "gh": 295234,
-            "gh --HEAD": 553
+            "gh": 292451,
+            "gh --HEAD": 559
           },
           "365d": {
-            "gh": 3091757,
-            "gh --HEAD": 4980
+            "gh": 3099321,
+            "gh --HEAD": 5018
           },
           "90d": {
-            "gh": 749267,
-            "gh --HEAD": 1405
+            "gh": 739754,
+            "gh --HEAD": 1399
           }
         },
         "install_on_request": {
           "30d": {
-            "gh": 292812,
-            "gh --HEAD": 553
+            "gh": 289851,
+            "gh --HEAD": 558
           },
           "365d": {
-            "gh": 3085800,
-            "gh --HEAD": 4980
+            "gh": 3092950,
+            "gh --HEAD": 5018
           },
           "90d": {
-            "gh": 746313,
-            "gh --HEAD": 1405
+            "gh": 736323,
+            "gh --HEAD": 1400
           }
         }
       },
@@ -1440,18 +1853,18 @@
         "gh"
       ],
       "full_name": "gh",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 34347857,
-        "analytics_30d": 295787,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 6.31,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:22Z",
-        "last_30_days": 1865820,
+        "all_time": 34670942,
+        "analytics_30d": 293010,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 6.33,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:38Z",
+        "last_30_days": 1853540,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fgh",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://cli.github.com/",
       "installed": [],
@@ -1483,7 +1896,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -1515,35 +1928,35 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "git": 196
+            "git": 194
           }
         },
         "install": {
           "30d": {
-            "git": 133597,
-            "git --HEAD": 252
+            "git": 127972,
+            "git --HEAD": 254
           },
           "365d": {
-            "git": 1418942,
-            "git --HEAD": 2568
+            "git": 1410753,
+            "git --HEAD": 2565
           },
           "90d": {
-            "git": 273441,
-            "git --HEAD": 449
+            "git": 278026,
+            "git --HEAD": 470
           }
         },
         "install_on_request": {
           "30d": {
-            "git": 130463,
-            "git --HEAD": 252
+            "git": 124759,
+            "git --HEAD": 254
           },
           "365d": {
-            "git": 1389004,
-            "git --HEAD": 2568
+            "git": 1381366,
+            "git --HEAD": 2565
           },
           "90d": {
-            "git": 267656,
-            "git --HEAD": 449
+            "git": 271778,
+            "git --HEAD": 470
           }
         }
       },
@@ -1617,18 +2030,18 @@
         "scalar"
       ],
       "full_name": "git",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 44815805,
-        "analytics_30d": 133849,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 6.42,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:28Z",
-        "last_30_days": 859820,
+        "all_time": 44979498,
+        "analytics_30d": 128226,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 6.16,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:47Z",
+        "last_30_days": 790435,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fgit",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://git-scm.com",
       "installed": [],
@@ -1660,7 +2073,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -1731,36 +2144,36 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "go": 1966,
-            "go --HEAD": 5
+            "go": 2046,
+            "go --HEAD": 4
           }
         },
         "install": {
           "30d": {
-            "go": 166708,
-            "go --HEAD": 157
+            "go": 160061,
+            "go --HEAD": 142
           },
           "365d": {
-            "go": 1643760,
-            "go --HEAD": 1751
+            "go": 1637696,
+            "go --HEAD": 1745
           },
           "90d": {
-            "go": 400848,
-            "go --HEAD": 425
+            "go": 407935,
+            "go --HEAD": 433
           }
         },
         "install_on_request": {
           "30d": {
-            "go": 103480,
-            "go --HEAD": 156
+            "go": 97782,
+            "go --HEAD": 141
           },
           "365d": {
-            "go": 1238307,
-            "go --HEAD": 1750
+            "go": 1226220,
+            "go --HEAD": 1744
           },
           "90d": {
-            "go": 273431,
-            "go --HEAD": 424
+            "go": 273421,
+            "go --HEAD": 432
           }
         }
       },
@@ -1822,18 +2235,18 @@
         "gofmt"
       ],
       "full_name": "go",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 26573998,
-        "analytics_30d": 166865,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 3.98,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:25Z",
-        "last_30_days": 663775,
+        "all_time": 26687685,
+        "analytics_30d": 160203,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 3.86,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:41Z",
+        "last_30_days": 618215,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fgo",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://go.dev/",
       "installed": [],
@@ -1877,7 +2290,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -1922,34 +2335,33 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "json-c": 140
+            "json-c": 137
           }
         },
         "install": {
           "30d": {
-            "json-c": 97629,
+            "json-c": 93603,
             "json-c --HEAD": 5
           },
           "365d": {
-            "json-c": 510906,
-            "json-c --HEAD": 27
+            "json-c": 530538,
+            "json-c --HEAD": 28
           },
           "90d": {
-            "json-c": 281583,
-            "json-c --HEAD": 10
+            "json-c": 271794,
+            "json-c --HEAD": 11
           }
         },
         "install_on_request": {
           "30d": {
-            "json-c": 434,
-            "json-c --HEAD": 1
+            "json-c": 408
           },
           "365d": {
-            "json-c": 5724,
+            "json-c": 5764,
             "json-c --HEAD": 10
           },
           "90d": {
-            "json-c": 1638,
+            "json-c": 1604,
             "json-c --HEAD": 1
           }
         }
@@ -2016,18 +2428,18 @@
       "disabled": false,
       "executables": [],
       "full_name": "json-c",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 11297289,
-        "analytics_30d": 97634,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 14.2,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:31Z",
-        "last_30_days": 1385940,
+        "all_time": 11612939,
+        "analytics_30d": 93608,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 14.45,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:51Z",
+        "last_30_days": 1352977,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fjson-c",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://github.com/json-c/json-c/wiki",
       "installed": [],
@@ -2059,7 +2471,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -2091,32 +2503,34 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "libnghttp2": 17
+            "libnghttp2": 190
           }
         },
         "install": {
           "30d": {
-            "libnghttp2": 99132
+            "libnghttp2": 130860,
+            "libnghttp2 --HEAD": 3
           },
           "365d": {
-            "libnghttp2": 1615892,
-            "libnghttp2 --HEAD": 38
+            "libnghttp2": 1632811,
+            "libnghttp2 --HEAD": 40
           },
           "90d": {
-            "libnghttp2": 236363,
-            "libnghttp2 --HEAD": 3
+            "libnghttp2": 261627,
+            "libnghttp2 --HEAD": 4
           }
         },
         "install_on_request": {
           "30d": {
-            "libnghttp2": 583
+            "libnghttp2": 1452,
+            "libnghttp2 --HEAD": 2
           },
           "365d": {
-            "libnghttp2": 12089,
-            "libnghttp2 --HEAD": 16
+            "libnghttp2": 12624,
+            "libnghttp2 --HEAD": 18
           },
           "90d": {
-            "libnghttp2": 1870,
+            "libnghttp2": 2433,
             "libnghttp2 --HEAD": 2
           }
         }
@@ -2178,18 +2592,18 @@
       "disabled": false,
       "executables": [],
       "full_name": "libnghttp2",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 85258217,
-        "analytics_30d": 99132,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 13.59,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:31Z",
-        "last_30_days": 1346953,
+        "all_time": 86027597,
+        "analytics_30d": 130863,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 13.97,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:47Z",
+        "last_30_days": 1828410,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibnghttp2",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "head_dependencies": {
         "build_dependencies": [
@@ -2244,7 +2658,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -2281,30 +2695,29 @@
         },
         "install": {
           "30d": {
-            "libnghttp3": 68570,
+            "libnghttp3": 93997,
             "libnghttp3 --HEAD": 3
           },
           "365d": {
-            "libnghttp3": 1383671,
+            "libnghttp3": 1404273,
             "libnghttp3 --HEAD": 63
           },
           "90d": {
-            "libnghttp3": 174672,
-            "libnghttp3 --HEAD": 12
+            "libnghttp3": 193030,
+            "libnghttp3 --HEAD": 9
           }
         },
         "install_on_request": {
           "30d": {
-            "libnghttp3": 3971,
-            "libnghttp3 --HEAD": 1
+            "libnghttp3": 4735
           },
           "365d": {
-            "libnghttp3": 57139,
-            "libnghttp3 --HEAD": 48
+            "libnghttp3": 57206,
+            "libnghttp3 --HEAD": 47
           },
           "90d": {
-            "libnghttp3": 8729,
-            "libnghttp3 --HEAD": 9
+            "libnghttp3": 9038,
+            "libnghttp3 --HEAD": 5
           }
         }
       },
@@ -2365,18 +2778,18 @@
       "disabled": false,
       "executables": [],
       "full_name": "libnghttp3",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 18669913,
-        "analytics_30d": 68573,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 10.57,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:38Z",
-        "last_30_days": 724697,
+        "all_time": 19179404,
+        "analytics_30d": 94000,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 11.58,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:51Z",
+        "last_30_days": 1088896,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibnghttp3",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://nghttp2.org/nghttp3/",
       "installed": [],
@@ -2408,7 +2821,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -2440,36 +2853,36 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "libngtcp2": 5,
-            "libngtcp2 --HEAD": 10
+            "libngtcp2": 14,
+            "libngtcp2 --HEAD": 8
           }
         },
         "install": {
           "30d": {
-            "libngtcp2": 98821,
+            "libngtcp2": 114545,
             "libngtcp2 --HEAD": 7
           },
           "365d": {
-            "libngtcp2": 1603550,
-            "libngtcp2 --HEAD": 65
+            "libngtcp2": 1619196,
+            "libngtcp2 --HEAD": 68
           },
           "90d": {
-            "libngtcp2": 205005,
-            "libngtcp2 --HEAD": 13
+            "libngtcp2": 222773,
+            "libngtcp2 --HEAD": 12
           }
         },
         "install_on_request": {
           "30d": {
-            "libngtcp2": 4758,
-            "libngtcp2 --HEAD": 6
+            "libngtcp2": 5411,
+            "libngtcp2 --HEAD": 5
           },
           "365d": {
-            "libngtcp2": 59953,
-            "libngtcp2 --HEAD": 55
+            "libngtcp2": 59966,
+            "libngtcp2 --HEAD": 57
           },
           "90d": {
-            "libngtcp2": 9717,
-            "libngtcp2 --HEAD": 12
+            "libngtcp2": 10100,
+            "libngtcp2 --HEAD": 10
           }
         }
       },
@@ -2532,18 +2945,18 @@
       "disabled": false,
       "executables": [],
       "full_name": "libngtcp2",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 20923911,
-        "analytics_30d": 98828,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 10.11,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:31Z",
-        "last_30_days": 998862,
+        "all_time": 21381050,
+        "analytics_30d": 114552,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 10.42,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:48Z",
+        "last_30_days": 1193654,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibngtcp2",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://nghttp2.org/ngtcp2/",
       "installed": [],
@@ -2575,7 +2988,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -2607,33 +3020,33 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "libpsl": 68
+            "libpsl": 74
           }
         },
         "install": {
           "30d": {
-            "libpsl": 59634,
-            "libpsl --HEAD": 1
+            "libpsl": 62393,
+            "libpsl --HEAD": 2
           },
           "365d": {
-            "libpsl": 235053,
-            "libpsl --HEAD": 4
+            "libpsl": 249829,
+            "libpsl --HEAD": 5
           },
           "90d": {
-            "libpsl": 146931,
-            "libpsl --HEAD": 2
+            "libpsl": 149228,
+            "libpsl --HEAD": 3
           }
         },
         "install_on_request": {
           "30d": {
-            "libpsl": 216
+            "libpsl": 220
           },
           "365d": {
-            "libpsl": 2418,
+            "libpsl": 2437,
             "libpsl --HEAD": 2
           },
           "90d": {
-            "libpsl": 986
+            "libpsl": 889
           }
         }
       },
@@ -2707,18 +3120,18 @@
         "psl-make-dafsa"
       ],
       "full_name": "libpsl",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 6100829,
-        "analytics_30d": 59635,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 9.14,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:42Z",
-        "last_30_days": 544843,
+        "all_time": 6291114,
+        "analytics_30d": 62395,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 10.0,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:48:01Z",
+        "last_30_days": 624159,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibpsl",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://rockdaboot.github.io/libpsl",
       "installed": [],
@@ -2750,7 +3163,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "stable": {
@@ -2814,36 +3227,36 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "libssh2": 85,
+            "libssh2": 82,
             "libssh2 --HEAD": 1
           }
         },
         "install": {
           "30d": {
-            "libssh2": 156846,
-            "libssh2 --HEAD": 13
+            "libssh2": 139222,
+            "libssh2 --HEAD": 11
           },
           "365d": {
-            "libssh2": 917870,
+            "libssh2": 936541,
             "libssh2 --HEAD": 75
           },
           "90d": {
-            "libssh2": 299723,
-            "libssh2 --HEAD": 23
+            "libssh2": 310080,
+            "libssh2 --HEAD": 22
           }
         },
         "install_on_request": {
           "30d": {
-            "libssh2": 7537,
-            "libssh2 --HEAD": 11
+            "libssh2": 6219,
+            "libssh2 --HEAD": 9
           },
           "365d": {
-            "libssh2": 53052,
+            "libssh2": 53878,
             "libssh2 --HEAD": 66
           },
           "90d": {
-            "libssh2": 15870,
-            "libssh2 --HEAD": 21
+            "libssh2": 15732,
+            "libssh2 --HEAD": 20
           }
         }
       },
@@ -2904,18 +3317,18 @@
       "disabled": false,
       "executables": [],
       "full_name": "libssh2",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 25379352,
-        "analytics_30d": 156859,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 6.92,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:25Z",
-        "last_30_days": 1085206,
+        "all_time": 25613127,
+        "analytics_30d": 139233,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 6.94,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:46Z",
+        "last_30_days": 966219,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibssh2",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "head_dependencies": {
         "build_dependencies": [
@@ -3111,13 +3524,13 @@
       "requirements": [],
       "revision": 7,
       "ruby_source_checksum": {
-        "sha256": "eecf497120b0b28aad11f0536ac3c7759fe0d02db6ef972a811a7fc198ade8d3"
+        "sha256": "1bb5700525084a6a5ad6e165cc132a145b0b290a2ea5361d596e6fc9b6b09859"
       },
       "ruby_source_path": "Formula/lib/libssh2.rb",
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -3328,35 +3741,35 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "libunistring": 588
+            "libunistring": 757
           }
         },
         "install": {
           "30d": {
-            "libunistring": 168527,
-            "libunistring --HEAD": 5
+            "libunistring": 184995,
+            "libunistring --HEAD": 6
           },
           "365d": {
-            "libunistring": 1774792,
-            "libunistring --HEAD": 42
+            "libunistring": 1774318,
+            "libunistring --HEAD": 41
           },
           "90d": {
-            "libunistring": 297615,
-            "libunistring --HEAD": 7
+            "libunistring": 317652,
+            "libunistring --HEAD": 8
           }
         },
         "install_on_request": {
           "30d": {
-            "libunistring": 1714,
-            "libunistring --HEAD": 1
+            "libunistring": 1899,
+            "libunistring --HEAD": 2
           },
           "365d": {
-            "libunistring": 12545,
+            "libunistring": 12456,
             "libunistring --HEAD": 12
           },
           "90d": {
-            "libunistring": 2330,
-            "libunistring --HEAD": 1
+            "libunistring": 2494,
+            "libunistring --HEAD": 2
           }
         }
       },
@@ -3415,18 +3828,18 @@
       "disabled": false,
       "executables": [],
       "full_name": "libunistring",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 60589860,
-        "analytics_30d": 168532,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 13.17,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:25Z",
-        "last_30_days": 2220380,
+        "all_time": 61131978,
+        "analytics_30d": 185001,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 13.49,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:40Z",
+        "last_30_days": 2494794,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flibunistring",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://www.gnu.org/software/libunistring/",
       "installed": [],
@@ -3458,7 +3871,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "stable": {
@@ -3485,35 +3898,35 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "lz4": 19
+            "lz4": 63
           }
         },
         "install": {
           "30d": {
-            "lz4": 179442,
-            "lz4 --HEAD": 16
+            "lz4": 230628,
+            "lz4 --HEAD": 20
           },
           "365d": {
-            "lz4": 2101343,
-            "lz4 --HEAD": 53
+            "lz4": 2161128,
+            "lz4 --HEAD": 58
           },
           "90d": {
-            "lz4": 390982,
-            "lz4 --HEAD": 19
+            "lz4": 454960,
+            "lz4 --HEAD": 25
           }
         },
         "install_on_request": {
           "30d": {
-            "lz4": 466,
-            "lz4 --HEAD": 13
+            "lz4": 2038,
+            "lz4 --HEAD": 17
           },
           "365d": {
-            "lz4": 11223,
-            "lz4 --HEAD": 28
+            "lz4": 12531,
+            "lz4 --HEAD": 33
           },
           "90d": {
-            "lz4": 1484,
-            "lz4 --HEAD": 14
+            "lz4": 3045,
+            "lz4 --HEAD": 19
           }
         }
       },
@@ -3523,28 +3936,28 @@
           "files": {
             "arm64_golden_gate": {
               "cellar": ":any",
-              "sha256": "464d0e2782c24627a2ffa99093daaf8a7f9e2acbdae1ac4587d8724b85f2dbf9",
-              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:464d0e2782c24627a2ffa99093daaf8a7f9e2acbdae1ac4587d8724b85f2dbf9"
+              "sha256": "b2422bda202e4a59007a9189493902ac7a75423640081da43de9281a89770d5c",
+              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:b2422bda202e4a59007a9189493902ac7a75423640081da43de9281a89770d5c"
             },
             "arm64_linux": {
               "cellar": ":any",
-              "sha256": "73e9aabe8d8050adae8f0d71946169b0e915fb9d627e956b2377558d48285ae1",
-              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:73e9aabe8d8050adae8f0d71946169b0e915fb9d627e956b2377558d48285ae1"
+              "sha256": "14205882471527eb17656af9519512f70b76e9f944f6b68f3395253a175e15f4",
+              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:14205882471527eb17656af9519512f70b76e9f944f6b68f3395253a175e15f4"
             },
             "arm64_sequoia": {
               "cellar": ":any",
-              "sha256": "8c311d5e93bca17d53f8225dd8fabbb2626fa6ade09ff5713e3b85d428fec3bf",
-              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:8c311d5e93bca17d53f8225dd8fabbb2626fa6ade09ff5713e3b85d428fec3bf"
+              "sha256": "69c0c38e660f81b36bbd165a77d7619d2b8b6b175bf670a4840aaaaddd86a520",
+              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:69c0c38e660f81b36bbd165a77d7619d2b8b6b175bf670a4840aaaaddd86a520"
             },
             "arm64_tahoe": {
               "cellar": ":any",
-              "sha256": "f25384fe48be399693954cf6b1b48da50ae795a29058ca7abfe91fc4c3e8b623",
-              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:f25384fe48be399693954cf6b1b48da50ae795a29058ca7abfe91fc4c3e8b623"
+              "sha256": "9ab0175d769ca830f573defafb22b020f3e9b4e0862ee6ee9f47e0b46a29468d",
+              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:9ab0175d769ca830f573defafb22b020f3e9b4e0862ee6ee9f47e0b46a29468d"
             },
             "x86_64_linux": {
               "cellar": ":any",
-              "sha256": "48865122616cc54135b0605f93ebc56a6fc7aecffb112019e91a90a5893b6903",
-              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:48865122616cc54135b0605f93ebc56a6fc7aecffb112019e91a90a5893b6903"
+              "sha256": "f89740f8da822dda3870cefc3993db46d721944f4c8eb10755aee79ec5b0706e",
+              "url": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:f89740f8da822dda3870cefc3993db46d721944f4c8eb10755aee79ec5b0706e"
             }
           },
           "rebuild": 0,
@@ -3579,18 +3992,18 @@
         "unlz4"
       ],
       "full_name": "lz4",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 61575051,
-        "analytics_30d": 179458,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 7.56,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:25Z",
-        "last_30_days": 1356738,
+        "all_time": 62865643,
+        "analytics_30d": 230648,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 9.97,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:39Z",
+        "last_30_days": 2300276,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Flz4",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://lz4.github.io/lz4/",
       "installed": [],
@@ -3616,13 +4029,13 @@
       "requirements": [],
       "revision": 0,
       "ruby_source_checksum": {
-        "sha256": "745caf6d52068ef269f41dd3445171baef7610dfdd657d1a19da7f27a930c7d8"
+        "sha256": "ddb14ca1abd07e8b55e30b047dfd3564916c89057b66816009f814daeeb1e5c0"
       },
       "ruby_source_path": "Formula/l/lz4.rb",
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -3631,10 +4044,10 @@
           "using": null
         },
         "stable": {
-          "checksum": "247e5fa64da5f7b75ee3dd3bed484076396c9ebe8254d9ccf693eb62800c5e26",
+          "checksum": "683fed08a844ad012196381e40badf80c0bbe4962959761416d41c9e67d77ec7",
           "revision": null,
           "tag": null,
-          "url": "https://github.com/lz4/lz4/archive/refs/tags/v1.11.0.tar.gz",
+          "url": "https://github.com/lz4/lz4/archive/refs/tags/v1.11.1.tar.gz",
           "using": null
         }
       },
@@ -3646,7 +4059,7 @@
       "versions": {
         "bottle": true,
         "head": "HEAD",
-        "stable": "1.11.0"
+        "stable": "1.11.1"
       }
     },
     "netbird": {
@@ -3654,29 +4067,35 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "netbird": 0
+            "netbird": 1
           }
         },
         "install": {
           "30d": {
-            "netbird": 0
+            "netbird": 76,
+            "netbird --HEAD": 1
           },
           "365d": {
-            "netbird": 4
+            "netbird": 80,
+            "netbird --HEAD": 1
           },
           "90d": {
-            "netbird": 0
+            "netbird": 76,
+            "netbird --HEAD": 1
           }
         },
         "install_on_request": {
           "30d": {
-            "netbird": 0
+            "netbird": 60,
+            "netbird --HEAD": 1
           },
           "365d": {
-            "netbird": 4
+            "netbird": 64,
+            "netbird --HEAD": 1
           },
           "90d": {
-            "netbird": 0
+            "netbird": 60,
+            "netbird --HEAD": 1
           }
         }
       },
@@ -3686,28 +4105,28 @@
           "files": {
             "arm64_golden_gate": {
               "cellar": ":any_skip_relocation",
-              "sha256": "d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1",
-              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1"
+              "sha256": "6a02bf0700c0bfd7e5f744612efe04c13a04f3ec8f4eada6e734dbe8624ae0a4",
+              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:6a02bf0700c0bfd7e5f744612efe04c13a04f3ec8f4eada6e734dbe8624ae0a4"
             },
             "arm64_linux": {
               "cellar": ":any_skip_relocation",
-              "sha256": "b7fa188803d2da12044b84bfed295c3f256e4618eb4ac1c451baf5ea15c17f0d",
-              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:b7fa188803d2da12044b84bfed295c3f256e4618eb4ac1c451baf5ea15c17f0d"
+              "sha256": "031cbdeaca9a00036c353966c168ed768388ad6af798aa61118d2fe6e5437029",
+              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:031cbdeaca9a00036c353966c168ed768388ad6af798aa61118d2fe6e5437029"
             },
             "arm64_sequoia": {
               "cellar": ":any_skip_relocation",
-              "sha256": "d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1",
-              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1"
+              "sha256": "6a02bf0700c0bfd7e5f744612efe04c13a04f3ec8f4eada6e734dbe8624ae0a4",
+              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:6a02bf0700c0bfd7e5f744612efe04c13a04f3ec8f4eada6e734dbe8624ae0a4"
             },
             "arm64_tahoe": {
               "cellar": ":any_skip_relocation",
-              "sha256": "d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1",
-              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:d9cda2ea118f6c6b7bdd2c8cb36ed8decc8d5b378bfa69fea558866f575014a1"
+              "sha256": "6a02bf0700c0bfd7e5f744612efe04c13a04f3ec8f4eada6e734dbe8624ae0a4",
+              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:6a02bf0700c0bfd7e5f744612efe04c13a04f3ec8f4eada6e734dbe8624ae0a4"
             },
             "x86_64_linux": {
               "cellar": ":any_skip_relocation",
-              "sha256": "267e35d7e5dac75bacb763ff6005caf250749d16200570a21b240a1f901570d0",
-              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:267e35d7e5dac75bacb763ff6005caf250749d16200570a21b240a1f901570d0"
+              "sha256": "e38ada1a9aede5817702b105d457fb523b49a7d0d67ba6521b8796ee1fb724c6",
+              "url": "https://ghcr.io/v2/homebrew/core/netbird/blobs/sha256:e38ada1a9aede5817702b105d457fb523b49a7d0d67ba6521b8796ee1fb724c6"
             }
           },
           "rebuild": 0,
@@ -3739,7 +4158,7 @@
         "netbird"
       ],
       "full_name": "netbird",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "homepage": "https://netbird.io",
       "installed": [],
       "keg_only": false,
@@ -3764,20 +4183,20 @@
       "requirements": [],
       "revision": 0,
       "ruby_source_checksum": {
-        "sha256": "9de516483ed98bbb2fb641059d7510a0b798fe9eab88934bc7a3d1b6a0ed2a36"
+        "sha256": "c47506e69fab9163f54bd428d6bb9f4917ad7ac3e4b08787cc6280b6bfea74e0"
       },
       "ruby_source_path": "Formula/n/netbird.rb",
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "stable": {
-          "checksum": "9553375fdd487572a4fdfeefd4cce95622686a80b8f0d10077c9913bebefe021",
+          "checksum": "faea65ed0321a285818ad4458da5b0441c6f6f766c9fd963cb7dfc5cd9bf4445",
           "revision": null,
           "tag": null,
-          "url": "https://github.com/netbirdio/netbird/archive/refs/tags/v0.82.0.tar.gz",
+          "url": "https://github.com/netbirdio/netbird/archive/refs/tags/v0.82.1.tar.gz",
           "using": null
         }
       },
@@ -3789,7 +4208,7 @@
       "versions": {
         "bottle": true,
         "head": null,
-        "stable": "0.82.0"
+        "stable": "0.82.1"
       }
     },
     "opencode": {
@@ -3797,35 +4216,35 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "opencode": 51
+            "opencode": 47
           }
         },
         "install": {
           "30d": {
-            "opencode": 44159,
-            "opencode --HEAD": 82
+            "opencode": 45813,
+            "opencode --HEAD": 87
           },
           "365d": {
-            "opencode": 411613,
-            "opencode --HEAD": 655
+            "opencode": 414908,
+            "opencode --HEAD": 670
           },
           "90d": {
-            "opencode": 95394,
-            "opencode --HEAD": 155
+            "opencode": 94682,
+            "opencode --HEAD": 158
           }
         },
         "install_on_request": {
           "30d": {
-            "opencode": 44110,
-            "opencode --HEAD": 82
+            "opencode": 45765,
+            "opencode --HEAD": 87
           },
           "365d": {
-            "opencode": 411487,
-            "opencode --HEAD": 655
+            "opencode": 414775,
+            "opencode --HEAD": 670
           },
           "90d": {
-            "opencode": 95336,
-            "opencode --HEAD": 155
+            "opencode": 94618,
+            "opencode --HEAD": 158
           }
         }
       },
@@ -3835,31 +4254,31 @@
           "files": {
             "arm64_golden_gate": {
               "cellar": "/opt/homebrew/Cellar",
-              "sha256": "c5c9005403cebf90c25d10599a7fcdaafb664eafa91d20c1be16f830cf3c8e1a",
-              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:c5c9005403cebf90c25d10599a7fcdaafb664eafa91d20c1be16f830cf3c8e1a"
+              "sha256": "54591d7764c0d3a9b2b68e4c23fddb205276fcb9ed7f8e700daa1665332c53b6",
+              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:54591d7764c0d3a9b2b68e4c23fddb205276fcb9ed7f8e700daa1665332c53b6"
             },
             "arm64_linux": {
               "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-              "sha256": "11cea92273faab90c96629acf5ff46a15144ce729b3644ed88bb929126a27363",
-              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:11cea92273faab90c96629acf5ff46a15144ce729b3644ed88bb929126a27363"
+              "sha256": "051dee7f939ce3140164390fd4a204266fdb9626ec48910624854f9bc459a1a7",
+              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:051dee7f939ce3140164390fd4a204266fdb9626ec48910624854f9bc459a1a7"
             },
             "arm64_sequoia": {
               "cellar": "/opt/homebrew/Cellar",
-              "sha256": "298115ba70a52fff940c6a54e3399591927c96d84cd07d910690f13027290bdc",
-              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:298115ba70a52fff940c6a54e3399591927c96d84cd07d910690f13027290bdc"
+              "sha256": "2394d1223865d5244ea920c140254f92cca64e746d1a41a48e913aba2c896a59",
+              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:2394d1223865d5244ea920c140254f92cca64e746d1a41a48e913aba2c896a59"
             },
             "arm64_tahoe": {
               "cellar": "/opt/homebrew/Cellar",
-              "sha256": "ee89b294d1465431bc1734602266b1b9b1fcff7abb113a969540ba838eeee998",
-              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:ee89b294d1465431bc1734602266b1b9b1fcff7abb113a969540ba838eeee998"
+              "sha256": "b6a424039b9e14e0dc0b16e5051703ed6d5c163ba8074eae9b4e084a0b012fc4",
+              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:b6a424039b9e14e0dc0b16e5051703ed6d5c163ba8074eae9b4e084a0b012fc4"
             },
             "x86_64_linux": {
               "cellar": "/home/linuxbrew/.linuxbrew/Cellar",
-              "sha256": "01667dd07202f61671c4c48130156831ac0186671ce5f9924207970595c22e9b",
-              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:01667dd07202f61671c4c48130156831ac0186671ce5f9924207970595c22e9b"
+              "sha256": "bb3254ca6bcc7bf78ce9d89cfec14cdca8dd46c60a23c767e24acc121f7d32d5",
+              "url": "https://ghcr.io/v2/homebrew/core/opencode/blobs/sha256:bb3254ca6bcc7bf78ce9d89cfec14cdca8dd46c60a23c767e24acc121f7d32d5"
             }
           },
-          "rebuild": 1,
+          "rebuild": 0,
           "root_url": "https://ghcr.io/v2/homebrew/core"
         }
       },
@@ -3892,18 +4311,18 @@
         "opencode"
       ],
       "full_name": "opencode",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 1869719,
-        "analytics_30d": 44241,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 5.6,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:52Z",
-        "last_30_days": 247953,
+        "all_time": 1917021,
+        "analytics_30d": 45900,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 5.53,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:48:13Z",
+        "last_30_days": 253754,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fopencode",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://opencode.ai",
       "installed": [],
@@ -3929,20 +4348,20 @@
       "requirements": [],
       "revision": 0,
       "ruby_source_checksum": {
-        "sha256": "e07b67abcd41017de2f3d3e9604005bb15a8ebdaa937f30104d240878b199988"
+        "sha256": "f7f25016f3b11dee20603c6469e09b4e4c8489359078d70f076e2eead376f75b"
       },
       "ruby_source_path": "Formula/o/opencode.rb",
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "stable": {
-          "checksum": "04621edf6c47c2c7a36982ef39914d482c16977708fbd7b779f49f928bdc4fba",
+          "checksum": "493e29d872f1cd9604ef3de609f0278e093c0f8066719e4166efc6544d16f34d",
           "revision": null,
           "tag": null,
-          "url": "https://github.com/anomalyco/opencode/archive/refs/tags/v2.2.5.tar.gz",
+          "url": "https://github.com/anomalyco/opencode/archive/refs/tags/v2.2.7.tar.gz",
           "using": null
         }
       },
@@ -3967,7 +4386,7 @@
       "versions": {
         "bottle": true,
         "head": null,
-        "stable": "2.2.5"
+        "stable": "2.2.7"
       },
       "vulnerabilities": {
         "fixed_count": 2,
@@ -3982,35 +4401,35 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "openssl@4": 4611
+            "openssl@4": 5389
           }
         },
         "install": {
           "30d": {
-            "openssl@4": 459536,
-            "openssl@4 --HEAD": 18
+            "openssl@4": 494964,
+            "openssl@4 --HEAD": 17
           },
           "365d": {
-            "openssl@4": 623959,
-            "openssl@4 --HEAD": 37
+            "openssl@4": 729685,
+            "openssl@4 --HEAD": 39
           },
           "90d": {
-            "openssl@4": 549579,
-            "openssl@4 --HEAD": 28
+            "openssl@4": 651006,
+            "openssl@4 --HEAD": 26
           }
         },
         "install_on_request": {
           "30d": {
-            "openssl@4": 15749,
-            "openssl@4 --HEAD": 12
+            "openssl@4": 13640,
+            "openssl@4 --HEAD": 9
           },
           "365d": {
-            "openssl@4": 39457,
+            "openssl@4": 42018,
             "openssl@4 --HEAD": 27
           },
           "90d": {
-            "openssl@4": 25641,
-            "openssl@4 --HEAD": 21
+            "openssl@4": 27046,
+            "openssl@4 --HEAD": 17
           }
         }
       },
@@ -4073,18 +4492,18 @@
         "openssl"
       ],
       "full_name": "openssl@4",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 6093058,
-        "analytics_30d": 459554,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 9.83,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:21Z",
-        "last_30_days": 4519574,
+        "all_time": 7117217,
+        "analytics_30d": 494981,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 9.75,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:37Z",
+        "last_30_days": 4824602,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fopenssl%2F4",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://openssl-library.org",
       "installed": [],
@@ -4141,7 +4560,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "stable": {
@@ -4178,34 +4597,34 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "pcre2": 439
+            "pcre2": 390
           }
         },
         "install": {
           "30d": {
-            "pcre2": 202186,
-            "pcre2 --HEAD": 15
+            "pcre2": 186906,
+            "pcre2 --HEAD": 11
           },
           "365d": {
-            "pcre2": 2339670,
+            "pcre2": 2325642,
             "pcre2 --HEAD": 90
           },
           "90d": {
-            "pcre2": 511049,
-            "pcre2 --HEAD": 22
+            "pcre2": 518435,
+            "pcre2 --HEAD": 20
           }
         },
         "install_on_request": {
           "30d": {
-            "pcre2": 2861,
-            "pcre2 --HEAD": 12
+            "pcre2": 2383,
+            "pcre2 --HEAD": 8
           },
           "365d": {
-            "pcre2": 28938,
+            "pcre2": 28395,
             "pcre2 --HEAD": 55
           },
           "90d": {
-            "pcre2": 8176,
+            "pcre2": 8396,
             "pcre2 --HEAD": 17
           }
         }
@@ -4269,18 +4688,18 @@
         "pcre2test"
       ],
       "full_name": "pcre2",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 76882954,
-        "analytics_30d": 202201,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 10.9,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:24Z",
-        "last_30_days": 2204439,
+        "all_time": 77313805,
+        "analytics_30d": 186917,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 10.61,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:40Z",
+        "last_30_days": 1984082,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fpcre2",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "head_dependencies": {
         "build_dependencies": [
@@ -4330,7 +4749,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -4419,35 +4838,35 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "ripgrep": 6
+            "ripgrep": 8
           }
         },
         "install": {
           "30d": {
-            "ripgrep": 47071,
-            "ripgrep --HEAD": 43
+            "ripgrep": 46445,
+            "ripgrep --HEAD": 44
           },
           "365d": {
-            "ripgrep": 702403,
-            "ripgrep --HEAD": 778
+            "ripgrep": 702749,
+            "ripgrep --HEAD": 776
           },
           "90d": {
-            "ripgrep": 149042,
-            "ripgrep --HEAD": 158
+            "ripgrep": 141227,
+            "ripgrep --HEAD": 152
           }
         },
         "install_on_request": {
           "30d": {
-            "ripgrep": 36219,
-            "ripgrep --HEAD": 43
+            "ripgrep": 35551,
+            "ripgrep --HEAD": 44
           },
           "365d": {
-            "ripgrep": 504258,
-            "ripgrep --HEAD": 778
+            "ripgrep": 504404,
+            "ripgrep --HEAD": 776
           },
           "90d": {
-            "ripgrep": 114336,
-            "ripgrep --HEAD": 158
+            "ripgrep": 108414,
+            "ripgrep --HEAD": 152
           }
         }
       },
@@ -4524,18 +4943,18 @@
         "rg"
       ],
       "full_name": "ripgrep",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 8349245,
-        "analytics_30d": 47114,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 12.83,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:50Z",
-        "last_30_days": 604632,
+        "all_time": 8497773,
+        "analytics_30d": 46489,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 12.93,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:48:12Z",
+        "last_30_days": 601284,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fripgrep",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://github.com/BurntSushi/ripgrep",
       "installed": [],
@@ -4567,7 +4986,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
@@ -4599,35 +5018,35 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "xz": 551
+            "xz": 505
           }
         },
         "install": {
           "30d": {
-            "xz": 358027,
-            "xz --HEAD": 40
+            "xz": 345862,
+            "xz --HEAD": 36
           },
           "365d": {
-            "xz": 3660215,
-            "xz --HEAD": 503
+            "xz": 3693204,
+            "xz --HEAD": 506
           },
           "90d": {
-            "xz": 719071,
-            "xz --HEAD": 82
+            "xz": 753110,
+            "xz --HEAD": 84
           }
         },
         "install_on_request": {
           "30d": {
-            "xz": 46893,
-            "xz --HEAD": 33
+            "xz": 43471,
+            "xz --HEAD": 29
           },
           "365d": {
-            "xz": 586631,
-            "xz --HEAD": 464
+            "xz": 591031,
+            "xz --HEAD": 466
           },
           "90d": {
-            "xz": 108875,
-            "xz --HEAD": 72
+            "xz": 110826,
+            "xz --HEAD": 73
           }
         }
       },
@@ -4710,18 +5129,18 @@
         "xzmore"
       ],
       "full_name": "xz",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 127449436,
-        "analytics_30d": 358067,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 9.67,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:21Z",
-        "last_30_days": 3462520,
+        "all_time": 128200593,
+        "analytics_30d": 345898,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 9.48,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:37Z",
+        "last_30_days": 3278426,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fxz",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://tukaani.org/xz/",
       "installed": [],
@@ -4753,7 +5172,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "stable": {
@@ -4782,35 +5201,36 @@
       "analytics": {
         "build_error": {
           "30d": {
-            "zstd": 183
+            "zstd": 4724,
+            "zstd --HEAD": 4
           }
         },
         "install": {
           "30d": {
-            "zstd": 197338,
-            "zstd --HEAD": 12
+            "zstd": 194563,
+            "zstd --HEAD": 18
           },
           "365d": {
-            "zstd": 2780094,
-            "zstd --HEAD": 168
+            "zstd": 2783999,
+            "zstd --HEAD": 172
           },
           "90d": {
-            "zstd": 462521,
-            "zstd --HEAD": 28
+            "zstd": 467721,
+            "zstd --HEAD": 34
           }
         },
         "install_on_request": {
           "30d": {
-            "zstd": 4216,
-            "zstd --HEAD": 10
+            "zstd": 4752,
+            "zstd --HEAD": 15
           },
           "365d": {
-            "zstd": 118784,
-            "zstd --HEAD": 141
+            "zstd": 119258,
+            "zstd --HEAD": 144
           },
           "90d": {
-            "zstd": 23778,
-            "zstd --HEAD": 23
+            "zstd": 22655,
+            "zstd --HEAD": 28
           }
         }
       },
@@ -4902,18 +5322,18 @@
         "zstdmt"
       ],
       "full_name": "zstd",
-      "generated_date": "2026-11-05",
+      "generated_date": "2026-11-10",
       "github_packages_downloads": {
-        "all_time": 81529427,
-        "analytics_30d": 197350,
-        "analytics_end_date": "2026-11-03",
-        "analytics_ratio": 9.04,
-        "analytics_start_date": "2026-10-04",
-        "end_date": "2026-11-02",
-        "fetched_at": "2026-11-03T00:38:24Z",
-        "last_30_days": 1783584,
+        "all_time": 81999141,
+        "analytics_30d": 194581,
+        "analytics_end_date": "2026-11-10",
+        "analytics_ratio": 9.26,
+        "analytics_start_date": "2026-10-11",
+        "end_date": "2026-11-09",
+        "fetched_at": "2026-11-10T00:47:40Z",
+        "last_30_days": 1801021,
         "source": "https://github.com/Homebrew/homebrew-core/pkgs/container/core%2Fzstd",
-        "start_date": "2026-10-04"
+        "start_date": "2026-10-11"
       },
       "homepage": "https://facebook.github.io/zstd/",
       "installed": [],
@@ -4945,7 +5365,7 @@
       "service": null,
       "skip_livecheck": false,
       "tap": "homebrew/core",
-      "tap_git_head": "25277e0625e49ad162897f3e4ae21986fa3e94ff",
+      "tap_git_head": "28abed0dcade2a29ade6e80d6b670c12c0c4e386",
       "test_dependencies": [],
       "urls": {
         "head": {
