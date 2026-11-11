@@ -22,7 +22,7 @@ the facts, this file holds only what you must or must not do.
 
 - Land with a PR into `main`, opened with `gh -R hotchi-dev/homebrew-tap`. Push
   only when asked. This is by discipline: `main` has no ruleset or protection
-  (checked 2026-11-10 with `gh api repos/hotchi-dev/homebrew-tap/rulesets`).
+  and CI is not a required check (checked 2026-11-10 with `gh api repos/hotchi-dev/homebrew-tap/rulesets`).
 - Never force-push, and never push straight to `main`.
 - Never move Quill's pin (`brew_tap.commit` in `hotchi-dev/quill`
   `manifest/testing.json`) from this repository's work. That is a separate Quill
