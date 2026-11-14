@@ -31,20 +31,12 @@ jobs:
       - name: Update Homebrew
         run: brew update
       - name: Tap this checkout
+        id: tap
         run: |
           brew tap hotchi-dev/tap "$GITHUB_WORKSPACE"
           brew trust hotchi-dev/tap
-      # netbird-ui is copied verbatim from netbirdio/homebrew-tap and does not meet
-      # homebrew-core cask style; it is excluded rather than rewritten.
-      - name: brew style
-        run: |
-          tap="$(brew --repository hotchi-dev/tap)"
-          brew style "$tap"/Formula/*.rb "$tap"/Casks/claude-code.rb "$tap"/Casks/codex.rb
-      # Excluded checks, each inherent to copying Homebrew's own metadata:
-      #   urls: "HTTP mirror" for curl deps; the formulae API publishes no mirrors and
-      #         the mirror only matters for building curl from source, which this tap never does.
-      #   installed: inspects the runner's preinstalled homebrew-core kegs, not this tap.
-      #   sha256_no_check_if_unversioned: netbird-ui is netbirdio's cask copied verbatim
-      #         (same URL and sha256) by decision.
-      - name: brew audit
-        run: brew audit --tap hotchi-dev/tap --except=urls,installed,sha256_no_check_if_unversioned
+      - name: brew style (per package)
+        run: bash scripts/check-tap.sh style
+      - name: brew audit (per package)
+        if: ${{ !cancelled() && steps.tap.outcome == 'success' }}
+        run: bash scripts/check-tap.sh audit
